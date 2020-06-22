@@ -15,7 +15,7 @@
 {% block extrameta %}
 {% endblock %}
 
-{% block corecss}
+{% block corecss %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -34,16 +34,16 @@
 {% block extrajs %}
 {% endblock %}
 
-    <title>iLearn {%block extratitle}{% endblock %}</title>
+    <title>iLearn {% block extratitle %}{% endblock %}</title>
   </head>
 
  <body>
  <header></header>
  {% if messages %}
  <div> </div>
- {% end if %}
+ {% endif %}
 
- {% block PageHeader %}
+{% block PageHeader %}
 {% endblock %}
 
 {% block content %}
