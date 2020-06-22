@@ -37,6 +37,28 @@
     <title>iLearn {%block extratitle}{% endblock %}</title>
   </head>
 
+ <body>
+ <header></header>
+ {% if messages %}
+ <div> </div>
+ {% end if %}
+
+ {% block PageHeader %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block PostLoadJs %}
+{% endblock %}
+
+
+
+
+
+
+
+
   
 
 </html>
