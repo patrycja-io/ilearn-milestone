@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------- 
+Start of extra features
+-------------------------------------------------------------------------*/
+.extra-features-section .section-content {
+	padding-top: 160px;
+}
+.extra-features-section .extra-left .features-icon,
+.extra-features-section .extra-right .features-icon {
+	width: 80px;
+	height: 80px;
+	line-height: 100px;
+	float: right;
+	box-shadow: none;
+	background-color: #f7f7f9;
+	margin-left: 20px;
+}
+.extra-features-section .features-icon i {
+	font-size: 36px;
+}
+.extra-left-content {
+	display: inline-block;
+	width: 100%;
+	margin-top: 35px;
+}
+.extra-features-section .extra-right .features-icon {
+	float: left;
+	margin-right: 20px;
+	margin-left: 0;
+}
+/*----------------------------------------------------------------------- 
+End of extra features
+-------------------------------------------------------------------------*/
