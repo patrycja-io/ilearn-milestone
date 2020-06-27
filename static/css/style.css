@@ -147,5 +147,51 @@ Start of extra features
 /*----------------------------------------------------------------------- 
 End of extra features
 -------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------- 
+Start of testimonial section
+-------------------------------------------------------------------------*/
+.testimonial-section {
+	background-color: #f7f7f9;
+}
+.testimonial-name-designation {
+	background-color: #fff;
+	position: relative;
+	padding: 30px;
+	display: inline-block;
+	border-radius: 10px;
+}
+.quate-icon {
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+	line-height: 40px;
+	position: absolute;
+	top: -20px;
+	background-color: #fff;
+	text-align: center;
+}
+.quate-icon span {
+	font-size: 18px;
+	font-weight: 700;
+}
+.testimonial-pic {
+	height: 80px;
+	width: 80px;
+	float: left;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.testimonial-pic img {
+	border-radius: 100%;
+}
+.client-designation .name {
+	display: block;
+	font-weight: 600;
+}
+/*----------------------------------------------------------------------- 
+End of testimonial section
+-------------------------------------------------------------------------*/
+
+
 
 
