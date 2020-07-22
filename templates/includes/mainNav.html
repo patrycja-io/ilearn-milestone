@@ -19,7 +19,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="stack-link">
                 <a href="{% url 'courses' %}?category=frontend" class="dropdown-item"> FrontEnd</a>
                 <a href="{% url 'courses' %}?category=backend" class="dropdown-item">BackEnd</a>
-                <a href="{% url 'courses' %}?category=cybersecurity" class="dropdown-item">FullStack</a>
+                <a href="{% url 'courses' %}?category=ui" class="dropdown-item">UI</a>
                <a href="{% url 'courses' %}?category=frontend,backend,cybersecurity" class="dropdown-item">All Courses</a>
             </div>
         </li>
@@ -28,10 +28,10 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 CyberSecurity
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">CISCo &amp; Bath</a>
-                <a href="" class="dropdown-item"> Comptia &amp; Dining</a>
-                <a href="" class="dropdown-item">All </a>
+            <div class="dropdown-menu border-0" aria-labelledby="cybersecurity-link">
+                <a href="{% url 'courses' %}?category=cisco" class="dropdown-item">CISCo</a>
+               <a href="{% url 'courses' %}?category=comptia" class="dropdown-item">Comptia</a>
+                <a href="{% url 'courses' %}?category=all" class="dropdown-item">All</a>
             </div>
         </li>
 
@@ -40,10 +40,8 @@
                 Hot Deals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+               <a href="{% url 'courses' %}?category=new arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'courses' %}?category=deals" class="dropdown-item">Deals</a>
             </div>
         </li>
     </ul>
