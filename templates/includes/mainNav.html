@@ -16,11 +16,11 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Software Development
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item"> Front &amp; Essentials</a>
-                <a href="" class="dropdown-item">Back</a>
-                <a href="" class="dropdown-item">Full</a>
-                <a href="" class="dropdown-item">UI </a>
+            <div class="dropdown-menu border-0" aria-labelledby="stack-link">
+                <a href="{% url 'courses' %}?category=frontend" class="dropdown-item"> FrontEnd</a>
+                <a href="{% url 'courses' %}?category=backend" class="dropdown-item">BackEnd</a>
+                <a href="{% url 'courses' %}?category=cybersecurity" class="dropdown-item">FullStack</a>
+               <a href="{% url 'courses' %}?category=frontend,backend,cybersecurity" class="dropdown-item">All Courses</a>
             </div>
         </li>
 
