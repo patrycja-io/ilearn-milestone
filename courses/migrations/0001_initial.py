@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Product',
+            name='Courses',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('sku', models.CharField(blank=True, max_length=254, null=True)),
@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('rating', models.DecimalField(blank=True, decimal_places=2, max_digits=6, null=True)),
                 ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
                 ('image', models.ImageField(blank=True, null=True, upload_to='')),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.Category')),
+                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='courses.Category')),
             ],
         ),
     ]

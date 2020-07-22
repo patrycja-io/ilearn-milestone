@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "products.category",
+    "model": "courses.category",
     "fields": {
       "name": "development",
       "friendly_name": "Development"
@@ -9,7 +9,7 @@
   },
   {
     "pk": 2,
-    "model": "products.category",
+    "model": "courses.category",
     "fields": {
       "name": "it",
       "friendly_name": "IT & Software"
