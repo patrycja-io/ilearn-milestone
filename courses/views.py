@@ -66,21 +66,21 @@ def course_detail(request, course_id):
     return render(request, 'courses/course_detail.html', context)
 
 def add_course(request):
-    """ Add a product to the store """
+    """ Add a course to the platform """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only creator can do it!.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = CourseForm(request.POST, request.FILES)
         if form.is_valid():
-            product = form.save()
+            course = form.save()
             messages.success(request, 'Added new course!')
             return redirect(reverse('course_detail', args=[course.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add course. Please ensure the form is valid.')
     else:
-        form = ProductForm()
+        form = CourseForm()
         
     template = 'courses/add_course.html'
     context = {
@@ -90,22 +90,22 @@ def add_course(request):
     return render(request, template, context)
 
 def edit_course(request, course_id):
-    """ Edit a product in the store """
+    """ Edit a course in the platform """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, only course creator can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, pk=product_id)
+    course = get_object_or_404(Course, pk=course_id)
     if request.method == 'POST':
-        form = CourseForm(request.POST, request.FILES, instance=product)
+        form = CourseForm(request.POST, request.FILES, instance=course)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated course!')
-            return redirect(reverse('product_detail', args=[course.id]))
+            return redirect(reverse('course_detail', args=[course.id]))
         else:
             messages.error(request, 'Failed to update the course. Please ensure the form is valid.')
     else:
-        form = ProductForm(instance=course)
+        form = CourseForm(instance=course)
         messages.info(request, f'You are editing {course.name}')
 
     template = 'courses/edit_course.html'
@@ -115,4 +115,15 @@ def edit_course(request, course_id):
     }
 
     return render(request, template, context)
+
+def delete_course(request, course_id):
+    """ Delete a course from the platform """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only course creator can do that.')
+        return redirect(reverse('home'))
+
+    course = get_object_or_404(Course, pk= course_id)
+    course.delete()
+    messages.success(request, 'Course deleted!')
+    return redirect(reverse('courses'))
     
