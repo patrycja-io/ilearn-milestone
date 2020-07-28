@@ -65,7 +65,6 @@ def course_detail(request, course_id):
 
     return render(request, 'courses/course_detail.html', context)
 
-@login_required
 def add_course(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
@@ -86,6 +85,33 @@ def add_course(request):
     template = 'courses/add_course.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+def edit_course(request, course_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = CourseForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated course!')
+            return redirect(reverse('product_detail', args=[course.id]))
+        else:
+            messages.error(request, 'Failed to update the course. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=course)
+        messages.info(request, f'You are editing {course.name}')
+
+    template = 'courses/edit_course.html'
+    context = {
+        'form': form,
+        'course': course,
     }
 
     return render(request, template, context)
