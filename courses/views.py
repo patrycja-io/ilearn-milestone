@@ -4,7 +4,7 @@ from django.db.models import Q
 from .models import Course, Category
 
 
-def courses_all(request):
+def all_courses(request):
     """ A view to show all products, including sorting and search queries """
     courses = Course.objects.all()
     query = None
@@ -64,4 +64,29 @@ def course_detail(request, course_id):
     }
 
     return render(request, 'courses/course_detail.html', context)
+
+@login_required
+def add_course(request):
+    """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only creator can do it!.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Added new course!')
+            return redirect(reverse('course_detail', args=[course.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+        
+    template = 'courses/add_course.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
     
