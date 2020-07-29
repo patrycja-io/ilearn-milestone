@@ -1,7 +1,5 @@
-
-<!DOCTYPE html>
 {% load static %}
-
+<!doctype html>
 <html lang="en">
 <head>
 
@@ -19,14 +17,13 @@
 {% endblock %}
 
 {% block corecss %}
-
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700,500">
-<link rel="stylesheet" href="vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet">
+<link rel="stylesheet" href="vendor/unicons-2.0.1/css/unicons.css">
 <link href="css/vertical-responsive-menu.min.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
 {% endblock %}
 
 {% block extracss %}
@@ -51,7 +48,7 @@
         <div class="main_logo" id="logo">
             <a href="{% url 'home' %}"><img src="images/logo.svg" alt=""></a>
         </div>
-        <form method="GET" action="{% url 'courses' %}">
+    <form method="GET" action="{% url 'courses' %}">
         <div class="search120">
             <div class="ui search">
                 <div class="ui left icon input swdh10">
@@ -60,7 +57,7 @@
                 </div>
             </div>
         </div>
-                </form>
+     </form>
 
         <div class="header_right">
             <ul>
