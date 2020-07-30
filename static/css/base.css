@@ -318,7 +318,6 @@ input[type=text] {
 }
 
 /*--- Header ---*/
-
 header {
 	position: fixed;
 	z-index: 999;
@@ -334,6 +333,10 @@ header {
     float: left;
     width: 135px;
     margin-left: 20px;
+}
+
+.logo-inverse {
+    display: none;
 }
 
 .search120 {
