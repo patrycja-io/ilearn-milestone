@@ -65,6 +65,7 @@ def course_detail(request, course_id):
 
     return render(request, 'courses/course_detail.html', context)
 
+
 def add_course(request):
     """ Add a course to the platform """
     if not request.user.is_superuser:
@@ -88,6 +89,7 @@ def add_course(request):
     }
 
     return render(request, template, context)
+
 
 def edit_course(request, course_id):
     """ Edit a course in the platform """
@@ -116,13 +118,14 @@ def edit_course(request, course_id):
 
     return render(request, template, context)
 
+
 def delete_course(request, course_id):
     """ Delete a course from the platform """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only course creator can do that.')
         return redirect(reverse('home'))
 
-    course = get_object_or_404(Course, pk= course_id)
+    course = get_object_or_404(Course, pk=course_id)
     course.delete()
     messages.success(request, 'Course deleted!')
     return redirect(reverse('courses'))
