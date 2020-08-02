@@ -3,17 +3,33 @@
     "pk": 1,
     "model": "courses.category",
     "fields": {
-      "name": "development",
-      "friendly_name": "Development"
+      "name": "php",
+      "friendly_name": "PHP and Laravel"
     }
   },
   {
     "pk": 2,
     "model": "courses.category",
     "fields": {
-      "name": "it",
-      "friendly_name": "IT & Software"
+      "name": "javascript",
+      "friendly_name": "Javascript & Frameworks"
     }
+   },
+   {
+    "pk": 3,
+    "model": "courses.category",
+    "fields": {
+      "name": "html",
+      "friendly_name": "Html , Css & Bootstrap"
+    }
+    {
+    "pk": 4,
+    "model": "courses.category",
+    "fields": {
+      "name": "python",
+      "friendly_name": "Python & Frameworks"
+    }
+  },
   
   }
 ]
