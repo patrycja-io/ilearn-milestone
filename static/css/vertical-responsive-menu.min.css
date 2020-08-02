@@ -1,0 +1,259 @@
+.collapse_menu .collapse_menu--icon,.vertical_nav{
+	-moz-transition:all .3s ease-out;
+	-webkit-transition:all .3s ease-out;
+	transition:all .3s ease-out}*{box-sizing:border-box}:active,:focus{outline:0;}
+
+.toggle_menu {
+	display: block;
+	float: left;
+	line-height: 57px;
+	padding: 0;
+	background: 0 0;
+	border: 0;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.toggle_menu i {
+	width: 50px;
+    text-align: center;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    color: #737373;
+    font-size: 120%;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+}
+
+.toggle_menu i:hover {
+    color: #ed2a26;
+}
+	
+.vertical_nav {
+	position: fixed;
+    left: -240px;
+    top: 60px;
+    bottom: 0;
+    background: #fff;
+    overflow: hidden;
+    width: 240px;
+    z-index: 995;
+}
+
+.vertical_nav__closed {
+	left: -240px !important;
+}
+
+.vertical_nav__opened {
+	left: 0 !important;
+	box-shadow: rgba(0,0,0,.2)-30px 0 30px 30px;
+}
+
+.menu_left {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menu_left:hover {
+	overflow-y: scroll;
+}
+
+.menu--item {
+	position: relative;
+	min-height: 42px;
+	line-height: 42px;
+}
+
+.menu--link:hover {
+	background: #ffecec;
+	color: #ed2a26 !important;
+}
+
+.menu--link.active {
+	background: #ffecec;
+	color: #ed2a26;
+}
+
+.menu--item__has_sub_menu .menu--link:after {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	height: 45px;
+	line-height: 45px;
+	font-family: FontAwesome;
+	content: "\f0d7";
+}
+
+.menu--subitens__opened {
+	background: #ffecec;
+}
+
+.menu--subitens__opened .menu--link {
+	color: #333;
+}
+
+.menu--subitens__opened .sub_menu { 
+	display: block;
+}
+
+.menu--link {
+	display: block;
+    overflow: hidden;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu--link:hover,.menu--link:hover .menu--label {
+	background: #ffecec;
+}
+
+.menu--icon {
+	display: block;
+	float: left;
+	width: 50px;
+	height: 45px;
+	line-height: 43px;
+	font-size: 20px; 
+	text-align: center;
+}
+
+.menu--label {
+	display: block;
+	height: 45px;
+	line-height: 43px;
+}
+
+.sub_menu{
+	display: none;
+	overflow: hidden;
+	padding-left: 0;
+	list-style: none;
+}
+
+.sub_menu--link {
+	display: block;
+	padding-left: 50px;
+	padding-right: 16px;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #333;
+	text-decoration: none;
+}
+
+.sub_menu--link:hover {
+	color: #ed2a26 !important;
+	background: #ffecec;
+}
+
+.sub_menu--link.active {
+	color: #da1f27;
+	font-weight: 500;
+}
+
+.collapse_menu {
+	display: none;
+}
+
+@media (min-width:992px) {	
+.vertical_nav{
+	left: 0;
+}
+	
+.toggle_menu {
+	display: none;
+}
+
+.vertical_nav__minify {
+	width: 0;
+}
+
+.vertical_nav__minify .menu {
+	overflow: visible;
+}
+
+.vertical_nav__minify .menu--label {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	padding-left: 16px;
+	padding-right: 16px;
+	background: #e9e9e9;
+	font-weight: 500;
+}
+
+.vertical_nav__minify .menu--item__has_sub_menu .menu--link:after {
+	content: "";
+}
+
+.vertical_nav__minify .menu--subitens__opened .menu--label,.vertical_nav__minify .menu--subitens__opened .sub_menu {
+	display: block;
+}
+
+.vertical_nav__minify .sub_menu {
+	position: absolute;
+	top: 40px;
+	left: 50px;
+	width: 150px;
+	background: #e9e9e9
+}
+
+.vertical_nav__minify .sub_menu--link {
+	padding-left: 16px;
+}
+
+.vertical_nav__minify .collapse_menu--icon {
+	-webkit-transform: rotate(180deg);
+}
+
+.collapse_menu {
+    width: 60px;
+    text-align: center;
+    display: block;
+    height: 60px;
+    padding: 0;
+    border: 0;
+    background: #ed2a26;
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+    cursor: pointer;
+    float: left;
+}
+
+.collapse_menu:hover {
+	color: #fff;
+	background: #af1f24;
+}
+
+.collapse_menu .collapse_menu--icon {
+	display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+}
+
+.collapse_menu .collapse_menu--label {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
