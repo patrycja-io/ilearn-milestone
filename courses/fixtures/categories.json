@@ -22,14 +22,12 @@
       "name": "html",
       "friendly_name": "Html , Css & Bootstrap"
     }
-    {
+   },{
     "pk": 4,
     "model": "courses.category",
     "fields": {
       "name": "python",
       "friendly_name": "Python & Frameworks"
     }
-  },
-  
   }
 ]
