@@ -113,11 +113,15 @@ WSGI_APPLICATION = 'ilearn.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+  #      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+  #  }
+#}
+
+DATABASES ={
+    'default':dj_database_url.parse('postgres://qacijhvzkadqgd:19016373387be884d2a5363d397a63b13c831e2d8d4b626b9980dc930fc2c5b8@ec2-34-224-229-81.compute-1.amazonaws.com:5432/d9lnfthnd71vuh')
 }
 
 
