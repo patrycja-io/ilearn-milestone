@@ -48,64 +48,83 @@
   </head>
 
   <body>
-
-   <header class="header">
-   
-  
-        <div class="main_logo" id="logo">
-            <a href="{% url 'home' %}"><img src="xx" alt=""></a>
-        </div>
-   
-         <form method="GET" action="{% url 'courses' %}">
-			<div class="search120">
-				<div class="ui search">
-					<div class="ui left icon input swdh10">
-						<input class="prompt srch10" type="text" name="q" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
-						<i class="uil uil-search-alt icon icon1"></i>
-					</div>
-				</div>
+    <!-- Header Start -->
+	<header class="header clearfix">
+		<button type="button" id="toggleMenu" class="toggle_menu">
+		  <i class="uil uil-bars"></i>
+		</button>
+		<button id="collapse_menu" class="collapse_menu">
+			<i class="uil uil-bars collapse_menu--icon "></i>
+			<span class="collapse_menu--label"></span>
+		</button>
+		<div class="main_logo" id="logo">
+			<a href="index.html"><img src="images/logo.svg" alt=""></a>
+			<a href="index.html"><img class="logo-inverse" src="images/ct_logo.svg" alt=""></a>
+		</div>
+		<div class="search120">
+			<div class="ui search">
+			  <div class="ui left icon input swdh10">
+				<input class="prompt srch10" type="text" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
+				<i class="uil uil-search-alt icon icon1"></i>
+			  </div>
 			</div>
-        </form>
-   
+		</div>
 		<div class="header_right">
 			<ul>
 				<li>
-					<a href="create_new_course.html" class="upload_btn">My account</a>
-					<div class="dropdown-menu border-0" aria-labelledby="user-options">
-						{% if request.user.is_authenticated %}
-						{% if request.user.is_superuser %}
-						<a href="" class="dropdown-item">Product Management</a>
-						{% endif %}
-						<a href="" class="dropdown-item">My Profile</a>
-						<a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-						{% else %}
-						<a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-						<a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-						{% endif %}
-					</div>
+					<a href="create_new_course.html" class="upload_btn">Create New Course</a>
 				</li>
-				<li class="list-inline-item">
-					<a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-						<div class="text-center">
-							<div><i class="fas fa-shopping-bag fa-lg"></i></div>
-							<p class="my-0">
-								{% if grand_total %}
-								${{ grand_total|floatformat:2 }}
-								{% else %}
-								$0.00
-								{% endif %}
-							</p>
-						</div>
+				<li>
+					<a href="index.html" class="option_links"><i class="uil uil-home-alt"></i><span class="noti_count">9+</span></a>
+				</li>
+				<li class="ui dropdown">
+					<a href="#" class="option_links"><i class="uil uil-envelope-alt"></i></a>
+				</li>
+				<li class="ui dropdown">
+					<a href="#" class="option_links"><i class="uil uil-bell"></i></a>
+				</li>
+				<li class="ui dropdown">
+					<a href="#" class="opts_account">
+						<img src="images/hd_dp.jpg" alt="">
 					</a>
 				</li>
 			</ul>
 		</div>
-				        
-
-    </header>
-    
-       
-        
+	</header>
+		<nav class="vertical_nav">
+			<div class="left_section menu_left" id="js-menu">
+				<div class="left_section">
+					<ul>
+						<li class="menu--item">
+							<a href="index.html" class="menu--link active" title="Home">
+								<i class="uil uil-home-alt menu--icon"></i>
+								<span class="menu--label">Home</span>
+							</a>
+						</li>
+						<li class="menu--item">
+							<label class="menu--link" title="Categories">
+								  <i class="uil uil-clipboard-alt menu--icon"></i>
+								  <span class="menu--label">Categories</span>
+								</label>
+							<ul class="sub_menu">
+								<li class="sub_menu--item">
+									<a href="about_us.html" class="sub_menu--link">About</a>
+								</li>
+								<li class="sub_menu--item">
+									<a href="sign_in.html" class="sub_menu--link">Sign In</a>
+								</li>
+								<li class="sub_menu--item">
+									<a href="sign_up.html" class="sub_menu--link">Sign Up</a>
+								</li>
+								<li class="sub_menu--item">
+									<a href="blog_single_view.html" class="sub_menu--link">Blog Detail View</a>
+								</li>
+						     </ul>
+                         </li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
  
     {% if messages %}
         <div class="message-container"></div>
