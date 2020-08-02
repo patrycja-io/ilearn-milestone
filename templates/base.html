@@ -73,7 +73,7 @@
 					<a href="create_new_course.html" class="upload_btn">My Account</a>
 				</li>
 				<li>
-					<a href="index.html" class="option_links"><i class="uil uil-home-alt"></i><span class="noti_count">9+</span></a>
+					<a href="index.html" class="option_links"><i class="uil uil-home-alt"></i></a>
 				</li>
 				<li class="ui dropdown">
 					<a href="#" class="option_links"><i class="uil uil-envelope-alt"></i></a>
@@ -106,19 +106,19 @@
 							</label>
 							<ul class="sub_menu">
                             <li class="sub_menu--item">
-									<a href="about_us.html" class="sub_menu--link">Newly added!</a>
+									<a href="{% url 'courses' %}?category=new" class="sub_menu--link">Newly added!</a>
 								</li>
 								<li class="sub_menu--item">
-									<a href="about_us.html" class="sub_menu--link">HTML</a>
+									<a href="{% url 'courses' %}?category=html" class="sub_menu--link">HTML</a>
 								</li>
 								<li class="sub_menu--item">
-									<a href="sign_in.html" class="sub_menu--link">JavaScript</a>
+									<a href="{% url 'courses' %}?category=javascript">JavaScript</a>
 								</li>
 								<li class="sub_menu--item">
-									<a href="sign_up.html" class="sub_menu--link">PHP</a>
+									<a href="{% url 'courses' %}?category=php" class="sub_menu--link">PHP</a>
 								</li>
 								<li class="sub_menu--item">
-									<a href="blog_single_view.html" class="sub_menu--link">Python</a>
+									<a href="{% url 'courses' %}?category=python" class="sub_menu--link">Python</a>
 								</li>
 						     </ul>
                          </li>
