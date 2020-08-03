@@ -9,6 +9,7 @@ class CourseAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
+        'description',
         'price',
         'rating',
         'image',

@@ -12,7 +12,7 @@
     "model": "courses.category",
     "fields": {
       "name": "javascript",
-      "friendly_name": "Javascript & Frameworks"
+      "friendly_name": "Javascript, Node.js & Frameworks"
     }
    },
    {
