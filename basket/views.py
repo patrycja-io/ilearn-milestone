@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 
-def index(request):
-    """ A view to return the index page """
+def view_basket(request):
+    """ A view  that renders basket page """
 
-    return render(request, 'home/index.html')
+    return render(request, 'basket/basket.html')
