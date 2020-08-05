@@ -1,0 +1,1 @@
+web: gunicorn ilearn.wsgi:application
