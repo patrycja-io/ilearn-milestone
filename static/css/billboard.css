@@ -1,84 +1,35 @@
 /* --- Billboard ---*/
+.text-white {
+    color: #fff!important;
+}
 
-* {
+@media (min-width: 768px)
+.p-md-5 {
+    padding: 3rem!important;
+}
+.p-4 {
+    padding: 1.5rem!important;
+}
+.rounded {
+    border-radius: .25rem!important;
+}
+.bg-dark {
+    background-color: #343a40!important;
+}
+@media (min-width: 576px)
+.jumbotron {
+    padding: 4rem 2rem;
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}
+*, ::after, ::before {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
-
-
-.billboard--billboard--3-fQr {
+user agent stylesheet
+div {
     display: block;
-    margin: 0 auto 6.4rem auto;
-    position: relative;
-    width: 100%;
-}
-
-.billboard--billboard--3-fQr .billboard--content-box--JtXUJ {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.08);
-    padding: 2.4rem;
-}
-@media (min-width: 61.31em){
-.billboard--billboard--3-fQr {
-    max-width: 134rem;}
-}
-
-@media (min-width: 61.31em){
-.billboard--billboard--3-fQr .billboard--content-box--JtXUJ {
-    left: 4.8rem;
-    top: 6.4rem;
-    max-width: 44rem;
-}
-}
-.value-props--wrapper--2-saF.transfer_billboard_margin {
-    border-top: none;
-    margin-top: -6.4rem;
-    margin-bottom: 6.4rem;
-}
-
-.value-props--wrapper--2-saF {
-    padding: 2.4rem 0;
-    border-top: 1px solid #dcdacb;
-    border-bottom: 1px solid #dcdacb;
-}
-.udlite-full-width-container {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-}
-
-.value-props--items--1ZQui {
-    display: flex;
-    justify-content: space-between;
-}
-.value-props--wrapper--2-saF {
-    padding: 2.4rem 0;
-    border-top: 1px solid #dcdacb;
-    border-bottom: 1px solid #dcdacb;
-}
-.udlite-container {
-    width: 100%;
-    max-width: 134rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
-}
-
-@media screen and (min-width: 61.31em){
-.value-props--item-container--1qleY {
-    min-width: 25rem;
-}
-.value-props--item-container--1qleY {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 }
