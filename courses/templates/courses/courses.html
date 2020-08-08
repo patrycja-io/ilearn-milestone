@@ -6,200 +6,47 @@
 {% block content %}
 
 <div class="section3125 mt-30">
-							<h4 class="item_title">Newest Courses</h4>
+							<h4 class="item_title">All categories</h4>
 							<a href="#" class="see150">See all</a>
 							<div class="la5lo1">
 								<div class="owl-carousel featured_courses owl-theme">
-                                 {% for course in courses %}
-									<div class="item">
-										<div class="fcrse_1 mb-20">
-										<a href="{% url 'course_detail' course.id %}" class="fcrse_img">
-												<img src="images/courses/img-14.jpg" alt="">
+                                 {% for course in courses %}	
+                                    
+									<div class="col-lg-3 col-md-4">
+										<div class="fcrse_1 mt-30">
+											<a href="{% url 'course_description' product.id %}" class="fcrse_img">
+												<img src="{{ course.image.url }}" alt="{{ course.name }}">
 												<div class="course-overlay">
 													<span class="play_btn1"><i class="uil uil-play"></i></span>
-													<div class="crse_timer">
-														e-book
-												    </div>
-											</a>
-											<div class="fcrse_content">
-												<a href="course_detail_view.html" class="crse14s">Build Responsive Real World Websites with HTML5 and CSS3</a>
-												<a href="#" class="crse-cate">Development | CSS</a>
-												<div class="auth1lnkprce">
-													<p class="cr1fot">By <a href="#">John Doe</a></p>
-													<div class="prce142">$4</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="fcrse_1 mb-20">
-											<a href="course_detail_view.html" class="fcrse_img">
-												<img src="images/courses/img-11.jpg" alt="">
-												<div class="course-overlay">
-													<span class="play_btn1"><i class="uil uil-play"></i></span>
-													<div class="crse_timer">
-														28 hours
-													</div>
-												</div>
-											</a>
-											<div class="fcrse_content">
-												<div class="eps_dots more_dropdown">
-													<a href="#"><i class='uil uil-ellipsis-v'></i></a>
-													<div class="dropdown-content">
-														<span><i class='uil uil-share-alt'></i>Share</span>
-														<span><i class="uil uil-clock-three"></i>Save</span>
-														<span><i class='uil uil-ban'></i>Not Interested</span>
-														<span><i class="uil uil-windsock"></i>Report</span>
-													 </div>																										
-												</div>
-												<div class="vdtodt">
-													<span class="vdt14">5 views</span>
-													<span class="vdt14">15 Min ago</span>
-												</div>
-												<a href="course_detail_view.html" class="crse14s">The Complete JavaScript Course 2020: Build Real Projects!</a>
-												<a href="#" class="crse-cate">Development | JavaScript</a>
-												<div class="auth1lnkprce">
-													<p class="cr1fot">By <a href="#">Jassica William</a></p>
-													<div class="prce142">$5</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="fcrse_1 mb-20">
-											<a href="course_detail_view.html" class="fcrse_img">
-												<img src="images/courses/img-18.jpg" alt="">
-												<div class="course-overlay">
-													<span class="play_btn1"><i class="uil uil-play"></i></span>
-													<div class="crse_timer">
-														15 hours
-													</div>
-												</div>
-											</a>
-											<div class="fcrse_content">
-												<div class="eps_dots more_dropdown">
-													<a href="#"><i class='uil uil-ellipsis-v'></i></a>
-													<div class="dropdown-content">
-														<span><i class='uil uil-share-alt'></i>Share</span>
-														<span><i class="uil uil-clock-three"></i>Save</span>
-														<span><i class='uil uil-ban'></i>Not Interested</span>
-														<span><i class="uil uil-windsock"></i>Report</span>
-													 </div>																										
-												</div>
-												<div class="vdtodt">
-													<span class="vdt14">25 views</span>
-													<span class="vdt14">2 Hour ago</span>
-												</div>
-												<a href="course_detail_view.html" class="crse14s">The Complete Front-End Web Development Course!</a>
-												<a href="#" class="crse-cate">Development | Web Development</a>
-												<div class="auth1lnkprce">
-													<p class="cr1fot">By <a href="#">Joginder Singh</a></p>
-													<div class="prce142">$9</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="fcrse_1 mb-20">
-											<a href="course_detail_view.html" class="fcrse_img">
-												<img src="images/courses/img-19.jpg" alt="">
-												<div class="course-overlay">
+													<div class="badge_seller">Bestseller</div>
+                                                     {% if product.rating %}
 													<div class="crse_reviews">
-														<i class='uil uil-star'></i>5.0
+														<i class="uil uil-star"></i>{{ course.rating }} / 5
 													</div>
-													<span class="play_btn1"><i class="uil uil-play"></i></span>
-													<div class="crse_timer">
-														1 hour
+                                                    {% else %}
+                                                    <div class="crse_reviews">
+														<i class="uil uil-star"></i>no stars yet
 													</div>
+                                                     {% endif %}
 												</div>
 											</a>
 											<div class="fcrse_content">
-												<div class="eps_dots more_dropdown">
-													<a href="#"><i class='uil uil-ellipsis-v'></i></a>
-													<div class="dropdown-content">
-														<span><i class='uil uil-share-alt'></i>Share</span>
-														<span><i class="uil uil-clock-three"></i>Save</span>
-														<span><i class='uil uil-ban'></i>Not Interested</span>
-														<span><i class="uil uil-windsock"></i>Report</span>
-													 </div>																										
-												</div>
-												<div class="vdtodt">
-													<span class="vdt14">15 views</span>
-													<span class="vdt14">6 hours ago</span>
-												</div>
-												<a href="course_detail_view.html" class="crse14s">Ethical Hacking - Most Advanced Level Penetration Testing</a>
-												<a href="#" class="crse-cate">IT &amp; Software | Ethical Hacking</a>
+												<a href="{% url 'course_description' product.id %}" class="crse14s">The Complete Front-End Web Development Course!</a>
+                                                 {% if product.category %}
+												<a href="{% url 'course %}?category={{ course.category.name }}" class="crse-cate"> <i></i>{{ course.category.friendly_name }}</a>
+                                                  
+                                                  {% endif %}
 												<div class="auth1lnkprce">
-													<p class="cr1fot">By <a href="#">Poonam Verma</a></p>
-													<div class="prce142">$10</div>
+													<div class="prce142">£{{ course.price }}</div>
 												</div>
 											</div>
 										</div>
 									</div>
+                                      {% end for %}	
 								</div>
 							</div>
-						</div>
-                <div class="row">
-                    {% for course in courses %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if course.image %}
-                                <a href="{% url 'course_detail' course.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'course_detail' course.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ course.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ course.price }}</p>
-                                            {% if course.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'courses' %}?category={{ course.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ course.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            {% if course.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ course.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+						
+          
     </div>
 	
 
