@@ -7,6 +7,8 @@ def basket_ebooks(request):
     total = 0
     product_count = 0
     
+    grand_total =  total
+    
     context = {
         'basket_items': bag_items,
         'total': total,
