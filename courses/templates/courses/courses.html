@@ -33,7 +33,7 @@
 											<div class="fcrse_content">
 												<a href="{% url 'course_description' product.id %}" class="crse14s">The Complete Front-End Web Development Course!</a>
                                                  {% if product.category %}
-												<a href="{% url 'course %}?category={{ course.category.name }}" class="crse-cate"> <i></i>{{ course.category.friendly_name }}</a>
+												<a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate"> <i></i>{{ course.category.friendly_name }}</a>
                                                   
                                                   {% endif %}
 												<div class="auth1lnkprce">
@@ -42,7 +42,7 @@
 											</div>
 										</div>
 									</div>
-                                      {% end for %}	
+                                {% endfor %}	
 								</div>
 							</div>
 						
