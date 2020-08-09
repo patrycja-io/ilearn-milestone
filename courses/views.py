@@ -58,7 +58,7 @@ def all_courses(request):
     return render(request, 'courses/courses.html', context)
 
 
-def course_detail(request, course_id):
+def course_description(request, course_id):
     """ A view to show individual course details """
 
     course = get_object_or_404(Course, pk=course_id)
@@ -67,7 +67,7 @@ def course_detail(request, course_id):
         'course': course,
     }
 
-    return render(request, 'courses/course_detail.html', context)
+    return render(request, 'courses/course_description.html', context)
 
 
 def add_course(request):
@@ -81,7 +81,7 @@ def add_course(request):
         if form.is_valid():
             course = form.save()
             messages.success(request, 'Added new course!')
-            return redirect(reverse('course_detail', args=[course.id]))
+            return redirect(reverse('course_description', args=[course.id]))
         else:
             messages.error(request, 'Failed to add course. Please ensure the form is valid.')
     else:
@@ -107,7 +107,7 @@ def edit_course(request, course_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated course!')
-            return redirect(reverse('course_detail', args=[course.id]))
+            return redirect(reverse('course_description', args=[course.id]))
         else:
             messages.error(request, 'Failed to update the course. Please ensure the form is valid.')
     else:
