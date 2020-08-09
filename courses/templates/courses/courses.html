@@ -26,11 +26,11 @@
                {% endif %}
             </div>
           </a>
-          {% if course.image %}
+          {% if course.name %}
           <div class="fcrse_content">
             <a href="{% url 'course_description' course.id %}" class="crse14s"
-              ></a
-            > {% endif %}
+              >{{ course.name }}</a>
+               {% endif %}
             {% if course.category %}
             <a
               href="{% url 'courses' %}?category={{ course.category.name }}"
