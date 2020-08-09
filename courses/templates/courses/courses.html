@@ -14,7 +14,6 @@
             <img src="{{ course.image.url }}" alt="{{ course.name }}" />
          {% endif %}
             <div class="course-overlay">
-              <span class="play_btn1"><i class="uil uil-play"></i></span>
               <div class="badge_seller">Bestseller</div>
               {% if course.rating %}
               <div class="crse_reviews">
@@ -27,10 +26,11 @@
                {% endif %}
             </div>
           </a>
+          {% if course.image %}
           <div class="fcrse_content">
             <a href="{% url 'course_description' course.id %}" class="crse14s"
-              >The Complete Front-End Web Development Course!</a
-            >
+              ></a
+            > {% endif %}
             {% if course.category %}
             <a
               href="{% url 'courses' %}?category={{ course.category.name }}"
