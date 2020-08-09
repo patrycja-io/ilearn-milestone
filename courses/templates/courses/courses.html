@@ -1,54 +1,54 @@
-<!doctype html>
-{% extends "base.html" %}
-
-{% load static %}
-
-{% block content %}
+<!DOCTYPE html>
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="section3125 mt-30">
-							<h4 class="item_title">All categories</h4>
-							<a href="#" class="see150">See all</a>
-							<div class="la5lo1">
-								<div class="owl-carousel featured_courses owl-theme">
-                                 {% for course in courses %}	
-                                    
-									<div class="col-lg-3 col-md-4">
-										<div class="fcrse_1 mt-30">
-											<a href="{% url 'course_description' product.id %}" class="fcrse_img">
-												<img src="{{ course.image.url }}" alt="{{ course.name }}">
-												<div class="course-overlay">
-													<span class="play_btn1"><i class="uil uil-play"></i></span>
-													<div class="badge_seller">Bestseller</div>
-                                                     {% if product.rating %}
-													<div class="crse_reviews">
-														<i class="uil uil-star"></i>{{ course.rating }} / 5
-													</div>
-                                                    {% else %}
-                                                    <div class="crse_reviews">
-														<i class="uil uil-star"></i>no stars yet
-													</div>
-                                                     {% endif %}
-												</div>
-											</a>
-											<div class="fcrse_content">
-												<a href="{% url 'course_description' product.id %}" class="crse14s">The Complete Front-End Web Development Course!</a>
-                                                 {% if product.category %}
-												<a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate"> <i></i>{{ course.category.friendly_name }}</a>
-                                                  
-                                                  {% endif %}
-												<div class="auth1lnkprce">
-													<div class="prce142">£{{ course.price }}</div>
-												</div>
-											</div>
-										</div>
-									</div>
-                                {% endfor %}	
-								</div>
-							</div>
-						
-          
-    </div>
-	
+  <h4 class="item_title">All categories</h4>
+  <a href="#" class="see150">See all</a>
+  <div class="la5lo1">
+    <div class="owl-carousel featured_courses owl-theme">
+      {% for course in courses %}
+      <div class="col-lg-3 col-md-4">
+        <div class="fcrse_1 mt-30">
+          {% if course.image %}
+          <a href="{% url 'course_description' product.id %}" class="fcrse_img">
+            <img src="{{ course.image.url }}" alt="{{ course.name }}" />
+         {% endif %}
+            <div class="course-overlay">
+              <span class="play_btn1"><i class="uil uil-play"></i></span>
+              <div class="badge_seller">Bestseller</div>
+              {% if course.rating %}
+              <div class="crse_reviews">
+                <i class="uil uil-star"></i>{{ course.rating }} / 5
+              </div>
+              {% else %}
+              <div class="crse_reviews">
+                <i class="uil uil-star"></i>no stars yet
+              </div>
+              
+            </div>
+          </a>
+          <div class="fcrse_content">
+            <a href="{% url 'course_description' product.id %}" class="crse14s"
+              >The Complete Front-End Web Development Course!</a
+            >
+            {% if course.category %}
+            <a
+              href="{% url 'courses' %}?category={{ course.category.name }}"
+              class="crse-cate"
+            >
+              <i></i>{{ course.category.friendly_name }}</a
+            >
 
+            {% endif %}
+            <div class="auth1lnkprce">
+              <div class="prce142">£{{ course.price }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 {% endblock %}
