@@ -10,7 +10,7 @@
       <div class="col-lg-3 col-md-4">
         <div class="fcrse_1 mt-30">
           {% if course.image %}
-          <a href="{% url 'course_description' product.id %}" class="fcrse_img">
+          <a href="{% url 'course_description' course.id %}" class="fcrse_img">
             <img src="{{ course.image.url }}" alt="{{ course.name }}" />
          {% endif %}
             <div class="course-overlay">
