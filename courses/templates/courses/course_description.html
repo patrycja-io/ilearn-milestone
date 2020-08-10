@@ -1,18 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-  
-<body>
-	<!-- Body Start -->
 	<div class="wrapper _bg4586">
 		<div class="_215b01">
 			<div class="container-fluid">			
@@ -23,10 +12,9 @@
 								<div class="col-xl-4 col-lg-5 col-md-6">						
 									<div class="preview_video">						
 										<a href="#" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
+                                        {% if product.image %}
 											<img src="images/courses/img-2.jpg" alt="">
-											<div class="course-overlay">
-												<span class="_215b02">Preview this course</span>
-											</div>
+                                            {% end if%}
 										</a>
 									</div>
 								</div>
