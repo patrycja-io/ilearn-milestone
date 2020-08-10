@@ -48,8 +48,8 @@
 					<a href="{% url 'view_basket' %}" class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} option_links">
                     <i class="uil uil-shopping-cart-alt"></i>
                     <p class="my-0">
-                                    {% if order_total %}
-                                        ${{ order_total|floatformat:2 }}
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
                                     {% else %}
                                         £0.00
                                     {% endif %}
