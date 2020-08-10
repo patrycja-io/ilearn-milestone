@@ -37,6 +37,7 @@
 		<div class="mb4d25">
 			<div class="container">			
 				<div class="row">
+                {% if bag_items %}
 					<div class="col-lg-8">
 						<div class="fcrse_1">
 							<a href="http://gambolthemes.net/html-items/cursus_demo_f12/course_detail_view.html" class="hf_img">
@@ -49,12 +50,12 @@
 								<a href="http://gambolthemes.net/html-items/cursus_demo_f12/course_detail_view.html" class="crse14s title900 pt-2">The Web Developer Bootcamp</a>
 								<a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#" class="crse-cate">Web Development | Python</a>
 								<div class="auth1lnkprce">
-									<p class="cr1fot">By <a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#">John Doe</a></p>
 									<div class="prce142">$10</div>
 								</div>
 							</div>
 						</div>								
 					</div>
+                     
 					<div class="col-lg-4">
 						<div class="membership_chk_bg rght1528">
 								<div class="checkout_title">
@@ -63,13 +64,10 @@
 								</div>
 								<div class="order_dt_section">
 									<div class="order_title">
-										<h4>Orignal Price</h4>
+										<h4>Price</h4>
 										<div class="order_price">$15</div>
 									</div>
-									<div class="order_title">
-										<h6>Discount Price</h6>
-										<div class="order_price">$5</div>
-									</div>
+									
 									<div class="order_title">
 										<h2>Total</h2>
 										<div class="order_price5">$10</div>
@@ -89,7 +87,16 @@
 								</div>
 						</div>
 					</div>								
-				</div>				
+				</div>
+                {% else %}
+                     <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}				
 			</div>
 		</div>
 {% endblock %}
