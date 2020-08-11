@@ -48,28 +48,22 @@
 									<div class="_215b05">										
 										Last updated 1/2020
 									</div>
-<li>
-			<h5 class="thnk_title1">£ {{ course.price }} &nbsp;&nbsp; </h5>
-		</li>
-<form class="form" action="{% url 'add_to_bag' course.id %}" methodically d="POST">
-	{% csrf_token %} 
-    <ul class="_215b31">
-		<li><input class="btn_adcart" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}">
-            Add to Cart
-		</li>
-	</ul>
-	<div class="col-12">
-		<a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 mt-5">
-			<span class="icon">
-             <i class="fas fa-chevron-left"></i>
-             </span>
-			<span class="text-uppercase">Keep Shopping</span>
-		</a>
-		<input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to cart">
-     </div>
-		<input type="hidden" name="redirect_url" value="{{ request.path }}">
-                      
-</form>
+
+
+                                    <ul class="_215b31">										
+										<li><h5 class="thnk_title1">£ {{ course.price }}  &nbsp;&nbsp; </h5></li>
+                                        <form class="form" action="{% url 'add_to_basket' course.id %}" method="POST">
+                        {% csrf_token %}										
+                                <a href="{% url 'courses' %}" class="btn_buy">
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn_adcart" value="Add to Cart">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+										<li><button class="btn_adcart">Add to Cart</button></li>
+									</ul>
+
+
 									<div class="_215fgt1">										
 										30-Day Money-Back Guarantee
 									</div>
