@@ -50,18 +50,22 @@
 									</div>
 
 
-                                    <ul class="_215b31">										
-										<li><h5 class="thnk_title1">£ {{ course.price }}  &nbsp;&nbsp; </h5></li>
-                                        <form class="form" action="{% url 'add_to_basket' course.id %}" method="POST">
-                        {% csrf_token %}										
-                                <a href="{% url 'courses' %}" class="btn_buy">
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn_adcart" value="Add to Cart">
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </form>
-										<li><button class="btn_adcart">Add to Cart</button></li>
-									</ul>
+									<form class="form" action="{% url 'add_to_basket' course.id %}" method="POST">
+										<ul class="_215b31">
+											<li>
+												<h5 class="thnk_title1">£ {{ course.price }} &nbsp;&nbsp; </h5>
+											</li>
+											{% csrf_token %}
+											<input type="submit" class="btn_adcart" value="Add to Cart">
+											<input type="hidden" name="redirect_url" value="{{ request.path }}">
+									    </ul>
+                                        <div class="_215b05">
+											<a href="{% url 'courses' %}" class="btn_buy">
+												<span class="text-uppercase">Keep Shopping</span>
+											</a>
+                                        </div>
+									</form>
+                                   
 
 
 									<div class="_215fgt1">										
