@@ -11,25 +11,29 @@
 							<div class="row justify-content-center">						
 								<div class="col-xl-4 col-lg-5 col-md-6">						
 									<div class="preview_video">						
-										<a href="#" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
-                                        {% if product.image %}
-											<img src="images/courses/img-2.jpg" alt="">
-                                            {% end if%}
+										<a href="{{ product.image.url }}" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
+                                           {% if product.image %}
+											<img src="{{ product.image.url }}" alt="">
+                                            {% endif%}
 										</a>
 									</div>
 								</div>
 								<div class="col-xl-8 col-lg-7 col-md-6">
+                                {% if product.category %}
 									<div class="_215b03">
-										<h2>The Web Developer Bootcamp</h2>
+										<h2>{ product.name }}</h2>
 										<span class="_215b04">The only course you need to learn web development - HTML, CSS, JS, Node, and More!</span>
 									</div>
+                                     {% endif %}
 									<div class="_215b05">
+                                    {% if product.rating %}
 										<div class="crse_reviews mr-2">
-											<i class="uil uil-star"></i>4.5
+											<i class="uil uil-star"></i>{{ product.rating }}/5
 										</div>
+                                         {% endif %}
 									</div>
 									<div class="_215b05">										
-										114,521 students enrolled
+									 many students enrolled
 									</div>
 									<div class="_215b06">										
 										<div class="_215b07">										
@@ -43,6 +47,7 @@
 									<ul class="_215b31">										
 										<li><button class="btn_adcart">Add to Cart</button></li>
 									</ul>
+                                    {{ product.price }}
 									<div class="_215fgt1">										
 										30-Day Money-Back Guarantee
 									</div>
@@ -87,16 +92,8 @@
 										<div class="_htg452 mt-35">
 											<h3>Description</h3>
 											<span class="_abc123">Just updated to include Bootstrap 4.1.3!</span>
-											<p>Hi! Welcome to the Web Developer Bootcamp, the <strong>only course you need to learn web development</strong>. There are a lot of options for online developer training, but this course is without a doubt the most comprehensive and effective on the market.  Here's why:</p>
-											<ul class="_abc124">
-												<li><span class="_5f7g11">This is the only online course taught by a professional bootcamp instructor.</span></li>
-												<li><span class="_5f7g11">94% of my in-person bootcamp students go on to get full-time developer jobs. Most of them are complete beginners when I start working with them.</span></li>
-												<li><span class="_5f7g11">The previous 2 bootcamp programs that I taught cost $14,000 and $21,000.  This course is just as comprehensive but with brand new content for a fraction of the price.</span></li>
-												<li><span class="_5f7g11">Everything I cover is up-to-date and relevant to today's developer industry. No PHP or other dated technologies. This course does not cut any corners.</span></li>
-												<li><span class="_5f7g11">This is the only complete beginner full-stack developer course that covers NodeJS.</span></li>
-												<li><span class="_5f7g11">We build 13+ projects, including a gigantic production application called YelpCamp. No other course walks you through the creation of such a substantial application.</span></li>
-												<li><span class="_5f7g11">The course is constantly updated with new content, projects, and modules.  Think of it as a subscription to a never-ending supply of developer training.</span></li>
-											</ul>
+											<p>{{ product.description }}</strong>. There are a lot of options for online developer training, but this course is without a doubt the most comprehensive and effective on the market.  Here's why:</p>
+				
 											<p>When you're learning to program you often have to sacrifice learning the exciting and current technologies in favor of the "beginner friendly" classes.  With this course, you get the best of both worlds.  This is a course designed for the complete beginner, yet it covers some of the most exciting and relevant topics in the industry.</p>
 											<p>Throughout the course we cover tons of tools and technologies including:</p>
 											<ul class="_abc124">												
@@ -106,30 +103,7 @@
 												<li><span class="_5f7g11"><strong>Bootstrap 4</strong></span></li>
 												<li><span class="_5f7g11"><strong>SemanticUI</strong></span></li>
 												<li><span class="_5f7g11"><strong>DOM Manipulation</strong></span></li>
-												<li><span class="_5f7g11"><strong>jQuery</strong></span></li>
-												<li><span class="_5f7g11"><strong>Unix(Command Line) Commands</strong></span></li>
-												<li><span class="_5f7g11"><strong>NodeJS</strong></span></li>
-												<li><span class="_5f7g11"><strong>NPM</strong></span></li>
-												<li><span class="_5f7g11"><strong>ExpressJS</strong></span></li>
-												<li><span class="_5f7g11"><strong>REST</strong></span></li>
-												<li><span class="_5f7g11"><strong>MongoDB</strong></span></li>
-												<li><span class="_5f7g11"><strong>Database Associations</strong></span></li>
-												<li><span class="_5f7g11"><strong>Authentication</strong></span></li>
-												<li><span class="_5f7g11"><strong>PassportJS</strong></span></li>
-												<li><span class="_5f7g11"><strong>Authorization</strong></span></li>
 											</ul>
-											
-												<p>This course is also unique in the way that it is structured and presented. Many online courses are just a long series of "watch as I code" videos.  This course is different. I've incorporated everything I learned in my years of teaching to make this course not only more effective but more engaging. The course includes:</p>
-												<ul class="_abc124">												
-													<li><span class="_5f7g11">Lectures</span></li>
-													<li><span class="_5f7g11">Code-Alongs</span></li>
-													<li><span class="_5f7g11">Projects</span></li>
-													<li><span class="_5f7g11">Exercises</span></li>
-													<li><span class="_5f7g11">Research Assignments</span></li>
-													<li><span class="_5f7g11">Slides</span></li>
-													<li><span class="_5f7g11">Downloads</span></li>
-													<li><span class="_5f7g11">Readings</span></li>
-												</ul>
 												<p>If you have any questions, please don't hesitate to contact me.  I got into this industry because I love working with people and helping students learn.  Sign up today and see how fun, exciting, and rewarding web development can be!</p>
 										</div>
 										<div class="_htg452 mt-35">
