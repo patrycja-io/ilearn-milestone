@@ -1,102 +1,90 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
-{% block content %}
-	<div class="wrapper _bg4586 _new89">		
-		<div class="_215b15">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">						
-						<div class="title125">						
-							<div class="titleleft">					
-								<div class="ttl121">
-									<nav aria-label="breadcrumb">
-										<ol class="breadcrumb">
-											<li class="breadcrumb-item"><a href="http://gambolthemes.net/html-items/cursus_demo_f12/index.html">Home</a></li>
-											<li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
-										</ol>
-									</nav>
-								</div>
+
+ {% block content %}
+<div class="wrapper _bg4586 _new89">
+	<div class="_215b15">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title125">
+						<div class="titleleft">
+							<div class="ttl121">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a
+												href="#">Home</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Shopping Cart
+										</li>
+									</ol>
+								</nav>
 							</div>
 						</div>
-						<div class="title126">	
-							<h2>Shopping Cart</h2>
-						</div>
+					</div>
+					<div class="title126">
+						<h2>Shopping Cart</h2>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="mb4d25">
-			<div class="container">			
-				<div class="row">
-                {% if bag_items %}
-					<div class="col-lg-8">
-						<div class="fcrse_1">
-							<a href="http://gambolthemes.net/html-items/cursus_demo_f12/course_detail_view.html" class="hf_img">
-								<img class="cart_img" src="./Cursus - Shopping Cart_files/img-2.jpg" alt="">
-							</a>
+	</div>
+	{% if basket_items %}
+	<div class="mb4d25">
+		<div class="container">
+			<div class="row">
+				{% for item in basket_items %}
+				<div class="col-lg-8">
+					<div class="fcrse_1">
+						<a href="#" class="hf_img">
+							<img class="cart_img" src="{{ item.course.image.url }}" alt="" />
+            </a>
 							<div class="hs_content">
 								<div class="eps_dots eps_dots10 more_dropdown">
-									<a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#"><i class="uil uil-times"></i></a>																										
+									<a href="#"><i class="uil uil-times"></i></a>
 								</div>
-								<a href="http://gambolthemes.net/html-items/cursus_demo_f12/course_detail_view.html" class="crse14s title900 pt-2">The Web Developer Bootcamp</a>
-								<a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#" class="crse-cate">Web Development | Python</a>
+								<a href="#" class="crse14s title900 pt-2">{{ item.course.name }}</a>
+								<a href="#" class="crse-cate">{{ item.course.category }}</a>
 								<div class="auth1lnkprce">
-									<div class="prce142">$10</div>
+									<div class="prce142">{{ item.course.price }}</div>
 								</div>
 							</div>
-						</div>								
 					</div>
-                     
-					<div class="col-lg-4">
-						<div class="membership_chk_bg rght1528">
-								<div class="checkout_title">
-									<h4>Total</h4>
-									<img src="./Cursus - Shopping Cart_files/line.svg" alt="">
-								</div>
-								<div class="order_dt_section">
-									<div class="order_title">
-										<h4>Price</h4>
-										<div class="order_price">$15</div>
-									</div>
-									
-									<div class="order_title">
-										<h2>Total</h2>
-										<div class="order_price5">$10</div>
-									</div>
-									<div class="coupon_code">
-										<p>Learn now is applied.</p>
-										<div class="coupon_input">
-											<div class="ui search focus mt-15">
-												<div class="ui left icon input swdh11 swdh19">
-													<input class="prompt srch_explore" type="text" name="couponcode" value="" id="id_coupon_code" required="" maxlength="6" placeholder="Enter Coupon Code">
-												</div>
-												<button class="code-apply-btn" type="submit">Apply</button>
-											</div>
-										</div>
-									</div>
-									<a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#" class="chck-btn22">Checkout Now</a>
-								</div>
-						</div>
-					</div>								
 				</div>
-                {% else %}
-                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                {% endif %}				
+
+				<div class="col-lg-4">
+					<div class="membership_chk_bg rght1528">
+						<div class="checkout_title">
+							<h4>Total</h4>
+							<img src="./Cursus - Shopping Cart_files/line.svg" alt="" />
+            </div>
+							<div class="order_dt_section">
+								<div class="order_title">
+									<h4>Price</h4>
+									<div class="order_price">£{{ item.course.price }}</div>
+								</div>
+{% endfor %}
+								<div class="order_title">
+									<h2>Total</h2>
+									<div class="order_price5">£{{ grand_total|floatformat:2 }}</div>
+								</div>
+									<a href="#"
+										class="chck-btn22">Checkout Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% else %}
+					<p class="lead mb-5">Your basket is empty.</p>
+					<a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
+				
+						<span class="text-uppercase">Keep Shopping</span>
+					</a>
+					{% endif %}
+				</div>
 			</div>
+			{% endblock %}
 		</div>
-{% endblock %}
