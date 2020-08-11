@@ -12,23 +12,27 @@
 								<div class="col-xl-4 col-lg-5 col-md-6">						
 									<div class="preview_video">						
 										<a href="{{ product.image.url }}" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
-                                           {% if product.image %}
+                                           {% if course.image %}
 											<img src="{{ product.image.url }}" alt="">
                                             {% endif%}
 										</a>
 									</div>
 								</div>
 								<div class="col-xl-8 col-lg-7 col-md-6">
-                                {% if product.category %}
+                               
 									<div class="_215b03">
-										<h2>{ product.name }}</h2>
-										<span class="_215b04">The only course you need to learn web development - HTML, CSS, JS, Node, and More!</span>
+										<h2>{{ course.name }}</h2>
+                                         {% if course.category %}
+                                        <a class="_215b04" href="{% url 'courses' %}?category={{ course.category.name }}">
+                            <i class="_215b04"></i>The course you need to learn web development - {{ course.category.friendly_name }}
+                        </a>
+                                        {% endif %}
 									</div>
-                                     {% endif %}
+                                     
 									<div class="_215b05">
-                                    {% if product.rating %}
+                                    {% if course.rating %}
 										<div class="crse_reviews mr-2">
-											<i class="uil uil-star"></i>{{ product.rating }}/5
+											<i class="uil uil-star"></i>{{ course.rating }}/5
 										</div>
                                          {% endif %}
 									</div>
@@ -44,10 +48,28 @@
 									<div class="_215b05">										
 										Last updated 1/2020
 									</div>
-									<ul class="_215b31">										
-										<li><button class="btn_adcart">Add to Cart</button></li>
-									</ul>
-                                    {{ product.price }}
+<li>
+			<h5 class="thnk_title1">£ {{ course.price }} &nbsp;&nbsp; </h5>
+		</li>
+<form class="form" action="{% url 'add_to_bag' course.id %}" methodically d="POST">
+	{% csrf_token %} 
+    <ul class="_215b31">
+		<li><input class="btn_adcart" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}">
+            Add to Cart
+		</li>
+	</ul>
+	<div class="col-12">
+		<a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 mt-5">
+			<span class="icon">
+             <i class="fas fa-chevron-left"></i>
+             </span>
+			<span class="text-uppercase">Keep Shopping</span>
+		</a>
+		<input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to cart">
+     </div>
+		<input type="hidden" name="redirect_url" value="{{ request.path }}">
+                      
+</form>
 									<div class="_215fgt1">										
 										30-Day Money-Back Guarantee
 									</div>
