@@ -9,7 +9,7 @@ def basket_ebooks(request):
 
     basket_items = []
     total = 0
-    product_count = 0
+    course_count = 0
     basket = request.session.get('basket', {})
 
     for item_id in basket.items():
@@ -24,7 +24,7 @@ def basket_ebooks(request):
     context = {
         'basket_items': basket_items,
         'total': total,
-        'course_count': product_count,
+        'course_count': course_count,
         'grand_total': grand_total,
     }
 
