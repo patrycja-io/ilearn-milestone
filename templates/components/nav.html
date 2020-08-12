@@ -45,7 +45,7 @@
                         </div>
 				</li>
 				<li>
-					<a href="{% url 'view_basket' %}" class="{% if order_total %}text-info font-weight-bold{% else %}text-black{% endif %} option_links">
+					<a href="{% url 'view_basket' %}" class="{% if grand_total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
                     <i class="uil uil-shopping-cart-alt"></i>
                     <p class="my-0">
                                     {% if grand_total %}
