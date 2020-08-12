@@ -4,26 +4,20 @@ from django.shortcuts import get_object_or_404
 from courses.models import Course
 
 
-
 def basket_ebooks(request):
 
     basket_items = set()
     total = 0
     basket = request.session.get('basket', {})
 
-    for item_id in basket.items():
-        course = get_object_or_404(Course, pk=item_id)
+    for course_id in basket.keys():
+        course = get_object_or_404(Course, pk=course_id)
         total += course.price
-        basket_items.append({
-            'item_id': item_id,
-            'course': course,
-        })
-
-    grand_total = total
+        basket_items.add(course)
 
     context = {
         'basket_items': basket_items,
-        'grand_total': grand_total,
+        'total': total,
     }
 
     return context
