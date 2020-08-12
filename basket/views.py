@@ -6,13 +6,13 @@ def view_basket(request):
 
     return render(request, 'basket/basket.html')
 
-def add_to_basket(request, item_id):
+def add_to_basket(request, course_id):
     """ Add a quantity of the specified product to the shopping basket """
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {}) 
 
-    if item_id not in basket:
-        basket[item_id] = item_id
+    if course_id not in basket:
+        basket[course_id] = course_id
 
     request.session['basket'] = basket
     return redirect(redirect_url) 
