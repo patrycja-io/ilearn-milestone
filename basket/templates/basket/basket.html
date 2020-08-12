@@ -32,16 +32,18 @@
 			</div>
 		</div>
 	</div>
-	{% if basket_items %}
+	
 	<div class="mb4d25">
 		<div class="container">
 			<div class="row">
-				{% for item in basket_items %}
+              {% if basket_items %}
 				<div class="col-lg-8">
+              
 					<div class="fcrse_1">
+                        {% for item in basket_items %}
 						<a href="#" class="hf_img">
 							<img class="cart_img" src="{{ item.course.image.url }}" alt="" />
-            </a>
+                        </a>
 							<div class="hs_content">
 								<div class="eps_dots eps_dots10 more_dropdown">
 									<a href="#"><i class="uil uil-times"></i></a>
@@ -53,6 +55,7 @@
 								</div>
 							</div>
 					</div>
+                     {% endfor %}
 				</div>
 
 				<div class="col-lg-4">
@@ -60,31 +63,26 @@
 						<div class="checkout_title">
 							<h4>Total</h4>
 							<img src="./Cursus - Shopping Cart_files/line.svg" alt="" />
-            </div>
+                        </div>
 							<div class="order_dt_section">
 								<div class="order_title">
 									<h4>Price</h4>
 									<div class="order_price">£{{ item.course.price }}</div>
 								</div>
-{% endfor %}
+
 								<div class="order_title">
 									<h2>Total</h2>
 									<div class="order_price5">£{{ grand_total|floatformat:2 }}</div>
 								</div>
 									<a href="#"
 										class="chck-btn22">Checkout Now</a>
-								</div>
 							</div>
-						</div>
 					</div>
-					{% else %}
-					<p class="lead mb-5">Your basket is empty.</p>
-					<a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-				
-						<span class="text-uppercase">Keep Shopping</span>
-					</a>
-					{% endif %}
 				</div>
-			</div>
-			{% endblock %}
+            {% endif %}
+			</div>	
 		</div>
+	</div>
+			
+</div>
+{% endblock %}
