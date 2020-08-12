@@ -45,11 +45,11 @@
                         </div>
 				</li>
 				<li>
-					<a href="{% url 'view_basket' %}" class="{% if grand_total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
+					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
                     <i class="uil uil-shopping-cart-alt"></i>
                     <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                    {% if total %}
+                                        ${{ total|floatformat:2 }}
                                     {% else %}
                                         £0.00
                                     {% endif %}
