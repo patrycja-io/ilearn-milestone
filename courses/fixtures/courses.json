@@ -45,7 +45,7 @@
             "category": 2,
             "price": 13.99,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image": "00_react.jpg"
 
         }
     },
@@ -72,7 +72,7 @@
             "category": 2,
             "price": 50,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image": "02_react.jpg"
         }
     },
     {
@@ -98,7 +98,7 @@
             "category": 2,
             "price": 200,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image": "03_react.jpg.jpg"
         }
     },
     {
@@ -160,7 +160,7 @@
             "sku": 52,
             "name": "The Complete Web Development Tutorial Using React and Redux",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
+            "image": "04_react.jpg",
            "category": 2,
             "price": 40
         }
