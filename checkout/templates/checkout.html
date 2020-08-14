@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
-{% load crispy_forms_tags %}
+{% load static %}
+{% load crispy_forms_filters %}
 
 <!-- listing name here (SEO) -->
 {% block title %}Cart | iLearn {% endblock %}
@@ -66,6 +66,7 @@
 															<label>First Name*</label>
 															<div class="ui left icon input swdh11 swdh19">
 																<input class="prompt srch_explore" type="text" name="name" value="" id="id_name" required="" maxlength="64" placeholder="First Name">
+                                                                {{ order_form.name | as_crispy_field }}
 															</div>
 															</div>
 														</div>
@@ -74,7 +75,8 @@
 																<label>Last Name*</label>
 																<div class="ui left icon input swdh11 swdh19">
 																	<input class="prompt srch_explore" type="text" name="surname" value="" id="id_surname" required="" maxlength="64" placeholder="Last Name">
-															</div>
+															{{ order_form.surname | as_crispy_field }}
+                                                            </div>
 																</div>
 															</div>
 															<div class="col-lg-12">
@@ -82,7 +84,8 @@
 																	<label>E-mail*<adress></adress></label>
 																	<div class="ui left icon input swdh11 swdh19">
 																		<input class="prompt srch_explore" type="text" name="email" value="adress@domain.com" id="id_academy" required="" maxlength="64" placeholder="Email">
-															</div>
+															 {{ order_form.email | as_crispy_field }}
+                                                            </div>
 																	</div>
 																</div>
 																<div class="col-lg-12">
@@ -94,6 +97,7 @@
 																		<input type="hidden" name="country" class="prompt srch_explore">
 																		<i class="dropdown icon"></i>
 																		<div class="default text">Select Country</div>
+                                                                        {{ order_form.county | as_crispy_field }}
 																		<div class="menu">
 																			<div class="item" data-value="af">
 																				<i class="af flag"></i>Afghanistan</div>
@@ -636,7 +640,8 @@
 																		<label>Address1*</label>
 																		<div class="ui left icon input swdh11 swdh19">
 																			<input class="prompt srch_explore" type="text" name="addressname" value="" id="id_address1" required="" maxlength="300" placeholder="Address Line 1">
-															</div>
+															{{ order_form.street_address1 | as_crispy_field }}
+                                                            </div>
 																		</div>
 																	</div>
 																	<div class="col-lg-12">
@@ -645,7 +650,8 @@
 																			<div
 																				class="ui left icon input swdh11 swdh19">
 																				<input class="prompt srch_explore" type="text" name="addressname2"  value="" id="id_address2" required="" maxlength="300" placeholder="Address Line 2">
-															</div>
+															{{ order_form.street_address2 | as_crispy_field }}
+                                                            </div>
 																			</div>
 																		</div>
 																		<div class="col-lg-6">
@@ -684,7 +690,8 @@
 																							<div
 																								class="ui left icon input swdh11 swdh19">
 																								<input class="prompt srch_explore" type="text" name="phone" value="+48700 000 00 00" id="id_phone" required="" maxlength="12" placeholder="Phone Number">
-															</div>
+{{ order_form.phone_number | as_crispy_field }}
+</div>
 																							</div>
 																						</div>
 																						<div class="col-lg-6">
