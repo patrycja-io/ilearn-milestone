@@ -2,6 +2,9 @@
 {% load static %}
 
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
 <!-- listing name here (SEO) -->
 {% block title %}Cart | iLearn {% endblock %}
 
@@ -50,7 +53,8 @@
 								<div class="panel-heading" role="tab" id="address1">
 								</div>
 								<div class="panel-body">
-									<form>
+									<form action="{% url 'checkout' %}" method="POST">
+										{% csrf_token %}
 										<div class="row">
 											<div class="col-lg-6">
 												<div class="ui search focus mt-30 lbel25">
@@ -78,10 +82,7 @@
 												<div class="ui search focus mt-30 lbel25">
 													<label>E-mail*<adress></adress></label>
 													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="text" name="email"
-															value="adress@domain.com" id="id_academy" required=""
-															maxlength="64" placeholder="Email">
-														{{ order_form.email }}
+														{{ order_form.email | as_crispy_field }}
 													</div>
 												</div>
 											</div>
@@ -93,7 +94,7 @@
 													<input type="hidden" name="country" class="prompt srch_explore">
 													<i class="dropdown icon"></i>
 													<div class="default text">Select Country</div>
-													{{ order_form.county}}
+													{{ order_form.country | as_crispy_field }}
 													<div class="menu">
 														<div class="item" data-value="af">
 															<i class="af flag"></i>Afghanistan</div>
@@ -635,21 +636,14 @@
 												<div class="ui search focus mt-30 lbel25">
 													<label>Address1*</label>
 													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="text"
-															name="addressname" value="" id="id_address1" required=""
-															maxlength="300" placeholder="Address Line 1">
-														{{ order_form.street_address }}
+														  {{ order_form.street_address1 | as_crispy_field }}
 													</div>
 												</div>
 												<div class="col-lg-12">
 													<div class="ui search focus mt-30 lbel25">
 														<label>Address2*</label>
 														<div class="ui left icon input swdh11 swdh19">
-															<input class="prompt srch_explore" type="text"
-																name="addressname2" value="" id="id_address2"
-																required="" maxlength="300"
-																placeholder="Address Line 2">
-															{{ order_form.street_address2 }}
+															{{ order_form.street_address2 | as_crispy_field }}
 														</div>
 													</div>
 												</div>
@@ -657,9 +651,7 @@
 													<div class="ui search focus mt-30 lbel25">
 														<label>City*</label>
 														<div class="ui left icon input swdh11 swdh19">
-															<input class="prompt srch_explore" type="text" name="city"
-																value="Ludhiana" id="id_city" required="" maxlength="64"
-																placeholder="City">
+															{{ order_form.town_or_city | as_crispy_field }}
 														</div>
 													</div>
 												</div>
@@ -667,9 +659,7 @@
 													<div class="ui search focus mt-30 lbel25">
 														<label>State / Province / Region*</label>
 														<div class="ui left icon input swdh11 swdh19">
-															<input class="prompt srch_explore" type="text" name="state"
-																value="Punjab" id="id_state" required="" maxlength="64"
-																placeholder="State / Province / Region">
+															{{ order_form.county | as_crispy_field }}
 														</div>
 													</div>
 												</div>
@@ -677,9 +667,7 @@
 													<div class="ui search focus mt-30 lbel25">
 														<label>Zip/Postal Code*</label>
 														<div class="ui left icon input swdh11 swdh19">
-															<input class="prompt srch_explore" type="text" name="zip"
-																value="141013" id="id_zip" required="" maxlength="64"
-																placeholder="Zip / Postal Code">
+															{{ order_form.postcode | as_crispy_field }}
 														</div>
 													</div>
 												</div>
@@ -687,10 +675,7 @@
 													<div class="ui search focus mt-30 lbel25">
 														<label>Phone Number*</label>
 														<div class="ui left icon input swdh11 swdh19">
-															<input class="prompt srch_explore" type="text" name="phone"
-																value="+48700 000 00 00" id="id_phone" required=""
-																maxlength="12" placeholder="Phone Number">
-															{{ order_form.phone_number }}
+															 {{ order_form.phone_number | as_crispy_field }}
 														</div>
 													</div>
 												</div>
@@ -699,7 +684,7 @@
 														<label>Date</label>
 														<div class="ui left icon input swdh11 swdh19">
 															<input class="prompt srch_explore" type="text" name="name"
-																value="" id="id_name" required="" placeholder="Date">
+																value="" required="" placeholder="Date">
 														</div>
 													</div>
 												</div>
@@ -708,7 +693,7 @@
 														<label>Order Number</label>
 														<div class="ui left icon input swdh11 swdh19">
 															<input class="prompt srch_explore" type="text"
-																name="surname" value="" id="id_surname" required=""
+																name="surname" value=""  required=""
 																maxlength="64" placeholder="Order Number">
 														</div>
 													</div>
@@ -717,6 +702,28 @@
 													<button class="save_address_btn" type="submit">Save Changes</button>
 												</div>
 											</div>
+										</div>
+										<div class="col-lg-4">
+											<div class="membership_chk_bg rght1528">
+												<div class="checkout_title">
+													<h4>Order Summary ({{ product_count }})</h4>
+													<img src="images/line.svg" alt="">
+												</div>
+												<div class="order_dt_section">
+													<div class="order_title">
+														<h4></h4>
+														<div class="order_price">$49</div>
+													</div>
+													<div class="order_title">
+														<h2>Total</h2>
+														<div class="order_price5">$51</div>
+													</div>
+													<button class="chckout_btn" type="submit">Confirm Checkout</button>
+													<div class="scr_text"><i class="uil uil-lock-alt"></i>Secure
+														checkout</div>
+												</div>
+											</div>
+										</div>
 									</form>
 								</div>
 							</div>
@@ -726,33 +733,13 @@
 			</div>
 		</div>
 	</div>
-</div>
-<div class="col-lg-4">
-	<div class="membership_chk_bg rght1528">
-		<div class="checkout_title">
-			<h4>Order Summary</h4>
-			<img src="images/line.svg" alt="">
-		</div>
-		<div class="order_dt_section">
-			<div class="order_title">
-				<h4></h4>
-				<div class="order_price">$49</div>
-			</div>
-			<div class="order_title">
-				<h2>Total</h2>
-				<div class="order_price5">$51</div>
-			</div>
-			<button class="chckout_btn" type="submit">Confirm Checkout</button>
-			<div class="scr_text"><i class="uil uil-lock-alt"></i>Secure checkout</div>
-		</div>
-	</div>
-</div>
 
-{% endblock %}
 
-{% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
-{% endblock %}
+	{% endblock %}
+
+	{% block postloadjs %}
+	{{ block.super }}
+	{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+	{{ client_secret|json_script:"id_client_secret" }}
+	<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+	{% endblock %}
