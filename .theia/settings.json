@@ -16,5 +16,6 @@
       "**/.DS_Store": true,
       "**/.theia": true,
    },
-   "emmet.extensionsPath": ".theia"
+"emmet.extensionsPath": ".theia",
+"python.pythonPath": "/home/gitpod/.pyenv/versions/3.8.3/bin/python"
 }
