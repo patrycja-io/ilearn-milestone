@@ -55,7 +55,6 @@
         "fields": {
             "sku": 28,
            "name": "Javascript ES6! A Complete Reference Guide to Javascript ES6",
-            "image_url": "https://www.udemy.com/javascript-es6-a-complete-reference-guide-to-javascript-es6/",
             "category": 2,
             "price": 175,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -68,7 +67,6 @@
         "fields": {
             "sku": 31,
             "name": "React.js: Building Production Ready Apps, Start to Finish",
-            "image_url": "https://www.udemy.com/reactjs-building-production-ready-apps-start-to-finish/",
             "category": 2,
             "price": 50,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -81,7 +79,6 @@
         "fields": {
             "sku": 34,
             "name": "Projects in Laravel: Learn Laravel Building 10 Projects",
-            "image_url": "https://www.udemy.com/projects-in-laravel-learn-laravel-building-10-projects/",
             "category": 1,
             "price": 50,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -94,7 +91,6 @@
         "fields": {
             "sku": 40,
             "name": "Complete React JS web developer with ES6 - Build 10 projects",
-            "image_url": "https://www.udemy.com/complete-react-js-course/",
             "category": 2,
             "price": 200,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -107,7 +103,6 @@
         "fields": {
             "sku": 41,
             "name": "Vue JS - Mastering Web Apps",
-            "image_url": "https://www.udemy.com/vue-web-apps/",
             "category": 2,
             "price": 80,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -121,7 +116,6 @@
         "fields": {
             "sku": 42,
             "name": "JavaScript the Basics - JavaScript for Beginners",
-            "image_url": "https://www.udemy.com/javascript-the-basics-for-beginners/",
             "category": 2,
             "price": 120,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
@@ -134,7 +128,6 @@
         "fields": {
             "sku": 43,
             "name":"Build a Responsive Website with HTML5, CSS3 and Bootstrap 4",
-            "image_url": "https://www.udemy.com/build-a-responsive-website-with-html5-css3-and-bootstrap-4/",
             "category": "3",
             "price": 20,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
