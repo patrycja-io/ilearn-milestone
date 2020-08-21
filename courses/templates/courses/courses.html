@@ -2,54 +2,48 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="section3125 mt-30">
-  <h4 class="item_title">All courses</h4>
-  <a href="#" class="see150">See all</a>
-  <div class="col-md-12">
-    <div class="_14d25">
-     <div class="row"> 
-      {% for course in courses %}
-      <div class="col-lg-3 col-md-4">
-        <div class="fcrse_1 mt-30">
-          {% if course.image %}
-          <a href="{% url 'course_description' course.id %}" class="fcrse_img">
-            <img src="{{ course.image.url }}" alt="{{ course.name }}" />
-         {% endif %}
-            <div class="course-overlay">
-              <div class="badge_seller">Bestseller</div>
-              {% if course.rating %}
-              <div class="crse_reviews">
-                <i class="uil uil-star"></i>{{ course.rating }} / 5
-              </div>
-              {% else %}
-              <div class="crse_reviews">
-                <i class="uil uil-star"></i>no stars yet
-              </div>
-               {% endif %}
+    <h4 class="item_title">All courses</h4>
+    <a href="#" class="see150">See all</a>
+    <div class="col-md-12">
+        <div class="_14d25">
+            <div class="row">
+                {% for course in courses %}
+                <div class="col-lg-3 col-md-4">
+                    <div class="fcrse_1 mt-30">
+                        {% if course.image %}
+                        <a href="{% url 'course_description' course.id %}" class="fcrse_img">
+                            <img src="{{ course.image.url }}" alt="{{ course.name }}" />
+                            {% endif %}
+                            <div class="course-overlay">
+                                <div class="badge_seller">Bestseller</div>
+                                {% if course.rating %}
+                                <div class="crse_reviews">
+                                    <i class="uil uil-star"></i>{{ course.rating }} / 5
+                                </div>
+                                {% else %}
+                                <div class="crse_reviews">
+                                    <i class="uil uil-star"></i>no stars yet
+                                </div>
+                                {% endif %}
+                            </div>
+                        </a>
+                        {% if course.name %}
+                        <div class="fcrse_content">
+                            <a href="{% url 'course_description' course.id %}" class="crse14s">{{ course.name }}</a>
+                            {% endif %}
+                            {% if course.category %}
+                            <a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate">
+                                <i></i>{{ course.category.friendly_name }}</a>
+                            {% endif %}
+                            <div class="auth1lnkprce">
+                                <div class="prce142">£{{ course.price }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-          </a>
-          {% if course.name %}
-          <div class="fcrse_content">
-            <a href="{% url 'course_description' course.id %}" class="crse14s"
-              >{{ course.name }}</a>
-               {% endif %}
-            {% if course.category %}
-            <a
-              href="{% url 'courses' %}?category={{ course.category.name }}"
-              class="crse-cate"
-            >
-              <i></i>{{ course.category.friendly_name }}</a
-            >
-
-            {% endif %}
-            <div class="auth1lnkprce">
-              <div class="prce142">£{{ course.price }}</div>
-            </div>
-          </div>
         </div>
-      </div>
-      {% endfor %}
     </div>
-  </div>
 </div>
-
 {% endblock %}
