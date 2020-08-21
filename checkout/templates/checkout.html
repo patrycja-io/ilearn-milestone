@@ -60,9 +60,6 @@
 												<div class="ui search focus mt-30 lbel25">
 													<label>First Name*</label>
 													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="text" name="name"
-															value="" id="id_name" required="" maxlength="64"
-															placeholder="First Name">
 														{{ order_form.name }}
 													</div>
 												</div>
@@ -71,9 +68,6 @@
 												<div class="ui search focus mt-30 lbel25">
 													<label>Last Name*</label>
 													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="text" name="surname"
-															value="" id="id_surname" required="" maxlength="64"
-															placeholder="Last Name">
 														{{ order_form.surname }}
 													</div>
 												</div>
@@ -698,29 +692,58 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-6">
-													<button class="save_address_btn" type="submit">Save Changes</button>
-												</div>
-											</div>
+                                                	</div>
 										</div>
+                                                
+                                                {% if user.is_authenticated %}
+												<div class="col-lg-6">
+													<button class="save_address_btn" type="submit" id="id-save-info" name="save-info" >Save Changes</button>
+												</div>
+                                                <div class="form-check form-check-inline float-right mr-0">
+							
+							
+							{% else %}
+								<label class="form-check-label" for="id-save-info">
+                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                </label>
+							{% endif %}
+						</div>
+                        <fieldset class="px-3">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                        <!-- A Stripe card element will go here -->
+                        <div class="mb-3" id="card-element"></div>
+
+                        <!-- Used to display form errors -->
+                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    </fieldset>
+
+                        
+										
 										<div class="col-lg-4">
 											<div class="membership_chk_bg rght1528">
 												<div class="checkout_title">
 													<h4>Order Summary ({{ product_count }})</h4>
 													<img src="images/line.svg" alt="">
 												</div>
+                                                 {% for item in bag_items %}
 												<div class="order_dt_section">
 													<div class="order_title">
-														<h4></h4>
-														<div class="order_price">$49</div>
+														<h4>{{ item.product.name }}
+                                                        </h4>
+														<div class="order_price">{{ item.product.price }}</div>
 													</div>
 													<div class="order_title">
 														<h2>Total</h2>
-														<div class="order_price5">$51</div>
+														<div class="order_price5">£{{ total | floatformat:2 }}</div>
 													</div>
 													<button class="chckout_btn" type="submit">Confirm Checkout</button>
 													<div class="scr_text"><i class="uil uil-lock-alt"></i>Secure
 														checkout</div>
+
+                                                        {% endfor %}  
+                                                        
+                                                          
 												</div>
 											</div>
 										</div>
