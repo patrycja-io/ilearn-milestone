@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 
 from .forms import OrderForm
 from basket.context import basket_ebooks
 
 import stripe
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -15,8 +17,7 @@ def checkout(request):
         messages.error(request, "Basket is empty!")
         return redirect(reverse('courses'))
 
-
-    current_basket = basket_contents(request)
+    current_basket = basket_ebooks(request)
     total = current_basket['total']
     stripe_total = round(total * 100)
     stripe.api_key = stripe_secret_key
@@ -24,7 +25,6 @@ def checkout(request):
         amount=stripe_total,
         currency=settings.STRIPE_CURRENCY,
     )
-
 
     order_form = OrderForm()
 
