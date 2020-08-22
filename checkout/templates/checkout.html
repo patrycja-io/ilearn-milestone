@@ -48,15 +48,15 @@
                         <p class="mb-1 mt-0 small text-muted">Item</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>s
+                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
-                </div>s
-                {% for item in basket_items %}
+                </div>
+                {% for course in basket_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'course_description' %}">
+                            <a href="{% url 'course_description' course.id %}">
                                 {% if course.image %}
-                                    <img class="w-100" src="{{ item.course.image.url }}" alt="{{ course.name }}">
+                                    <img class="w-100" src="{{ course.image.url }}" alt="{{ course.name }}">
                                 {% else %}
                                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
                                 {% endif %}
@@ -65,10 +65,9 @@
                         <div class="col-7">
                             <p class="my-0"><strong>{{ course.name }}</strong></p>
 
-                            <p class="my-0 small text-muted">Qty: {{ course.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">£{{ total }}</p>
+                            <p class="my-0 small text-muted">£{{ course.price }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -151,8 +150,10 @@
 	{% endblock %}
 
 	{% block postloadjs %}
+
 	{{ block.super }}
 	{{ stripe_public_key|json_script:"id_stripe_public_key" }}
 	{{ client_secret|json_script:"id_client_secret" }}
-	<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+	<script src="{% static 'checkout/js/stripe.js' %}"></script>
+
 	{% endblock %}
