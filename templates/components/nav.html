@@ -3,8 +3,12 @@
 <!-- Header Start -->
 	<header class="header clearfix">
 		<div class="main_logo" id="logo">
-        <img src="LOGO.png">
+          <a class="navbar-brand px-1 mr-md-1" href="{% url 'home' %}">
+        <img src="{% media 'logo/logo.png' %}" alt="iLearn">
+    </a>
+
 		</div>
+        
         <div class="top-category">
 			<div class="ui compact menu cate-dpdwn">
 				<div class="ui simple dropdown item">
