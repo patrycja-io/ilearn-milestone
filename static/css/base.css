@@ -868,6 +868,7 @@ i.icon1 {
     border-radius: 10px;
 	border: 1px solid #efefef;
 	transition: all .2s ease-in-out;
+    margin-bottom: 10px;
 }
 
 .fcrse_img {
@@ -1648,6 +1649,7 @@ i.icon1 {
 }
 
 .item_f0 p {
+    padding-top: 50px;
     font-size: 16px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
