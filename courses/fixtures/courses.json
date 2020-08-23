@@ -80,9 +80,10 @@
             "sku": 34,
             "name": "Projects in Laravel: Learn Laravel Building 10 Projects",
             "category": 1,
-            "price": 50,
+            "price": 49.99,
+            "rating": 4.1,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image": "laravel01.jpg"
         }
     },
     {
@@ -93,6 +94,7 @@
             "name": "Complete React JS web developer with ES6 - Build 10 projects",
             "category": 2,
             "price": 200,
+            "rating": 4.2,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "03_react.jpg.jpg"
         }
@@ -271,11 +273,13 @@
         "model": "courses.course",
         "fields": {
             "sku": 98,
-           "name": "PHP with Laravel for beginners - Become a Master in Laravel",
+            "name": "PHP with Laravel for beginners - Become a Master in Laravel",
+            "category": 1,
+            "price": 149.99,
+            "rating": 4.1,
            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
-           "category": 1,
-            "price": 150
+            "image": "laravel02.jpg"
+           
         }
     },
     {
@@ -440,22 +444,25 @@
         "fields": {
             "sku": 1051672,
             "name": "Learn PHP from scratch!",
-            "image_url": "https://www.udemy.com/learn-php-from-scratch-by-niveditajain/",
-             "image": "437398_46c3_9.jpg",
             "category": 1,
-            "price": 25
+            "price": 19.99,
+            "image_url": "https://www.udemy.com/learn-php-from-scratch-by-niveditajain/",
+            "image": "php01.jpg"
+           
         }
     },
     {
         "pk": 38,
         "model": "courses.course",
         "fields": {
-            "sku": 1064104,
+             "sku": 4104,
             "name": "Laravel, the complete guide with real world projects",
-            "image_url": "https://www.udemy.com/best-laravel/",
-             "image": "437398_46c3_9.jpg",
             "category": 1,
-            "price": 99.99
+            "price": 99.99,
+            "rating": 4.1,
+            "image_url": "https://www.udemy.com/best-laravel/",
+            "image": "laravel00.jpg"
+           
         }
     },
     {
@@ -476,11 +483,12 @@
         "fields": {
             "sku": 814206,
             "name": "Learn By Example: PHP For Dynamic Websites",
+             "category": 1,
+            "price": 49.99,
             "image_url": "https://www.udemy.com/learn-by-example-php-for-dynamic-websites/",
-             "image": "437398_46c3_9.jpg",
-            "category": 1,
-            "price": 50
-        }
+             "image": "php03.jpg"
+            }
+           
     },
     {
         "pk": 41,
@@ -524,11 +532,12 @@
         "fields": {
             "sku": 715516,
            "name": "Modern Web Development with Laravel 5.2 (PHP Framework)",
+           "category": 1,
+            "price": 119.99,
             "image_url": "https://www.udemy.com/modern-web-development-with-laravel/",
-            "image": "437398_46c3_9.jpg",
-            "category": 1,
-            "price": 119.99
-        }
+            "image": "laravel04.jpg"
+                    }
+            
     },
     {
         "pk": 45,
@@ -548,11 +557,13 @@
         "model": "courses.course",
         "fields": {
             "sku": 418386,
+            "category": 1,
+            "price": 45,
             "name": "Create a REAL Social Network like Facebook in PHP + MySQL",
             "image_url": "https://www.udemy.com/make-a-social-media-website/",
-            "image": "437398_46c3_9.jpg",
-          "category": 1,
-            "price": 45
+            "image": "php00.jpg"
+         
+            
         }
     },
     {
