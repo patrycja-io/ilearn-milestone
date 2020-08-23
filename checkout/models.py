@@ -6,7 +6,7 @@ from django.db.models import Sum
 from django_countries.fields import CountryField
 
 from courses.models import Course
-from accounts.models import UserAccount
+from myaccount.models import UserAccount
 
 
 class Order(models.Model):
