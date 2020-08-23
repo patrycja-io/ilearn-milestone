@@ -13,10 +13,10 @@
 				<div class="ui simple dropdown item">
 					<a href="#" class="option_links p-0" title="categories"><i class="uil uil-apps"></i></a>
 					<div class="menu dropdown_category5">
-						<a href="#" class="item channel_item">Development</a>
-						<a href="#" class="item channel_item">Business</a>
-						<a href="#" class="item channel_item">Finance & Accounting</a>
-						<a href="#" class="item channel_item">IT & Software</a>
+						<a href="{% url 'courses' %}?category=html" class="item channel_item">HTML & CSS</a>
+						<a href="{% url 'courses' %}?category=javascript" class="item channel_item">Javascript & Frameworks</a>
+						<a href="{% url 'courses' %}?category=php" class="item channel_item">PHP & Laravel</a>
+						<a href="{% url 'courses' %}?category=python" class="item channel_item">Python & Frameworks</a>
 					</div>
 				</div>
 			</div>
