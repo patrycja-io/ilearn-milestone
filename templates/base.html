@@ -22,17 +22,18 @@
 <link href=" {% static 'css/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,500">
-<link rel="stylesheet" href="vendor/unicons-2.0.1/css/unicons.css">
+<link rel="stylesheet" href="unicons-2.0.1/css/unicons.css">
 
 {% endblock %}
 
 {% block extracss %}
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,500">
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.5/css/unicons.css">
 <link href=" {% static 'css/vertical-responsive-menu.min.css' %}" rel="stylesheet">
 <link href=" {% static 'css/responsive.css' %}" rel="stylesheet">
 <link href=" {% static 'css/semantic/semantic.min.css' %}" rel="stylesheet">
-<link href=" {% static 'css/billboard.css' %}" rel="stylesheet">
+
 {% endblock %}
 
 
@@ -40,11 +41,30 @@
   </head>
 
   <body>
-    	 {% if nav != False %}
+
+    {% if nav != False %}
     {% include 'components/nav.html' %}
     {% endif %}
 
- {% block content %}
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'components/bootstrap_toasts/error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'components/bootstrap_toasts//warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'components/bootstrap_toasts/success.html' %}
+                    {% else %}
+                        {% include 'components/bootstrap_toasts/info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% block content %}
     {% endblock %}
 
     {% if footer != False %}
@@ -54,14 +74,18 @@
     {% block postloadjs %}
     {% endblock %}
 
- {% block corejs %}
- <script src="https://js.stripe.com/v3/"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% block corejs %}
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+     <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+    {% endblock %}   
 
 
-{% endblock %}   
   </body>
 </html>
 
