@@ -63,7 +63,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.6,
-            "image": "437398_46c3_9.jpg",
+            "image": "js07.jpg",
             "image_url": ""
             
         }
@@ -75,7 +75,7 @@
             "sku": 31,
             "name": "React.js: Building Production Ready Apps, Start to Finish",
             "category": 2,
-            "price": 50,
+            "price": 13.99,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "02_react.jpg"
         }
@@ -100,7 +100,7 @@
             "sku": 40,
             "name": "Complete React JS web developer with ES6 - Build 10 projects",
             "category": 2,
-            "price": 200,
+            "price": 13.99,
             "rating": 4.2,
             "image_url": "",
             "image": "03_react.jpg"
@@ -113,8 +113,8 @@
             "sku": 41,
             "name": "Vue JS - Mastering Web Apps",
             "category": 2,
-            "price": 80,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "price": 13.99,
+            "image_url": "",
             "image": "vue00.jpg"
            
         }
@@ -126,9 +126,9 @@
             "sku": 42,
             "name": "JavaScript the Basics - JavaScript for Beginners",
             "category": 2,
-            "price": 120,
+            "price": 13.99,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image": "js10.jpg"
         }
     },
     {
@@ -137,9 +137,9 @@
         "fields": {
             "sku": 43,
             "name":"Build a Responsive Website with HTML5, CSS3 and Bootstrap 4",
-            "category": "3",
-            "price": 20,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "category": 3,
+            "price": 13.99,
+            "image_url": "",
             "image": "html04.jpg"
         }
     },
@@ -149,9 +149,9 @@
         "fields": {
             "sku": 46,
             "name": "Beginner Full Stack Web Development: HTML, CSS, React & Node",
-           "category": 2,
-            "price": 200,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "category": 2,
+            "price": 99.99,
+            "image_url": "",
             "image": "html05.jpg"
         }
     },
@@ -162,7 +162,7 @@
             "sku": 52,
             "name": "The Complete Web Development Tutorial Using React and Redux",
             "category": 2,
-            "price": 40,
+            "price": 13.99,
             "image_url": "",
             "image": "04_react.jpg"
         }
@@ -227,10 +227,11 @@
         "fields": {
             "sku": 78,
             "name": "JavaScript Game Development: Create Your Own Breakout Game",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "js00.jpg",
             "category": 2,
-            "price": 13.99
+            "price": 13.99,
+            "image_url": "",
+            "image": "js00.jpg"
+            
         }
     },
     {
@@ -238,11 +239,12 @@
         "model": "courses.course",
         "fields": {
             "sku": 84,
-           "name": "HTML5 and CSS3 for beginners: Create a Website from Scratch",
-           "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "html03.jpg",
-           "category": 3,
-            "price": 200
+            "name": "HTML5 and CSS3 for beginners: Create a Website from Scratch",
+            "category": 3,
+            "price": 13.99,
+            "image_url": "",
+            "image": "html03.jpg"
+          
         }
     },
     {
@@ -251,10 +253,11 @@
         "fields": {
             "sku": 90,
             "name":"Javascript from Beginner to Advanced Level",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "js01.jpg",
             "category": 2,
-            "price": 89.99
+            "price": 89.99,
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "js01.jpg"
+            
         }
     },
     {
@@ -263,10 +266,11 @@
         "fields": {
             "sku": 93,
             "name": "CSS Web Development Crash Course",
+            "price": 19.99,
+            "category": 3,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
-            "price": 65,
-            "category": 3
+            "image": "css00.jpg"
+            
         }
     },
     {
@@ -275,10 +279,11 @@
         "fields": {
             "sku": 95,
             "name": "Bootstrap 4: Exploring New Features",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "bootstrap00.jpg",
-           "category": 3,
-            "price": 75
+            "category": 3,
+            "price": 13.99,
+            "image_url": "",
+            "image": "bootstrap00.jpg"
+           
         }
     },
     {
@@ -329,10 +334,11 @@
         "fields": {
             "sku": 126,
             "name": "JavaScript Complete for beginners with real world Apps",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "js03.jpg",
             "category": 2,
-            "price": 99.99
+            "price": 99.99,
+            "image_url": "",
+            "image": "js03.jpg"
+          
         }
     },
     {
@@ -355,10 +361,11 @@
         "fields": {
             "sku": 135,
             "name": "The Complete JavaScript, HTML and CSS Tutorial For Beginners",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "js05.jpg",
             "category": 2,
-            "price": 39.99
+            "price": 39.99,
+            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image": "js05.jpg"
+           
         }
     },
     {
@@ -396,7 +403,7 @@
             "name": "JavaScript manipulation of the DOM Document Object Model",
             "category": 2,
             "price": 19.99,
-            "image_url": "https://www.udemy.com/javascript-manipulation-of-the-dom-document-object-model/",
+            "image_url": "",
             "image": "js05.jpg"
            
         }
@@ -422,7 +429,7 @@
             "name": "Build Your Own Calculator App with Javascript, HTML5 & CSS",
             "category": 2,
             "price": 49.99,
-            "image_url": "https://www.udemy.com/create-a-calculator-web-app-with-javascript-html-css/",
+            "image_url": "",
             "image": "html07.jpg"
           
         }
@@ -462,7 +469,7 @@
             "category": 2,
             "price": 99.99,
             "image_url": "https://www.udemy.com/javascript-tricks-and-workarounds/",
-            "image": "437398_46c3_9.jpg"
+            "image": "js09.jpg"
             
             }
     },
@@ -499,10 +506,11 @@
         "fields": {
             "sku": 900434,
             "name": "VueJS V1 Introduction to VueJS JavaScript Framework",
-            "image_url": "https://www.udemy.com/vuejs-introduction-to-vuejs-javascript-framework/",
-            "image": "vue01.jpg",
-           "category": 2,
-            "price": 99.99
+            "category": 2,
+            "price": 99.99,
+            "image_url": "",
+            "image": "vue01.jpg"
+          
         }
     },
     {
@@ -513,7 +521,7 @@
             "name": "Learn By Example: PHP For Dynamic Websites",
             "category": 1,
             "price": 49.99,
-            "image_url": "https://www.udemy.com/learn-by-example-php-for-dynamic-websites/",
+            "image_url": "",
             "image": "php03.jpg"
             }
            
@@ -524,10 +532,11 @@
         "fields": {
             "sku": 112,
             "name": "Web Design How to Create a Website HTML CSS Bootstrap",
-            "image_url": "https://www.udemy.com/how-to-create-a-website-html-css-bootstrap/",
-             "image": "00_html_css.jpg",
-           "category": 3,
-            "price": 75
+            "category": 3,
+            "price": 69.99,
+            "image_url": "",
+             "image": "00_html_css.jpg"
+           
         }
     },
     {
@@ -538,7 +547,7 @@
             "name": "Master Angular 4 by Example - Build 7 Awesome Apps!",
             "category": 2,
             "price": 119.99,
-            "image_url": "https://www.udemy.com/learn-angular-4/",
+            "image_url": "",
             "image": "angular01.jpg"
            
         }
@@ -551,8 +560,8 @@
             "name": "JavaScript in Action JavaScript Projects",
             "category": 2,
             "price": 149.99,
-            "image_url": "https://www.udemy.com/javascript-in-action-learn-javascript-projects/",
-            "image": "437398_46c3_9.jpg"
+            "image_url": "",
+            "image": "js08.jpg"
             
            }
     },
@@ -602,10 +611,11 @@
         "fields": {
             "sku": 857270,
             "name": "Become a HTML and CSS Developer - Build a Responsive Site",
-            "image_url": "https://www.udemy.com/learn-to-code-in-html-and-css/",
-            "image": "html00.jpg",
             "category": 3,
-            "price": 0
+            "price": 13.99,
+            "image_url": "",
+            "image": "html00.jpg"
+            
         }
     }
 
