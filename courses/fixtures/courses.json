@@ -89,7 +89,7 @@
             "category": 1,
             "price": 49.99,
             "rating": 4.1,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "laravel01.jpg"
         }
     },
@@ -102,8 +102,8 @@
             "category": 2,
             "price": 200,
             "rating": 4.2,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "03_react.jpg.jpg"
+            "image_url": "",
+            "image": "03_react.jpg"
         }
     },
     {
@@ -161,10 +161,10 @@
         "fields": {
             "sku": 52,
             "name": "The Complete Web Development Tutorial Using React and Redux",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "04_react.jpg",
-           "category": 2,
-            "price": 40
+            "category": 2,
+            "price": 40,
+            "image_url": "",
+            "image": "04_react.jpg"
         }
     },
     {
@@ -175,7 +175,7 @@
             "name": "Getting Started with NodeJS for Beginners",
             "category": 2,
             "price": 99.99,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "nodejs00.jpg"
             
         }
@@ -189,7 +189,7 @@
             "category": 2,
             "price": 13.99,
             "image_url": "",
-            "image": "437398_46c3_9.jpg"
+            "image": "react02.jpg"
            
         }
     },
@@ -370,8 +370,8 @@
             "category": 2,
             "price": 49.99,
             "rating": 4.5,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image_url": "",
+            "image": "react00.jpg"
            
         }
     },
@@ -409,8 +409,8 @@
             "name":"Learn React JS from scratch",
              "category": 2,
             "price": 99.99,
-            "image_url": "https://www.udemy.com/learn-react-js-from-scratch/",
-            "image": "437398_46c3_9.jpg"
+            "image_url": "",
+            "image": "react01.jpg"
            
         }
     },
