@@ -14,7 +14,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item">
-                                            <a href="#">Home</a>
+                                            <a href="{% url 'home' %}">Home</a>
                                         </li>
                                         <li class="breadcrumb-item active" aria-current="page">
                                             Shopping Cart
@@ -35,26 +35,29 @@
     <div class="mb4d25">
         <div class="container">
             <div class="row">
-                {% if basket_items %}
                 <div class="col-lg-8">
+                 {% if basket_items %}
+                       {% for course in basket_items %}
                     <div class="fcrse_1">
-                        {% for course in basket_items %}
+                    
                         <a href="#" class="hf_img">
                             <img class="cart_img" src="{{ course.image.url }}" alt="" />
                         </a>
                         <div class="hs_content">
                             <div class="eps_dots eps_dots10 more_dropdown">
-                                <a href=""><i class="uil uil-times"></i></a>
+                                <a href="{% url 'delete_from_basket' course.id %}"><i class="uil uil-times"></i></a>
                             </div>
-                            <a href="#" class="crse14s title900 pt-2">{{ course.name }}</a>
+                            <a href="{% url 'course_description' course.id %}" class="crse14s title900 pt-2">{{ course.name }}</a>
                             <p class="my-0 small text-muted">SKU: {{ course.sku|upper }}</p>
-                            <a href="#" class="crse-cate">{{ course.category }}</a>
+                            {% if course.category %}
+                            <a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate">{{ course.category.friendly_name }} </a>
+                            {% endif %}
                             <div class="auth1lnkprce">
                                 <div class="prce142">£ {{ course.price }}</div>
                             </div>
                         </div>
-                         {% endfor %}
                     </div>
+                     {% endfor %}
                     
                 </div>
 
@@ -62,7 +65,6 @@
                     <div class="membership_chk_bg rght1528">
                         <div class="checkout_title">
                             <h4>Order Summary</h4>
-                            <img src="./Cursus - Shopping Cart_files/line.svg" alt="" />
                         </div>
                         <div class="order_dt_section">
                             <div class="order_title">
