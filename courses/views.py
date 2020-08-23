@@ -42,8 +42,8 @@ def all_courses(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('courses'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(name__icontains=query)
             courses = courses.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -53,7 +53,7 @@ def all_courses(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        
+
     }
     return render(request, 'courses/courses.html', context)
 
