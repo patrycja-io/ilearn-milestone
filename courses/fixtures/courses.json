@@ -5,7 +5,7 @@
             "sku": 1,
             "name": "Learn Web Designing & HTML5/CSS3 Essentials in 4-Hours",
             "category": 3,
-            "price": 75,
+            "price": 75.99,
             "rating": 4.1,
              "image": "437398_46c3_9.jpg",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp"
@@ -17,8 +17,8 @@
         "fields": {
             "sku": 6,
             "name": "The Complete Bootstrap Masterclass Course - Build 4 Projects",
-            "price": 195,
             "category": 3,
+            "price": 199.99,
             "rating": 4.6,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
              "image": "437398_46c3_9.jpg"
@@ -106,7 +106,7 @@
             "category": 2,
             "price": 80,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg"
+            "image": "vue00.jpg"
            
         }
     },
@@ -453,7 +453,7 @@
             "image_url": "https://www.udemy.com/best-laravel/",
              "image": "437398_46c3_9.jpg",
             "category": 1,
-            "price": 200
+            "price": 99.99
         }
     },
     {
@@ -463,9 +463,9 @@
             "sku": 900434,
             "name": "VueJS V1 Introduction to VueJS JavaScript Framework",
             "image_url": "https://www.udemy.com/vuejs-introduction-to-vuejs-javascript-framework/",
-             "image": "437398_46c3_9.jpg",
+            "image": "vue01.jpg",
            "category": 2,
-            "price": 200
+            "price": 99.99
         }
     },
     {
@@ -525,7 +525,7 @@
             "image_url": "https://www.udemy.com/modern-web-development-with-laravel/",
             "image": "437398_46c3_9.jpg",
             "category": 1,
-            "price": 120
+            "price": 119.99
         }
     },
     {
@@ -535,9 +535,9 @@
             "sku": 1047968,
             "name": "Vue JS 2: From Beginner to Professional",
             "image_url": "https://www.udemy.com/vuejs-from-beginner-to-professional/",
-            "image": "437398_46c3_9.jpg",
-      "category": 2,
-            "price": 145
+            "image": "vue02.jpg",
+            "category": 2,
+            "price": 99.99
             
         }
     },
