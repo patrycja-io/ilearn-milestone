@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 
 def view_basket(request):
@@ -10,13 +10,13 @@ def view_basket(request):
 def add_to_basket(request, course_id):
     """ Add a quantity of the specified product to the shopping basket """
     redirect_url = request.POST.get('redirect_url')
-    basket = request.session.get('basket', {}) 
+    basket = request.session.get('basket', {})
 
     if course_id not in basket:
         basket[course_id] = course_id
 
     request.session['basket'] = basket
-    return redirect(redirect_url) 
+    return redirect(redirect_url)
 
 
 def delete_from_basket(request, course_id):
