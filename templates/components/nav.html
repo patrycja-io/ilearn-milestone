@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% load static %}
 
 <!-- Header Start -->
@@ -25,7 +26,7 @@
 		<div class="search120">
 			<div class="ui search">
 			  <div class="ui left icon input swdh10">
-				<input class="prompt srch10" type="text" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
+				<input class="prompt srch10" type="text" name="q" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
 				<i class="uil uil-search-alt icon icon1"></i>
 			  </div>
 			</div>
@@ -33,8 +34,8 @@
         </form>
 		<div class="header_right">
 			<ul>
-				<li>
-					<a href="create_new_course.html" class="upload_btn">My Account</a>
+				<li>	
+					<a href="" class="upload_btn">My Account</a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
@@ -48,6 +49,7 @@
                             {% endif %}
                         </div>
 				</li>
+                
 				<li>
 					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
                     <i class="uil uil-shopping-cart-alt"></i>
