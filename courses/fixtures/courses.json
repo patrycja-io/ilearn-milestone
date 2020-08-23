@@ -213,9 +213,9 @@
             "sku": 78,
             "name": "JavaScript Game Development: Create Your Own Breakout Game",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
-           "category": 2,
-            "price": 0
+            "image": "js00.jpg",
+            "category": 2,
+            "price": 13.99
         }
     },
     {
@@ -237,9 +237,9 @@
             "sku": 90,
             "name":"Javascript from Beginner to Advanced Level",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
+            "image": "js01.jpg",
             "category": 2,
-            "price": 195
+            "price": 89.99
         }
     },
     {
@@ -285,8 +285,9 @@
             "sku": 99,
             "name":"JavaScript 2017: Become Top Rated Web Developer",
             "image_url": "https://www.udemy.com/become-professional-javascript-developer/",
-           "category": 2,
-            "price": 115
+            "image": "js02.jpg",
+            "category": 2,
+            "price": 99.99
         }
     },
     {
@@ -308,9 +309,9 @@
             "sku": 126,
             "name": "JavaScript Complete for beginners with real world Apps",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
+            "image": "js03.jpg",
             "category": 2,
-            "price": 120
+            "price": 99.99
         }
     },
     {
@@ -320,9 +321,9 @@
             "sku": 131,
            "name": "JavaScript Tutorial: Learn JavaScript Code for Beginners",
            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
+            "image": "js04.jpg",
            "category": 2,
-            "price": 20
+            "price": 19.99
         }
     },
     {
@@ -332,9 +333,9 @@
             "sku": 135,
             "name": "The Complete JavaScript, HTML and CSS Tutorial For Beginners",
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "437398_46c3_9.jpg",
+            "image": "js05.jpg",
             "category": 2,
-            "price": 35
+            "price": 39.99
         }
     },
     {
@@ -358,7 +359,7 @@
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "437398_46c3_9.jpg",
           "category": 2,
-            "price": 50
+            "price": 49.99
         }
     },
     {
@@ -368,7 +369,7 @@
             "sku": 168,
             "name": "JavaScript manipulation of the DOM Document Object Model",
             "image_url": "https://www.udemy.com/javascript-manipulation-of-the-dom-document-object-model/",
-             "image": "437398_46c3_9.jpg",
+             "image": "js05.jpg",
            "category": 2,
             "price": 20
         }
@@ -382,7 +383,7 @@
             "image_url": "https://www.udemy.com/learn-react-js-from-scratch/",
              "image": "437398_46c3_9.jpg",
            "category": 2,
-            "price": 115
+            "price": 99.99
         }
     },
     {
@@ -394,7 +395,7 @@
             "image_url": "https://www.udemy.com/create-a-calculator-web-app-with-javascript-html-css/",
              "image": "437398_46c3_9.jpg",
            "category": 2,
-            "price": 50
+            "price": 49.99
         }
     },
     {
@@ -430,7 +431,8 @@
             "image_url": "https://www.udemy.com/javascript-tricks-and-workarounds/",
              "image": "437398_46c3_9.jpg",
             "category": 2,
-            "price": 100}
+            "price": 99.99
+            }
     },
     {
         "pk": 37,
