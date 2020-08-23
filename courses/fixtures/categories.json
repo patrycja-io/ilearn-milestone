@@ -4,7 +4,7 @@
     "model": "courses.category",
     "fields": {
       "name": "php",
-      "friendly_name": "PHP and Laravel"
+      "friendly_name": "PHP & Laravel"
     }
   },
   {
@@ -12,7 +12,7 @@
     "model": "courses.category",
     "fields": {
       "name": "javascript",
-      "friendly_name": "Javascript, Node.js & Frameworks"
+      "friendly_name": "Javascript & Frameworks"
     }
    },
    {
@@ -20,7 +20,7 @@
     "model": "courses.category",
     "fields": {
       "name": "html",
-      "friendly_name": "Html , Css & Bootstrap"
+      "friendly_name": "HTML5, CSS  & Frameworks "
     }
    },{
     "pk": 4,
