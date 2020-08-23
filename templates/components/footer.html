@@ -1,28 +1,31 @@
 {% load static %}
-    
+
     <footer class="footer mt-30">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-6">
 						<div class="item_f1">
-							<a href="about_us.html">About</a>
-                            					
+							<a href="about_us.html">Home</a>
+                            <a href="about_us.html">Shop</a>
+                            <a href="about_us.html">About</a>
+                            <a href="terms_of_use.html">T&C</a>					
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="item_f1">	<a href="about_us.html">Categories</a>								
+                        <div class="item_f1">		
+                        <a href="about_us.html">Register</a>
+                        <a href="about_us.html">Sign In</a>									
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6">
 						<div class="item_f1">
-                        
-							
-							<a href="terms_of_use.html">T&C</a>
-							
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6">
 						<div class="item_f3">
+                        <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h1 class=" text-white mb-3"><strong>iLearn &trade;</strong></h1>
+                        </a>
 							<a href="{}" class="btn1542">Contact Us</a>
                             </div>
 					</div>
@@ -31,13 +34,6 @@
 							<div class="row">
 								<div class="col-md-6">
 									<ul class="fotb_left">
-										<li>
-											<a href="index.html">
-												<div class="footer_logo">
-													<img src="images/logo1.svg" alt="">
-												</div>
-											</a>
-										</li>
 										<li>
 											<p>© 2020 <strong>Patrycja.io</strong>. All Rights Reserved.</p>
 										</li>
@@ -54,4 +50,5 @@
 					</div>
 				</div>
 			</div>
+            	</div>
 		</footer>
