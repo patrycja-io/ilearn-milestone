@@ -45,8 +45,8 @@
                             <img class="cart_img" src="{{ course.image.url }}" alt="" />
                         </a>
                         <div class="hs_content">
-                            <div class="eps_dots eps_dots10 more_dropdown">
-                                <a href="{% url 'delete_from_basket' course.id %}"><i class="uil uil-times"></i></a>
+                            <div class="eps_dots">
+                                <a href="{% url 'delete_from_basket' course.id %}"><i class="uil uil-times-square"></i></a>
                             </div>
                             <a href="{% url 'course_description' course.id %}" class="crse14s title900 pt-2">{{ course.name }}</a>
                             <p class="my-0 small text-muted">SKU: {{ course.sku|upper }}</p>
