@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<div class="section3125 mt-30">
-    <h4 class="item_title">All courses</h4>
-    <a href="#" class="see150">See all</a>
+<div class="wrapper _bg4586 _new89">
+    <div class="_215b15">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title125">
+                        <div class="titleleft">
+                            <div class="ttl121">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'home' %}">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Courses
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title126">
+                        <h2>Courses</h2>
+                    </div>
+				</div>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="container">
+            <div class="row">
+      <div class="section3125 mt-30">
+    
     <div class="col-md-12">
+     <div class="course_tabs">
+     <div class="nav nav-tabs tab_crse justify-content-center">
+      <a href="{% url 'courses' %}?category=html"  class="nav-item nav-link">HTML & CSS </a>
+       <a href="{% url 'courses' %}?category=javascript" class="nav-item nav-link">Javascript & Frameworks</a>
+        <a href="{% url 'courses' %}?category=php"  class="inav-item nav-link">PHP & Laravel</a>
+         <a href="{% url 'courses' %}?category=python" class="nav-item nav-link">Python & Frameworks</a>
+          </div>
+           </div>
+ 
+    <a href="{% url 'courses' %}" class="see150">See all</a>
         <div class="_14d25">
             <div class="row">
-            	<div class="titleleft">					
-								<div class="ttl121">
-									<nav aria-label="breadcrumb">
-										<ol class="breadcrumb">
-											<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-											<li class="breadcrumb-item active" aria-current="page">Terms of Use</li>
-										</ol>
-									</nav>
-								</div>
-							</div>
                 {% for course in courses %}
                 <div class="col-lg-3 col-md-4">
                     <div class="fcrse_1 mt-30">
@@ -55,4 +85,6 @@
         </div>
     </div>
 </div>
+   </div>
+      </div>
 {% endblock %}
