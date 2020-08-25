@@ -1,0 +1,2298 @@
+/****************
+Night Mood
+****************/
+
+.btn-night-mode .btn-night-mode-switch {
+    display: inline-block;
+    height: 18px;
+    width: 37px;
+    top: 35%;
+    right: 13px;
+    position: absolute;
+}
+
+.btn-night-mode .uk-switch-button {
+    background-color: rgba(0, 0, 0, 0.09);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 500px;
+    bottom: 0;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .2s;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.07);
+}
+
+.btn-night-mode .uk-switch-button:before {
+    content: '';
+    background-color: #a9a9a9;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 0px;
+    bottom: -1px;
+    border-radius: 50%;
+    transition-property: transform, box-shadow;
+    transition-duration: .2s;
+}
+
+.night-mode .btn-night-mode .uk-switch-button {
+    background-color: #4e4e4e !important;
+}
+
+.night-mode .btn-night-mode .uk-switch-button:before {
+    transform: scale(1.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.22);
+    transform: translateX(17px);
+    background: #fff;
+}
+
+
+.night-mode html , 
+.night-mode body , 
+.night-mode .main_content ,
+.night-mode .bg-gradient-warning  ,
+.night-mode .sidebar ,
+.night-mode .nav-profile ,
+.night-mode .post .post-add-comment-text-area,
+.night-mode .post .post-add-comment-text-area input{
+    background-color: #000 !important;
+    border-color: #242424 !important;
+    color: hsla(0, 0%, 100%, 0.79) !important;
+}
+
+.night-mode body {
+    background: #000 !important;
+	height: auto;
+    float: left;
+    width: 100%;
+}
+
+.night-mode body::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+
+.night-mode body::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.night-mode body::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.night-mode body::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: rgba(51,51,51,.6);
+    -webkit-box-shadow: inset -1px -1px 0 rgba(51,51,51,.05), inset 1px 1px 0 rgba(51,51,51,.05);
+}
+
+.night-mode .header {
+    background: #242424;
+}
+
+.night-mode .srch10 {
+    background: rgba(255, 255, 255, 0.15)!important;
+    border: 0 !important;
+    color: #393939 !important;
+}
+
+.night-mode i.icon1 {
+    font-size: 16px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.night-mode .ui[class*="left icon"].swdh10.input>input:focus {
+	background-color: #fff !important;
+}
+
+.night-mode .srch10:focus+.icon1 {
+	color: #333 !important;
+}
+
+.night-mode .upload_btn {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #fff !important;
+    background: #ed2a26;
+    padding: 9px 15px;
+    border-radius: 25px;
+	margin-right: 10px;
+}
+
+.night-mode .upload_btn i {
+    font-size: 16px;
+    margin-right:3px;
+}
+
+.night-mode .upload_btn:hover {
+    color: #fff !important;
+    background: #cc2622 !important;
+}
+
+.night-mode .menu.dropdown_ms {
+    width: 300px;
+    margin-top: 17px !important;
+    border-top: 1px solid #242424 !important;
+    border-radius: 3px !important;
+    min-width: 300px !important;
+    background: #171717 !important;
+}
+
+.night-mode .menu.dropdown_mn {
+    width: 300px;
+    margin-top: 17px !important;
+    border-top: 1px solid #242424 !important;
+    border-radius: 3px !important;
+    min-width: 300px !important;
+    background: #171717 !important;
+}
+
+.night-mode .menu.dropdown_account {
+    margin-top: 11px !important;
+    border-top: 1px solid #242424 !important;
+    border-radius: 3px !important;
+	background: #171717 !important;
+}
+
+.night-mode .channel_my {
+    padding: 15px !important;
+    border-bottom: 1px solid #242424 !important;
+    min-width: 100%;
+    max-width: 100%;
+    white-space: normal;
+}
+
+.night-mode  .pd_content p {
+    color: #c7c7c7 !important;
+}
+
+.night-mode .ui.dropdown .menu>.channel_my:hover {
+    color: #fff !important;
+    background: #333 !important;
+}
+
+.night-mode .vbm_btn {
+    width: 100%;
+    text-align: center;
+    float: left;
+    padding: 15px 0;
+    background: #ed2a26;
+    font-size: 14px;
+    color: #fff !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.night-mode .vbm_btn:hover {
+    background: #cc2622;
+    color: #fff !important;
+}
+
+.night-mode  .option_links:hover, .night-mode  .option_links:focus {
+    color: #fff !important;
+}
+
+.night-mode .night_mode_switch__btn a i {
+	background-color: #333 !important;
+    color: white !important;
+}
+
+.night-mode .pd_content span {
+    color: #c7c7c7;
+}
+
+.night-mode .night_mode_switch__btn {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .ui.dropdown .menu>.channel_item {
+    color: #c7c7c7 !important;
+    padding: .78571429rem 1.14285714rem!important;
+    font-size: 14px !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.night-mode .ui.dropdown .menu>.channel_item:hover {
+    color: #fff !important;
+    background: #333 !important;
+}
+
+.night-mode .menu--link.active {
+    background: #12141E ;
+    color: #fff;
+}
+
+.night-mode .menu--link.active {
+    background: #12141E ;
+    color: #fff;
+}
+
+.night-mode .vertical_nav {
+    background: #333;
+}
+
+.night-mode  .menu--link:hover, .night-mode .menu--link:hover .menu--label {
+	background: #242424;
+}
+
+.night-mode .menu--link {
+    color: #c7c7c7;
+}
+
+.night-mode .sub_menu--link:hover {
+	color: #fff !important;
+	background: #333;
+}
+
+.night-mode .sub_menu--link.active {
+	color: #fff;
+	font-weight: 500;
+}
+
+.night-mode .menu--subitens__opened {
+    background: #242424;
+}
+
+.night-mode .menu--link:hover {
+	background: #333;
+	color: #fff !important;
+}
+
+.night-mode .menu--link.active {
+	background: #242424;
+	color: #fff !important;
+}
+
+.night-mode .left_section {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .stream_1 {
+    background: rgba(51,51,51, 0.5);
+}
+
+.night-mode .fcrse_1 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .vdtodt {
+    color: #c7c7c7;
+}
+
+.night-mode .cr1fot {
+    color: #c7c7c7;
+}
+
+.night-mode .prce142 {
+    color: #fff;
+}
+
+.night-mode .pd_content h6 {
+    color: #fff !important;
+}
+
+.night-mode .live_stream .owl-nav .owl-next {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .live_stream .owl-nav .owl-prev {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .live_stream .owl-nav .owl-prev:hover {
+	color: #fff !important;
+	opacity: 1;
+	background: #ed2a26 !important;
+	border: 1px solid #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}	
+
+.night-mode .live_stream .owl-nav .owl-next:hover {
+	color: #fff !important;
+	opacity: 1;
+	border: 1px solid #ed2a26 !important;
+	background: #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.night-mode .featured_courses .owl-nav .owl-next {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .featured_courses .owl-nav .owl-prev {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .featured_courses .owl-nav .owl-prev:hover {
+	color: #fff !important;
+	opacity: 1;
+	background: #ed2a26 !important;
+	border: 1px solid #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}	
+
+.night-mode .featured_courses .owl-nav .owl-next:hover {
+	color: #fff !important;
+	opacity: 1;
+	border: 1px solid #ed2a26 !important;
+	background: #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.night-mode .Student_says .owl-nav .owl-next {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .Student_says .owl-nav .owl-prev {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .Student_says .owl-nav .owl-prev:hover {
+	color: #fff !important;
+	opacity: 1;
+	background: #ed2a26 !important;
+	border: 1px solid #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}	
+
+.night-mode .Student_says .owl-nav .owl-next:hover {
+	color: #fff !important;
+	opacity: 1;
+	border: 1px solid #ed2a26 !important;
+	background: #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.night-mode .dropdown-content {
+    background-color: #242424;
+    box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    border: 1px solid rgba(25,29,47,.15);
+}
+
+.night-mode .dropdown-content span {
+	color: #c7c7c7;
+}
+
+.night-mode .dropdown-content span:hover {
+	color: #fff !important;
+	background-color: #333;
+}
+
+.night-mode .value_props {
+    background: #333;
+}
+
+.night-mode  .value_icon i {
+    color: #fff;
+    background: #242424;
+}
+
+.night-mode .crse14s {
+    color: #fff !important;
+}
+
+.night-mode .value_content p {
+    color: #c7c7c7;
+}
+
+.night-mode .tutor_name {
+    color: #fff !important;
+}
+
+.night-mode .tutor_cate {
+    color: #c7c7c7;
+}
+
+.night-mode .tut1250 {
+    color: #c7c7c7;
+}
+
+.night-mode .fcrse_4 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .say_content p {
+    color: #c7c7c7;
+}
+
+.night-mode .stream_bg p {
+    color: #c7c7c7;
+}
+
+.night-mode .footer {
+    background: #242424;
+}
+
+.night-mode .btn1542 {
+    color: #fff !important;
+}
+
+.night-mode .fcrse_2 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .fcrse_3 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .cater_ttle {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .live_icon i {
+    background: #242424;
+    border: 1px solid #242424;
+}
+
+.night-mode .live-content p {
+    color: #c7c7c7;
+}
+
+.night-mode .livinfo {
+    color: #c7c7c7;
+}
+
+.night-mode .live_link {
+    background: #ed2a26;
+    color: #fff !important;
+}
+
+.night-mode .live_link:hover {
+	color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .tutor_social_links li a {
+    color: #fff !important;
+}
+
+.night-mode .get1452 {
+    border: 1px solid #242424;
+}
+
+.night-mode .strttech120 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .strttech120 p {
+    color: #c7c7c7;
+}
+
+.night-mode .back_link a {
+    color: #fff !important;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.night-mode .back_link a:hover {
+    color: #fff !important;
+    background: #ed2a26;
+    border: 1px solid #ed2a26;
+}
+
+.night-mode .toggle_menu i {
+    background: #333;
+    color: #fff;
+}
+
+.night-mode ._215cd2 {
+    background: #333;
+}
+
+.night-mode  .tab_crse .nav-link {
+    color: #c7c7c7 !important;
+}
+
+.night-mode .course_tabs .nav-tabs .nav-item.show .nav-link, .night-mode .course_tabs .nav-tabs .nav-link.active {
+    color: #fff !important;
+}
+
+.night-mode .course_tabs .nav-tabs .nav-link:hover {
+    color: #fff !important;
+}
+
+.night-mode .title589 p {
+    color: #c7c7c7;
+}
+
+.night-mode .feature125 i {
+    color: #fff;
+}
+
+.night-mode .feature125 p {
+    color: #c7c7c7;
+}
+
+.night-mode ._215zd5 {
+    background: #171717;
+}
+
+.night-mode .title478 p {
+    color: #c7c7c7;
+}
+
+.night-mode .p__metric {
+    color: #fff;
+}
+
+.night-mode .p__metric span {
+    color: #c7c7c7;
+}
+
+.night-mode ._215xd5 {
+    background: #171717;
+}
+
+.night-mode .jmio125 p {
+    color: #c7c7c7;
+}
+
+.night-mode .crer_btn_link {
+    color: #fff !important;
+    background: #ed2a26;
+}
+
+.night-mode .crer_btn_link:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .add_stream_content {
+	background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .sf475 {
+    color: #c7c7c7;
+}
+
+.night-mode p {
+	color: #c7c7c7;
+}
+
+.night-mode .stm_key {
+    color: #fff;
+}
+
+.night-mode .group-form label {
+    color: #fff;
+}
+
+.night-mode .slive_tabs .nav-link {
+    border: 1px solid #fff !important;
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.night-mode .slive_tabs .nav-link:hover {
+    border: 1px solid #fff !important;
+    background-color: #fff !important;
+    color: #08090f !important;
+}
+
+.night-mode .slive_tabs .nav-item.show .nav-link, .night-mode .slive_tabs .nav-link.active {
+    color: #fff !important;
+    background-color: #ed2a26 !important;
+    border-color: #ed2a26 !important;
+    border-radius: 20px;
+}
+
+.night-mode ._dlor1 {	
+	background: #242424 !important;
+    border: 0 !important;
+    color: #dbdbdb !important;
+}
+
+.night-mode ._6tf7s:hover {
+    background: #cc2622;
+    color: #fff;
+}
+
+.night-mode ._145d1:hover {
+    background: #cc2622;
+    color: #fff;
+}
+
+.night-mode .ui.toggle.checkbox .box:before, .night-mode .ui.toggle.checkbox label:before {
+    background-color: rgba(36, 36, 36) !important;
+}
+
+.night-mode ._1457s2 label {
+    color: #c7c7c7 !important;
+}
+
+.night-mode .ui.toggle.checkbox input:checked~.box, .night-mode .ui.toggle.checkbox input:checked~label {
+    color: #fff !important;
+}
+
+.night-mode .ui.toggle.checkbox input:focus:checked~.box, .night-mode .ui.toggle.checkbox input:focus:checked~label {
+    color: #fff !important;
+}
+
+.night-mode .srch_explore {
+    background: #333 !important;
+    border: 1px solid #242424 !important;
+    color: #787878 !important;
+	box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.night-mode i.icon2 {
+    font-size: 20px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.night-mode .ui[class*="left icon"].swdh11.input>input:focus {
+	background-color: #fff !important;
+}
+
+.night-mode .srch_explore:focus+.icon2 {
+	color: #333 !important;
+}
+
+/* === Animation Loader === */
+
+.night-mode .spinner {
+    margin: 0 auto 0;
+    width: 50px;
+    text-align: center;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #333;
+    line-height: 20px;
+    border: 1px solid #242424;
+    cursor: pointer;
+}
+
+.night-mode .spinner > div {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.night-mode .spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #c7c7c7;
+}
+
+.night-mode .spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #c7c7c7;
+  opacity: 0.702;
+}
+
+.night-mode .spinner .bounce3 {
+  -webkit-animation-delay: -0.12s;
+  animation-delay: -0.12s;
+  background-color: #c7c7c7;
+  opacity: 0.4;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+.night-mode ._215b15 {
+    background: #333;
+}
+
+.night-mode .ttl121 .breadcrumb {
+    background-color: #333 !important;
+}
+
+.night-mode .breadcrumb-item.active {
+    color: #fff !important;
+}
+
+.night-mode .career_lnk6 {
+    color: #fff !important;
+    background: #ed2a26;
+}
+
+.night-mode .career_lnk6:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .vdtodt55 {
+    color: #c7c7c7;
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .ui.selection.dropdown.cntry152 {
+    border: 1px solid #242424 !important;
+	box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3) !important;
+	background: #333;
+}
+
+.night-mode .ui.dropdown .menu {
+    background: #171717  !important;
+    border: 1px solid rgba(36,36,36,.15) !important;
+}
+
+.night-mode .ui.selection.dropdown .menu>.item {
+    border-top: 1px solid #242424 !important;
+}
+
+.night-mode .ui.selection.dropdown .menu>.item:hover, .night-mode .ui.selection.dropdown .menu>.item:focus {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+.night-mode .ui.dropdown .menu>.item {
+    color: #c7c7c7 !important;
+}
+
+.night-mode .ui.dropdown .menu .selected.item, .night-mode .ui.dropdown.selected {
+    color: #c7c7c7 !important;
+}
+
+.night-mode .ui.selection.cntry152.dropdown {
+	color: #c7c7c7 !important;
+}
+
+.night-mode .form-group1 label {
+    color: #fff;
+}
+
+.night-mode .image-upload-wrap {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .drag-text i {
+    color: #dbdbdb;
+}
+
+.night-mode .drag-text .applyfile {
+    color: #fff;
+}
+
+.night-mode .apply_form {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .apply_links_sco {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .ui.form.swdh30 textarea {
+    background: #333;
+    border: 1px solid #242424 !important;
+}
+
+.night-mode .ui.form.swdh30 textarea:focus {
+    border: 1px solid #242424 !important;
+    box-shadow: none;
+	background: #fff;
+}
+
+.night-mode .save_btn:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .prevlink {
+    color: #fff;
+}
+
+.night-mode  .prev_title {
+    color: #c7c7c7;
+}
+
+.night-mode .prevlink1 {
+    color: #fff;
+}
+
+.night-mode  .prev_title1 {
+    color: #c7c7c7;
+}
+
+.night-mode .bp_left i {
+    color: #fff;
+}
+
+.night-mode .bp_right i {
+    color: #fff;
+}
+
+.night-mode .feature_careers  .owl-nav .owl-next {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .feature_careers  .owl-nav .owl-prev {
+    color: #fff !important;
+    background: #242424 !important;
+    border: 1px solid #333 !important;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.night-mode .feature_careers .owl-nav .owl-prev:hover {
+	color: #fff !important;
+	opacity: 1;
+	background: #ed2a26 !important;
+	border: 1px solid #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}	
+
+.night-mode .feature_careers .owl-nav .owl-next:hover {
+	color: #fff !important;
+	opacity: 1;
+	border: 1px solid #ed2a26 !important;
+	background: #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.night-mode .apply_job_link {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .apply_job_link span {
+    color: #c7c7c7;
+}
+
+.night-mode .career_lnk5 {
+    color: #fff !important;
+}
+
+.night-mode .career_lnk5:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode ._cate101 {
+    background: #333;
+    color: #fff;
+}
+
+.night-mode ._215certibg {
+    background: #333;
+}
+
+.night-mode  .login-btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .catey-tabs .nav-pills .nav-link.active, .night-mode .catey-tabs .nav-pills .show>.nav-link {
+    color: #fff !important; 
+    background-color: #ed2a26 !important;
+}
+
+.night-mode .certilink__152 {
+    background: #333;
+    color: #c7c7c7 !important;
+	border: 1px solid #242424;
+	position: relative;
+    top: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.night-mode .certilink__152:hover {
+    box-shadow: -0.083333333in 0.5pc 1.125pc -7px rgba(25,42,70,.6);
+	color: #fff !important;
+	top: -10px;
+}
+
+.night-mode ._485td5 {
+    background: #333;
+}
+
+.night-mode .knowledge_btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .sign_form {
+    background: #242424;
+}
+
+.night-mode .panel-default {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .ui.checkbox label, .night-mode .ui.checkbox+label {
+    color: #fff !important;
+}
+
+.night-mode .ui.checkbox label:hover, .night-mode .ui.checkbox+label:hover {
+    color: #fff !important;
+}
+
+.night-mode .ui.pointing.dropdown>.menu:after {
+    background: #12141E !important;
+}
+
+.night-mode .download_btn {
+	color: #fff !important;
+}
+
+.night-mode .download_btn:hover {
+	color: #fff !important;
+	background: #cc2622;
+}
+
+.night-mode .test_timer_bg {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .timer_time h4 {
+    color: #fff;
+    border: 2px solid #fff;
+    background: #333;
+}
+
+.night-mode .timer_time p {
+    color: #fff;
+}
+
+.night-mode .ques_title {
+    color: #fff;
+}
+
+.night-mode .test_submit_btn:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .test_timer_left li {
+    border-right: 1px solid #242424;
+}
+
+.night-mode .test_timer_left li:last-child {
+    border-right: 0;
+}
+
+.night-mode .membership_chk_bg {
+	background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .lbel25 label {
+    color: #fff;
+}
+
+.night-mode .address_text {
+    color: #c7c7c7;
+}
+
+.night-mode  .help-block {
+    color: #c7c7c7;
+}
+
+.night-mode .save_address_btn:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .checkout-tabs .nav-tabs .nav-item {
+    width: 33.333%;
+    text-align: center;
+    border-right: 1px solid #333; 
+}
+
+.night-mode .checkout-tabs .nav-tabs .nav-item:last-child {
+    border-right: 0; 
+}
+
+.night-mode .checkout-tabs .nav-tabs {
+    border-top: 1px solid #242424;
+    border-left: 1px solid #242424;
+    border-right: 1px solid #242424;
+    background: #242424;
+}
+
+.night-mode .checkout-tabs .nav-tabs .nav-item .nav-link:hover {
+    color: #fff !important;
+	border-bottom: 2px solid #fff;
+}
+
+.night-mode .chckout_order_dt {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .order_title {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .order_title .order_price {
+    color: #fff;
+}
+
+.night-mode .order_title h4 {
+    color: #c7c7c7;
+}
+
+.night-mode .order_title .order_price5 {
+    color: #fff;
+}
+
+.night-mode .scr_text {
+    color: #c7c7c7;
+}
+
+.night-mode .chckot_btn:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .joblink {
+    color: #fff !important;
+}
+
+.night-mode .joblink:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+
+.night-mode .blogbg_1 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .cmpy14s {
+    color: #fff !important;
+}
+
+.night-mode .cmpylink {
+    color: #fff !important;
+}
+
+.night-mode .cmpylink:hover {
+    color: #fff !important;
+	text-decoration: underline !important;
+}
+
+.night-mode .contact_link_step {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .contact_map {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .contact_list_info .cntct_895 {
+    color: #fff;
+}
+
+.night-mode ._byt1458 {
+    background: #242424 !important;
+}
+
+.night-mode .lkcm152 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode ._5f7g11 {
+    color: #c7c7c7;
+}
+
+.night-mode ._abc123 {
+    color: #fff;
+}
+
+.night-mode ._htgdrt {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode ._5f7g15 span {
+    color: #c7c7c7;
+}
+
+.night-mode ._5f7g15 i {
+    color: #fff;
+}
+
+.night-mode .accordion-header {
+    border: solid 1px #242424;
+	background: #333;
+}
+
+.night-mode .accordion-header .section-title-text {
+    color: #fff;
+}
+
+.night-mode .ui-accordion-content .lecture-container {
+    background-color: #171717;
+    border-bottom: 1px solid #242424;
+    color: #c7c7c7;
+}
+
+.night-mode .ui-accordion-content {
+    border-left: 1px solid #242424;
+    border-right: 1px solid #242424;
+    background: #333;
+}
+
+.night-mode .ui-accordion-content .title {
+    color: #c7c7c7;
+}
+
+.night-mode .accordion-header .num-items-in-section {
+    color: #c7c7c7;
+}
+
+.night-mode .accordion-header .section-header-length {
+    color: #c7c7c7;
+}
+
+.night-mode .ui-accordion-content .content-summary {
+    color: #c7c7c7;
+}
+
+.night-mode .btn1458 {
+    border: 1px solid #242424;
+    background: #333;
+    color: #fff !important;
+}
+
+.night-mode .btn1458:hover {
+    border: 1px solid #242424;
+    background: #242424;
+    color: #fff !important;
+}
+
+.night-mode .reviews_left {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode ._rate002 {
+    color: #fff;
+}
+
+.night-mode .review_all120 {
+    background: #333;
+}
+
+.night-mode .rpt100 span {
+    color: #c7c7c7;
+}
+
+
+.night-mode .radio-label {
+    color: #c7c7c7;
+}
+
+.night-mode .review_item {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .caption-content {
+    background-color: #333;
+    border: 242424);
+}
+
+.night-mode .caption-content span {
+    color: #c7c7c7;
+}
+
+.night-mode ._df7852 {
+    color: #fff !important;
+}
+
+.night-mode ._215b01 {
+    background: #313131;
+}
+
+.night-mode .ui.dropdown .menu>.item>.description, .night-mode .ui.dropdown>.text>.description {
+    float: right;
+    margin: 0 0 0 1em;
+    color: rgba(255,255,255,.6);
+}
+
+.night-mode .sign_in_up_bg:before {
+    opacity: 0.2;
+}
+
+.night-mode .ui[class*="left icon"].swdh95.input>input:focus {
+	background-color: #fff !important;
+}
+
+.night-mode .sign_in_up_bg {
+    height: 100% !important;
+	background: #000 !important;
+}
+
+.night-mode .sign_footer {
+    color: #fff;
+}
+
+.night-mode ._215v12 {
+    background: #313131;
+}
+
+.night-mode .value_props50 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .value_props51 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .rqst152 {
+    color: #fff !important;
+}
+
+.night-mode .rqst152:hover {
+    background: #cc2622;
+}
+
+.night-mode .ht_title {
+    color: #fff;
+}
+
+.night-mode ._216b01 {
+    background: #212121;
+}
+
+.night-mode .cmmnt_1526 {
+    background: #333;
+	border: 1px solid #242424;
+}
+
+.night-mode .cmnt-btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .wtch125 {
+    color: #c7c7c7;
+}
+
+.night-mode a.rmv-btn {
+    color: #fff !important;
+}
+
+.night-mode a.rmv-btn:hover {
+    background: #cc2622;
+}
+
+.night-mode .live_input {
+    color: #333;
+	background: #242424;
+}
+
+.night-mode .live_comment {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .live_input:focus {
+	background: #fff;
+}
+
+.night-mode .membership_bg {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .save_price {
+    color: #c7c7c7;
+}
+
+.night-mode .chck_icon_1 {
+    color: #c7c7c7;
+}
+
+.night-mode .panel-body {
+    color: #c7c7c7;
+}
+
+.night-mode .prmb_btn:hover {
+    background: #cc2622;
+    color: #fff;
+}
+
+.night-mode .panel-default:first-child {
+    border-top: 0;
+}
+
+.night-mode .membership_faq_bg {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .panel-title a {
+    color: #fff !important;
+}
+
+.night-mode .sbbc145:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .purchased_badge {
+    background: #fa8305;
+}
+
+.night-mode .blogleft12 li {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .category-topics {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .category-topics:first-child {
+    border-top: 0;
+}
+
+.night-mode .press_item {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .vdtopress {
+    color: #c7c7c7;
+}
+
+.night-mode .press_item .press_title {
+    color: #fff !important;
+}
+
+.night-mode .report_history a {
+    color: #fff !important;
+}
+
+.night-mode .report_history span {
+    color: #f7f7f7;
+}
+
+.night-mode .rs6t_title {
+    color: #fff;
+}
+
+.night-mode .filter_selector {
+    color: #fff;
+}
+
+.night-mode  .filter__counter {
+    color: #dbdbdb;
+}
+
+
+.night-mode .billing-percentages-progress-bar__labels li {
+    color: #fff;
+}
+
+.night-mode .radio-label_1 {
+    color: #fff;
+    background: #333;
+}
+
+.night-mode .pymnt_title span {
+    color: #fff;
+}
+
+.night-mode .save_payout_btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .nt_apt {
+    color: #c7c7c7;
+}
+
+.night-mode .api_btn {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.night-mode .api_btn:hover {
+    border: 1px solid #fff;
+    color: #000;
+    background: #fff;
+}
+
+.night-mode .ttrm15 li {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .ttrm15 li:last-child {
+    border-bottom: 0;
+}
+
+.night-mode .atlink {
+    color: #fff;
+}
+
+.night-mode .main-tabs .nav-tabs {
+    border-top: 1px solid #242424;
+    border-left: 1px solid #242424;
+    border-right: 1px solid #242424;
+    background: #333;
+}
+
+.night-mode .main-tabs .nav-tabs .nav-item {
+    border-right: 1px solid #242424;
+}
+
+.night-mode .main-tabs .nav-tabs .nav-item:last-child {
+    border-right: 0;
+}
+
+.night-mode .main-tabs .nav-tabs .nav-item .nav-link:hover {
+    color: #fff !important;
+	border-bottom: 2px solid #fff;
+}
+
+.night-mode .main-tabs .nav-tabs .nav-item.show .nav-link, .night-mode .main-tabs .nav-tabs .nav-link.active {
+    color: #fff !important;
+    background-color: none !important;
+    border-bottom: 2px solid #ed2a26 !important;
+}
+
+.night-mode .sgntrm145 a {
+    color: #fff !important;
+}
+
+ /* Instructor Dashbaord Studio */ 
+ 
+.night-mode .card_dash {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .card_dash1 {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .card_dash_left1 i {
+    color: #c7c7c7;
+}
+
+.night-mode .create_btn_dash:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .courses_performance .owl-nav .owl-prev {
+	background: #242424 !important;
+	border: 1px solid #333 !important;
+	color: #fff !important;
+}
+
+.night-mode .courses_performance .owl-nav .owl-next {
+	background: #242424 !important;
+	border: 1px solid #333 !important;
+	color: #fff !important;
+}
+
+.night-mode .courses_performance .owl-nav .owl-prev:hover {
+	color: #fff !important;
+	opacity: 1;
+	background: #ed2a26 !important;
+	border: 1px solid #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}	
+
+.night-mode .courses_performance .owl-nav .owl-next:hover {
+	color: #fff !important;
+	opacity: 1;
+	border: 1px solid #ed2a26 !important;
+	background: #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.night-mode .edututs_news .owl-nav .owl-prev {
+	background: #242424 !important;
+	border: 1px solid #333 !important;
+	color: #fff !important;
+}
+
+.night-mode .edututs_news .owl-nav .owl-next {
+	background: #242424 !important;
+	border: 1px solid #333 !important;
+	color: #fff !important;
+}
+
+.night-mode .edututs_news .owl-nav .owl-prev:hover {
+	color: #fff !important;
+	opacity: 1;
+	background: #ed2a26 !important;
+	border: 1px solid #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}	
+
+.night-mode .edututs_news .owl-nav .owl-next:hover {
+	color: #fff !important;
+	opacity: 1;
+	border: 1px solid #ed2a26 !important;
+	background: #ed2a26 !important;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.07);
+}
+
+.night-mode .crse-perf-left {
+    color: #c7c7c7;
+}
+
+.night-mode .crse-perf-right {
+    color: #c7c7c7;
+}
+
+.night-mode .crsedt145 {
+    color: #fff !important;
+}
+
+.night-mode .new_links10 {
+	color: #fff !important;
+    border-bottom: 1px dashed #242424;
+}
+
+.night-mode .new_links10:last-child {
+    border-bottom: 0;
+}
+
+.night-mode .cr1fot50 {
+    color: #fff !important;
+}
+
+.night-mode .my_courses_tabs .nav-pills .nav-link.active, .night-mode .my_courses_tabs .nav-pills .show>.nav-link {
+    color: #fff !important;
+    background-color: #ed2a26 !important;
+}
+
+.night-mode .my_crse_nav {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .my_courses_tabs .nav-link {
+    color: #fff !important;
+}
+
+.night-mode .ucp-table thead {
+    color: #fff !important;
+}
+
+.night-mode .table-responsive {
+    border: 1px solid #242424;
+}
+
+.night-mode .ucp-table thead tr th {
+    color: #fff !important;
+    font-size: 14px;
+    background-color: #171717 !important;
+}
+
+.night-mode .ucp-table td, .night-mode .ucp-table th {
+    border-top: 1px solid #242424 !important;
+	color: #fff;
+}
+
+.night-mode .ucp-table tbody {
+    background: #333;
+}
+
+.night-mode .course_active {
+    color: #fa8305;
+}
+
+.night-mode .panel-title {
+    background: #333;
+}
+
+.night-mode .panel-body {
+    color: #fff !important;
+}
+
+.night-mode .ui[class*="left icon"].swdh19.input>input:focus {
+	background-color: #fff !important;
+}
+
+.night-mode .discount_btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .promotion_tab {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .plan_link_btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .analysis_card {
+    background: #333 !important;
+    border: 1px solid #242424 !important;
+}
+
+.night-mode  .analysis_card .card-header {
+    background-color: #333 !important;
+    border-bottom: 1px solid #242424!important;
+}
+
+.night-mode .analysis_card .card-header h2 {
+    color: #fff !important;
+}
+
+.night-mode .analysis_card .nav-tabs .nav-item.show .nav-link, .night-mode .analysis_card .nav-tabs .nav-link.active {
+    color: #fff !important;
+    background-color: #333 !important;
+    border-color: transparent #242424 #333 !important;
+}
+
+.night-mode .analysis_card .nav-link:hover {
+    color: #fff !important;
+    background-color: #333 !important;
+    border-color: transparent #242424 #333 !important;
+	border: 1px solid;
+}
+
+.night-mode .nav-tabs {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .border-right {
+    border-right: 1px solid #242424 !important;
+}
+
+.night-mode .analysis_card .card-footer {
+    border-top: 1px solid #242424 !important;
+}
+
+.night-mode .ovrvew-1 {
+    color: #fff !important;
+}
+
+.night-mode .border-bottom {
+    border-bottom: 1px solid #242424 !important;
+}
+
+.night-mode  #add-course-tab .step-steps > li.active > a > .step-name, .night-mode #add-course-tab .step-steps > li.done > a > .step-name {
+    color: #fff;
+}
+
+.night-mode #add-course-tab .step-steps > li:before {
+    background-color: #5d5d5d;
+}
+
+.night-mode #add-course-tab .step-steps > li > a > .number {
+    background-color: #575757;
+}
+
+.night-mode #add-course-tab .step-steps > li.active > a > .number, .night-mode #add-course-tab .step-steps > li.done > a > .number {
+    background-color: #ed2a26;
+}
+
+.night-mode #add-course-tab .step-steps > li.done:before {
+    background-color: #ed2a26;
+}
+
+.night-mode .title-icon {
+    border-bottom: 1px solid #242424;
+    border-top: 1px solid #242424;
+}
+
+.night-mode .course__form {
+    background: #242424;
+    border: 1px solid #242424;
+}
+
+.night-mode .steps_btn:hover {
+    color: #fff !important;
+    background: #cc2622 !important;
+}
+
+.night-mode .part_input .custom-file-label {
+    color: #c7c7c7;
+    background-color: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode #add-course-tab > .step-content .step-tab-gallery .custom-file-label {
+    color: #c7c7c7;
+    background-color: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .course_des_bg {
+    border: 1px solid #242424;
+    background: #333;
+}
+
+.night-mode .ui.form.swdh339 textarea {
+    background: #333;
+    color: #33;
+}
+
+.night-mode .ui.form.swdh339 textarea:focus {
+    background: #fff;
+    color: #333;
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+}
+
+.night-mode .course_des_ttle {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .price_course {
+    border-top: 1px solid #333;
+}
+
+.night-mode .lecture_title {
+    border-bottom: 1px solid #333;
+}
+
+.night-mode .part__title {
+    color: #fff;
+    border-bottom: 1px solid #333;
+}
+
+.night-mode .save_content {
+    border-top: 1px solid #333;
+}
+
+.night-mode .save_content_btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .part_btn_save:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .msg_search {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .all_msg_bg {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .user-status .user-status-text {
+    color: #c7c7c7;
+}
+
+.night-mode i.icon8 {
+    color: #fff;
+}
+
+.night-mode .srch_explore:focus+.icon8 {
+	color: #333 !important;
+}
+
+.night-mode .chat__message__dt.active, .night-mode .chat__message__dt:hover {
+    border-left: 4px solid #ed2a26;
+    background: #242424;
+}
+
+.night-mode .message-inner-dt > p {
+    color: #fff !important;
+}
+
+.night-mode .message-dt.st3 .message-inner-dt > p {
+    background-color: #242424;
+    color: #fff !important;
+}
+
+.night-mode .message-send-area {
+    background-color: #333;
+    border-top: 1px solid #242424;
+}
+
+.night-mode .chatbox_right {
+    border-left: 1px solid #242424;
+}
+
+.night-mode .chat_header {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .setting_noti {
+    color: #fff !important;
+}
+
+.night-mode .setting_noti:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .total_rating {
+    background: #242424;
+    border: 1px solid #242424;
+}
+
+.night-mode ._rate001 {
+    color: #fff;
+}
+
+.night-mode .review_item_course_title a {
+    color: #fff !important;
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .top_countries {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .country_list li {
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .country_list li:last-child {
+    border-bottom: 0;
+}
+
+.night-mode .top_countries_title h2 {
+    color: #fff;
+    border-bottom: 1px solid #242424;
+}
+
+.night-mode .country_item_left span {
+    color: #c7c7c7;
+}
+
+.night-mode .country_item_right span {
+    color: #fff;
+}
+
+.night-mode .ui.selection.vchrt-dropdown {
+    background: #333 !important;
+    border: 1px solid #242424 !important;
+    color: #fff;
+}
+
+.night-mode .ui.selection.vchrt-dropdown.visible.dropdown>.text:not(.default) {
+    font-weight: 400;
+    color: rgba(255,255,255,.8);
+}
+
+.night-mode .payout_content img {
+    width: 80px;
+    background: #fff;
+    padding: 5px;
+}
+
+.night-mode .payout_content span {
+    color: #fff;
+}
+
+.night-mode .payout__via {
+    color: #c7c7c7;
+}
+
+.night-mode .payout_content p {
+    border-top: 1px solid #242424;
+}
+
+.night-mode .payout__small-notification {
+    color: #c7c7c7;
+}
+
+.night-mode .payout__added {
+    color: #c7c7c7;
+}
+
+.night-mode .payout__btn {
+    color: #fff !important; 
+}
+
+.night-mode .payout__btn:hover {
+    background: #cc2622;
+    color: #fff !important;
+}
+
+.night-mode .left_section:last-child {
+    border-bottom: 0;
+}
+
+.night-mode .tt-body {
+    color: #c7c7c7 !important;
+}
+
+.night-mode .apply_instructor_btn {
+    color: #fff !important;
+}
+
+.night-mode .apply_instructor_btn:hover {
+    color: #fff !important;
+    background: #cc2622;
+}
+
+.night-mode .alert_verification {
+    background: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .edututs_required_img i {
+    color: #fff;
+}
+
+.night-mode .alert_verification li {
+    border-right: 1px solid #242424;
+}
+
+.night-mode .alert_verification li:last-child {
+    border-right: 0;
+}
+
+.night-mode .apply_verify_text {
+    color: #c7c7c7;
+}
+
+.night-mode .verification_form {
+    background: #242424;
+    border: 1px solid #333;
+}
+
+.night-mode .verify_submit_btn:hover {
+    color: #fff;
+    background: #cc2622;
+}
+
+.night-mode .preview_video {
+    background: #333;
+}
+
+.night-mode .main-p-pagination .pagination .page-link {
+    color: #fff !important;
+    background-color: #333;
+    border: 1px solid #242424;
+}
+
+.night-mode .page-item.disabled .page-link {
+    color: #727272!important;
+    background-color: #313131;
+    border-color: #333;
+}
+
+.main-p-pagination .pagination .page-link:hover {
+    background: #ed2a26;
+    border: 1px solid #ed2a26;
+    color: #fff !important;
+    box-shadow: none;
+}
+
+.night-mode .main-p-pagination .pagination .page-link.active {
+    background: #ed2a26;
+    border: 1px solid #ed2a26;
+}
+
+.night-mode .result_stitles {
+    padding: 0px 0 15px;
+    border-bottom: 1px solid #242424;
+    margin-bottom: 0;
+    float: left;
+    width: 100%;
+}
+
+.night-mode .adcrse1250 {
+	border: 1px solid #242424;
+}
+
+.night-mode .adcrse_body {
+	background: #242424;
+    border-left: 1px solid #242424;
+    border-right: 1px solid #242424;
+    border-bottom: 1px solid #242424;
+}
+
+ /* all theme custom cards */ 
+.night-mode .nav-single-group ,
+.night-mode .setting-menu ,
+.night-mode .group-card ,
+.night-mode .events-list ,
+.night-mode .event-info-date ,
+.night-mode  ,
+.night-mode .nav-profile ,
+.night-mode .post ,
+.night-mode .post-new ,
+.night-mode .profile-friend-card ,
+.night-mode .contact-list-box{
+    background-color: #000;
+    box-shadow: 0px 2px 10px 0px #0000001a;
+}
+
+.night-mode #logo img {
+      display:none;
+  }
+ .night-mode #logo .logo-inverse{
+      display:inline !important
+  }
+ 
+/* Titles & texts */
+.night-mode .uk-h1, .night-mode h1, .night-mode .uk-h2, .night-mode h2, .night-mode .uk-h3, .night-mode h3, .night-mode .uk-h4, .night-mode h4, .night-mode .uk-h5, .night-mode h5, .night-mode .uk-h6, .night-mode h6, .night-mode .uk-text-black, .night-mode .uk-text-danger, .night-mode .uk-text-primary, .night-mode .uk-text-sucess, .night-mode .uk-text-muted, .night-mode .uk-card-default .uk-card-title, .night-mode .uk-card-default, .night-mode .uk-text-lead, .night-mode .text-black, .night-mode .text-danger, .night-mode .text-primary, .night-mode .text-sucess, .night-mode .text-muted, .night-mode .text-lead, .night-mode .section-header-left>*,.night-mode .contact-list-box p {
+    color: #fff !important;
+}
+
+
+/* button hover */
+.night-mode .button:hover, .night-mode .button.danger:hover, .night-mode .button.grey:hover, .night-mode .button-info:hover, .night-mode .button.white:hover, .night-mode .button.success:hover, .night-mode .button.secondary:hover, .night-mode .button.primary:hover, .night-mode .button.light:hover, .night-mode .button.dark:hover, .night-mode .button.default:hover, .night-mode .Markup-botton:hover, .night-mode :not(pre)>code:hover, .night-mode .uk-label:hover, .night-mode .uk-icon-button:hover, .night-mode .uk-modal-close-full:hover, .night-mode .uk-pagination>.uk-active>*, .night-mode .slidenav-next:hover, .night-mode .slidenav-prev:hover, .night-mode #backtotop a:hover, .night-mode .comment-by a.reply, .night-mode .Markup-botton:hover, .night-mode .Markup-botton::before, .night-mode .grid-slider-header .slide-nav-prev, .night-mode .grid-slider-header .slide-nav-next ,
+.night-mode ul.dropdown-user-menu li a i  ,
+.night-mode header .head_user .opts_icon:hover,
+.night-mode header .head_user .opts_icon:focus ,
+.night-mode header .opts_icon_link:hover ,
+.night-mode .post-comment-opt:hover, .night-mode .post-comment-opt:focus ,
+.night-mode header .icon-browse .icon-menu-item:hover{
+    background-color: #242424  !important;
+    color: white !important;
+}
+
+
+
+/* reset links */
+.night-mode a,
+.night-mode #breadcrumbs,
+.night-mode .uk-accordion .uk-accordion-title,
+.night-mode .uk-accordion-title::before,
+.night-mode .dropdown-user-name,
+.night-mode .dropdown-user-name span,
+.night-mode .comment-by ,
+.night-mode .post .post-state .post-state-btns {
+    color: #c7c7c7 !important;
+}
+
+.night-mode a:hover,
+.night-mode #breadcrumbs ul li a,
+.night-mode .uk-accordion .uk-open .uk-accordion-title,
+.night-mode .uk-accordion-title::before,
+.night-mode .responsive-tab.style-2.uk-active,
+.night-mode .responsive-tab .uk-active a,
+.night-mode .uk-tab>.uk-active>a{
+    color: white !important;
+}
+ 
+/* all borders  */ 
+.night-mode .sidebar .sidebar_innr .sections ,
+.night-mode ul.dropdown-user-menu .menu-divider, 
+.night-mode ul.dropdown-search-list .list-title,
+.night-mode ul.dropdown-search-list .menu-divider,
+.night-mode .dropdown-notifications-content ul li, 
+.night-mode .dropdown-notifications-headline,
+.night-mode .dropdown-notifications-footer ,
+.night-mode .dropdown-user-details, 
+.night-mode .uk-tab>.uk-active>a ,
+.night-mode .main_sidebar .sidebar-header ,
+.night-mode pre , 
+.night-mode .nav-profile,
+.night-mode .contact-list-media img ,
+.night-mode .contact-list-media .online-dot , 
+.night-mode .contact-list-media .offline-dot{
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
+/* Remove border color  */
+.night-mode .post .post-state ,
+.night-mode header .head_search .head_search_cont input,
+.night-mode header,  .night-mode header .icon-browse .more-app, .night-mode .section-header, .night-mode .footer, .night-mode .uk-tab::before{
+    border-color: transparent !important;
+}
+
+
+
+/* reset all bg */
+.night-mode .bg-primary,
+.night-mode .bg-secondary,
+.night-mode .bg-success,
+.night-mode .bg-info,
+.night-mode .bg-warning,
+.night-mode .bg-danger,
+.night-mode .bg-grey,
+.night-mode .bg-light,
+.night-mode .bg-dark {
+    background-color: #201f23 !important;
+}
+
+.night-mode .bg-white, 
+.night-mode .bg-transparent, 
+.night-mode .slide-nav-next.uk-invisible{
+    background-color: #131313 !important;
+}
+
+.night-mode .responsive-tab:before ,
+.night-mode .responsive-tab .uk-active a:before ,
+ .night-mode .sidebar .sidebar_innr .sections li a:hover{
+    background: transparent;
+}
+ 
+  
+/* framework */
+.night-mode .dropdown-notifications-footer ,
+.night-mode .uk-card-default,
+.night-mode .uk-card-primary,
+.night-mode .uk-card-muted,
+.night-mode .uk-card-secondary,
+.night-mode .uk-background-default,
+.night-mode .uk-background-muted,
+.night-mode .uk-background-primary,
+.night-mode .uk-background-secondary,
+.night-mode .bg-gradient-primary,
+.night-mode .bg-gradient-secondary,
+.night-mode .bg-gradient-success,
+.night-mode .bg-gradient-info,
+.night-mode .bg-gradient-warning,
+.night-mode .bg-gradient-danger,
+.night-mode .bg-gradient-light,
+.night-mode .bg-gradient-grey,
+.night-mode .night-mode .uk-alert,
+.night-mode .uk-input,
+.night-mode .uk-select,
+.night-mode .uk-textarea,
+.night-mode .uk-input:focus,
+.night-mode .uk-textarea:focus,
+.night-mode .uk-drop,
+.night-mode .uk-dropdown,
+.night-mode .uk-modal-dialog,
+.night-mode .uk-notification-message,
+.night-mode .uk-offcanvas-bar,
+.night-mode .uk-list-striped>li:nth-of-type(odd),
+.night-mode .uk-overlay-default,
+.night-mode .uk-table-striped>tr:nth-of-type(odd),
+.night-mode .uk-table-striped tbody tr:nth-of-type(odd)  ,
+.night-mode .glyph.fs1:hover span:not([class*="mls"]) {
+    background: #12141E !important;
+}
+
+.night-mode .uk-form-label {
+    color: #dbdbdb !important;
+}
+
+.night-mode *+hr,
+*+.night-mode .uk-hr,
+.night-mode .uk-heading-line> ::before,
+.night-mode .uk-heading-line> ::after,
+.night-mode .uk-input,
+.night-mode .uk-select,
+.night-mode .uk-textarea,
+.night-mode .uk-heading-divider,
+.night-mode .uk-input:disabled,
+.night-mode .uk-select:disabled, 
+.night-mode .uk-textarea:disabled ,
+.night-mode .uk-heading-bullet::before,
+.night-mode .uk-divider-small::after ,
+.night-mode .uk-list-divider>li:nth-child(n+2),
+.night-mode .uk-table-divider>tr:not(:first-child),
+.night-mode .uk-table-divider> :not(:first-child)>tr,
+.night-mode .uk-list-large.uk-list-striped>li:nth-of-type(odd),
+.night-mode .uk-table-divider> :first-child>tr:not(:first-child),
+.night-mode .uk-list-striped>li:nth-of-type(odd),
+.night-mode .uk-table-striped>tr:nth-of-type(odd),
+.night-mode .uk-table-striped tbody tr:nth-of-type(odd) {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.night-mode .syntaxhighlighter,
+.night-mode .syntaxhighlighter .line.alt1 ,
+.night-mode .syntaxhighlighter .line.alt2 , 
+.night-mode pre ,
+.night-mode .responsive-tab.style-4 :before{
+    background-color: #393942 !important;
+}
+
+/* background-color level three */
+.night-mode .header-searchbox {
+    background-color: #45454d !important;
+
+}
+ 
+  
+.night-mode .dropdown-notifications-content ul li:hover, .night-mode .notifications-not-read, .night-mode ul.dropdown-search-list .list-title, .night-mode ul.dropdown-search-list li a:hover, .night-mode .setting-menu ul li a:hover, .night-mode ul.dropdown-user-menu li a:hover, .night-mode .sidebar .sidebar_innr .sections li.active a, .night-mode .sidebar .sidebar_innr .sections li a:focus, .night-mode .sidebar .sidebar_innr .sections li.active a, .night-mode .sidebar .sidebar_innr .sections li.active a, .night-mode .contact-list:hover, .night-mode .bg-secondary-hover:hover, .night-mode .responsive-tab a span, .night-mode .event-info-date, .night-mode .post .post-state .post-state-btns:hover, .night-mode .post-new-type > a:hover , .night-mode .post-comment-text-inner ,
+.night-mode .contact-list-box-btns .button  ,
+.night-mode .dropdown-user-details:before ,
+.night-mode header .icon-browse .more-app ,
+.night-mode .list-items:hover {
+    background-color: #191d2f !important;
+}
+
+.night-mode .sidebar .sidebar_innr .sections:first-child {
+    padding-top: 12px;
+}
+
+.night-mode header .head_search .head_search_cont input {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.night-mode header .head_search .head_search_cont input:focus {
+    background-color: rgb(255, 255, 255);
+}
+
+.night-mode .responsive-tab.style-4 .uk-active a:before ,
+.night-mode .responsive-tab.style-2 .uk-active a:before {
+    background: white !important;
+}
+
+ 
+.night-mode .photo-card ,
+.night-mode .nav-single-group ,
+.night-mode .post .post-state-details * img {
+    border-color:#08090f
+}
+.night-mode .btn-subscribe .button:before ,
+.night-mode .post-comment-text::before{
+    border-right-color: #201f23;
+}
