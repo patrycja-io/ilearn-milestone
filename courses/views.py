@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Course, Category
 
 
-
 def all_courses(request):
     """ A view to show all products, including sorting and search queries """
     courses = Course.objects.all()
