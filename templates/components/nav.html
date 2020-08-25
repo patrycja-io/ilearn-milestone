@@ -10,7 +10,7 @@
 		</div>
         
         <div class="top-category">
-			<div class="ui compact menu cate-dpdwn">
+			<div class="compact cate-dpdwn">
 				<div class="ui simple dropdown item">
 					<a href="#" class="option_links p-0" title="categories"><i class="uil uil-apps"></i></a>
 					<div class="menu dropdown_category5">
@@ -26,7 +26,7 @@
 		<div class="search120">
 			<div class="ui search">
 			  <div class="ui left icon input swdh10">
-				<input class="prompt srch10" type="text" name="q" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
+				<input class="prompt srch10" type="text" name="q" placeholder="Search ..">
 				<i class="uil uil-search-alt icon icon1"></i>
 			  </div>
 			</div>
@@ -34,7 +34,21 @@
         </form>
 		<div class="header_right">
 			<ul>
-				<li>	
+                  
+
+				<li>
+					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
+                    <i class="uil uil-shopping-cart"></i>
+                    <strong class="my-0">
+                                    {% if total %}
+                                        ${{ total|floatformat:2 }}
+                                    {% else %}
+                                        £0.00
+                                    {% endif %}
+                    </strong>
+                    </a>
+				</li>
+                <li>	
 					<a href="" class="upload_btn">My Account</a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
@@ -49,19 +63,16 @@
                             {% endif %}
                         </div>
 				</li>
-                
-				<li>
-					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
-                    <i class="uil uil-shopping-cart-alt"></i>
-                    <p class="my-0">
-                                    {% if total %}
-                                        ${{ total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                    </p>
-                    </a>
-				</li>
+                 <li>
+            <div class="night_mode_switch__btn">
+                                        <a href="#" id="night-mode" class="btn-night-mode">
+                                          Night mode
+                                            <span class="btn-night-mode-switch">
+                                                <span class="uk-switch-button"></span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    	</li>
                
 			</ul>
 		</div>
