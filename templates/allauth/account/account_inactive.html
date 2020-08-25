@@ -6,7 +6,23 @@
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
 
-<p>{% trans "This account is inactive." %}</p>
+<div class="sign_in_up_bg">
+	<div class="container">
+		<div class="row justify-content-lg-center justify-content-md-center">
+			<div class="col-lg-12">
+				<h2><a href="{% url 'home' %}">iLearn </a></h2>
+			</div>
+			<div class="col-lg-6 col-md-8">
+				<div class="sign_form">
+					<h2>{% trans "Account Inactive" %}</h2>
+					<p>{% trans "This account is inactive." %}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
 {% endblock %}
