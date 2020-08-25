@@ -49,7 +49,7 @@
                     </a>
 				</li>
                 <li>	
-					<a href="" class="upload_btn">My Account</a>
+					<a href="" class="upload_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
