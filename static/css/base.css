@@ -4579,7 +4579,7 @@ a.rmv-btn i {
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     margin-top: 30px !important;
-    color: #333;
+    color: rgb(0, 0, 0);
     text-align: center;
     line-height: 30px;
 }
@@ -5537,7 +5537,7 @@ a.rmv-btn i {
     flex: 1;
     float: left;
     width: 100%;
-    margin-top: 0;
+    margin-top:60px;
     text-align: center;
 }
 
@@ -7657,3 +7657,93 @@ a.rmv-btn i {
 .toast-capper {
     height: 2px;
 }
+/* ------------------------------- top banner*/
+
+.top-banner {
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.top-banner__wrapper__image {
+    background-image: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 65vh;
+}
+.top-banner__wrapper__image::before {
+    content: "";
+    width: 100%;
+    height: 65vh;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+}
+.top-banner__wrapper__image__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .top-banner__wrapper__image__content {
+        width: 80%;
+    }
+}
+.top-banner__wrapper__image__content__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.top-banner__wrapper__image__content__buttons a {
+    width: 50%;
+    margin: 0 5px;
+}
+@media (max-width: 767px) {
+    .top-banner__wrapper__image__content__buttons a:first-of-type {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/*-- Night Mode Btn --- */
+
+.night_mode_switch__btn {
+    border-bottom: 1px solid #EFEFEF;
+}
+.night_mode_switch__btn a {
+
+    font-size: 14px;
+    transition: 0.3s;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    color: #333;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.night_mode_switch__btn a i {
+    font-size: 120%;
+    height: 30px;
+    Width: 30px;
+    background: #FFECEC;
+    border-radius: 100%;
+    margin-right: 10px;
+    padding: 6px 4px 0;
+    display: inline-block;
+}
+.btn-night-mode .btn-night-mode-switch {
+    display: inline-block;
+    height: 18px;
+    width: 37px;
+    top: 35%;
+    right: 13px;
+    position: absolute;
+
+
+
+
