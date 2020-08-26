@@ -48,7 +48,8 @@
                     </strong>
                     </a>
 				</li>
-                <li>	
+                	
+                <div class="ui simple dropdown item">
 					<a href="" class="upload_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
@@ -62,17 +63,21 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
-				</li>
+                    </div>
+
                  <li>
-            <div class="night_mode_switch__btn">
-                                        <a href="#" id="night-mode" class="btn-night-mode">
-                                          Night mode
-                                            <span class="btn-night-mode-switch">
-                                                <span class="uk-switch-button"></span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    	</li>
+			     <div class="night_mode_switch__btn">
+                 <i class="uil uil-moon"></i>
+					Night mode
+                   
+				  <a href="#" id="night-mode" class="btn-night-mode night_mode_switch__btn">
+                
+					<span class="btn-night-mode-switch">
+			            <span class="uk-switch-button"></span>
+					</span>
+				  </a>
+			    </div>
+                </li>
                
 			</ul>
 		</div>
