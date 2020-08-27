@@ -7,47 +7,59 @@
 
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
-
-
-<div class="wrapper coming_soon_wrapper">		
+	<div class="sign_in_up_bg">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="cmtk_group">
-						<div class="cmtk_dt">
-                        <h1 class="confirm">{% trans "Confirm E-mail Address" %}</h1>
-							
-{% if confirmation %}
-
-{% user_display confirmation.email_address.user as user_display %}
-
+			<div class="row justify-content-lg-center justify-content-md-center">
+				<div class="col-lg-12">
+				<br>
+				</div>
+				<div class="col-lg-6 col-md-8">
+					<div class="sign_form">
+                    <h2>{% trans "Confirm E-mail Address" %}</h2>
 						
-							
-	
-<h4 class="thnk_title1">{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</h4> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
 
-<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
-{% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
-</form>
+						{% if confirmation %}
 
-{% else %}
+						{% user_display confirmation.email_address.user as user_display %}
 
-{% url 'account_email' as email_url %}
 
-<p class="thnk_des"> {% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}</p>
 
-		
 
-{% endif %}
+						<h4 class="thnk_title1">{% blocktrans with confirmation.email_address.email as email %}Please
+							confirm that <a href="mailto:{{ email }}">{{ email }}</h4> is an e-mail address for user
+						{{ user_display }}.{% endblocktrans %}</p>
 
+						<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+							{% csrf_token %}
+							<button type="submit">{% trans 'Confirm' %}</button>
+						</form>
+
+						{% else %}
+
+						{% url 'account_email' as email_url %}
+
+						<p class="thnk_des"> {% blocktrans %}This e-mail confirmation link expired or is invalid. Please
+							<a href="{{ email_url }}">issue a new e-mail confirmation request</a>.{% endblocktrans %}
+						</p>
+
+
+
+						{% endif %}
+
+					</div>
+				</div>
 			</div>
-					</div> 	
-				</div>	
-			</div>	
-		</div>		
-	</div>	
+		</div>
+	</div>
+</div>
 
 {% endblock %}
