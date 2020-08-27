@@ -95,9 +95,15 @@
                                              </ul>
 											<input type="hidden" name="redirect_url" value="{{ request.path }}">
 									   </form>
+                                       {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                                         <div class="_215b05">
 											<a href="{% url 'courses' %}" class="btn_buy">
-												<span class="text-uppercase">Keep Shopping</span>
+												<span >Keep Shopping</span>
 											</a>
                                         </div>
 									<div class="_215fgt1">										

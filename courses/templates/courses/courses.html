@@ -74,6 +74,12 @@
                             <a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate">
                                 <i></i>{{ course.category.friendly_name }}</a>
                             {% endif %}
+                             {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                             <div class="auth1lnkprce">
                                 <div class="prce142">£{{ course.price }}</div>
                             </div>
