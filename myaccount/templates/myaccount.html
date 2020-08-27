@@ -2,9 +2,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -38,10 +35,4 @@
                 {{ orders }}
             </div>
         </div>
-{% endblock %}
-
-
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
