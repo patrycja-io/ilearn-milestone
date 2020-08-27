@@ -5,6 +5,7 @@ from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 
 from .models import Course, Category
+from .forms import CourseForm
 
 
 def all_courses(request):
@@ -68,7 +69,7 @@ def course_description(request, course_id):
 
     return render(request, 'courses/course_description.html', context)
 
-
+@login_required
 def add_course(request):
     """ Add a course to the platform """
     if not request.user.is_superuser:
@@ -93,7 +94,7 @@ def add_course(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_course(request, course_id):
     """ Edit a course in the platform """
     if not request.user.is_superuser:
@@ -121,7 +122,7 @@ def edit_course(request, course_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_course(request, course_id):
     """ Delete a course from the platform """
     if not request.user.is_superuser:
