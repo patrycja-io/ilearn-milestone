@@ -8,9 +8,9 @@ from .forms import UserAccountForm
 from checkout.models import Order
 
 @login_required
-def myaccount(request):
+def myprofile(request):
     """ Display the user's profile. """
-    myaccount = get_object_or_404(UserAccount, user=request.user)
+    myprofile = get_object_or_404(UserAccount, user=request.user)
 
     if request.method == 'POST':
         form = UserAccountForm(request.POST, instance=myaccount)
