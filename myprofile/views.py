@@ -19,7 +19,7 @@ def myprofile(request):
             form.save()
             messages.success(request, 'Account updated successfully')
 
-    form = UserAccountForm(instance=myprofile
+    form = UserAccountForm(instance=myprofile)
     orders = myprofile.orders.all()
 
     template = 'myprofile/myprofile.html'

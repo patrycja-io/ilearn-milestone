@@ -7,7 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from courses.models import Course
-from myaccount.models import UserAccount
+from myprofile.models import UserAccount
 
 
 class Order(models.Model):
