@@ -5,8 +5,6 @@ from django.contrib.auth.decorators import login_required
 from .models import UserAccount
 from .forms import UserAccountForm
 
-from checkout.models import Order
-
 
 @login_required
 def myprofile(request):
