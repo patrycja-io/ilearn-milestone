@@ -2,7 +2,7 @@ from django.apps import AppConfig
 
 
 class CartConfig(AppConfig):
-    name = 'cart'
+    name = 'check'
 
     def ready(self):
-        import cart.signals
+        import check.signals
