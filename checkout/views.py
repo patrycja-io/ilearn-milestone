@@ -21,10 +21,44 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    basket = request.session.get('basket', {})
-    if not basket:
-        messages.error(request, "There's nothing in your basket yet")
-        return redirect(reverse('courses'))
+    if request.method == 'POST':
+        basket = request.session.get('basket', {})
+
+        form_data = {
+            'full_name': request.POST['full_name'],
+            'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'county': request.POST['county'],
+        }
+        order_form = OrderForm(form_data)
+        if order_form.is_valid():
+            order = order_form.save()
+            for course_id, course_data in basket.courses():
+                try:
+                    course = Course.objects.get(id=course_id)
+                except Product.DoesNotExist:
+                    messages.error(request, (
+                        "One of the products in your bag wasn't found in our database. "
+                        "Please call us for assistance!")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_bag'))
+
+            request.session['save_info'] = 'save-info' in request.POST
+            return redirect(reverse('payment_approved', args=[order.order_number]))
+        else:
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.') 
+    else:
+        basket = request.session.get('basket', {})
+        if not basket:
+           messages.error(request, "There's nothing in your basket yet")
+           return redirect(reverse('courses'))
 
     current_basket = basket_ebooks(request)
     total = current_basket['total']
@@ -49,3 +83,23 @@ def checkout(request):
     }
 
     return render(request, template, context) 
+
+def payment_approved(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'basket' in request.session:
+        del request.session['bag']
+
+    template = 'checkout/payment_approved.html'
+    context = {
+        'order': order,
+    }
+
+    return render(request, template, context)
