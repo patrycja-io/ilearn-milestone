@@ -45,12 +45,11 @@
 				{% csrf_token %}
 				<fieldset class="rounded px-3 mb-5">
 					<legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-					{{ order_form.name | as_crispy_field }}
-					{{ order_form.surname | as_crispy_field }}
+					{{ order_form.full_name | as_crispy_field }}
 					{{ order_form.email | as_crispy_field }}
 				</fieldset>
 				<fieldset class="rounded px-3 mb-5">
-					<legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+					<legend class="fieldset-label small text-black px-2 w-auto">Billing Info</legend>
 					{{ order_form.phone_number | as_crispy_field }}
 					{{ order_form.country | as_crispy_field }}
 					{{ order_form.postcode | as_crispy_field }}
@@ -65,15 +64,15 @@
 							{% else %}
 						<label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-info" href="{% url 'account_login' %}">Login</a> to save this information
                                 </label>
 						{% endif %}
 					</div>
 				</fieldset>
 				<fieldset class="px-3">
 					<legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-					<!-- A Stripe card element will go here -->
-					<div class="mb-3" id="card-element"></div>
+					<!-- A Stripe card element  -->
+					<div class="mb-3" id="card-field"></div>
 					<!-- Used to display form errors -->
 					<div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
