@@ -27,6 +27,7 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
+
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
