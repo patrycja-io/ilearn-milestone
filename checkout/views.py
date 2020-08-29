@@ -38,7 +38,7 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            for course_id, course_data in basket.courses():
+            for course_id, item_data in basket.items():
                 try:
                     course = Course.objects.get(id=course_id)
                 except Product.DoesNotExist:
@@ -95,7 +95,7 @@ def payment_approved(request, order_number):
         email will be sent to {order.email}.')
 
     if 'basket' in request.session:
-        del request.session['bag']
+        del request.session['basket']
 
     template = 'checkout/payment_approved.html'
     context = {
