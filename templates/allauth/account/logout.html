@@ -22,14 +22,14 @@
 				</div>
 				<div class="col-lg-6 col-md-8">
 					<div class="sign_form">
-                    <h2>Log Out</h2>
+                    <h2>{% trans "Sign Out" %}</h2>
 						<h4>{% trans 'Are you sure you want to sign out?' %}</h4>
 						<form method="post" action="{% url 'account_logout' %}">
 							{% csrf_token %}
 							{% if redirect_field_value %}
 							<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
 		                {% endif %}
-							<a href="" type="submit" class="upload_btn">{% trans 'Sign Out' %}</a>
+							<button href="" type="submit" class="upload_btn">{% trans 'Sign Out' %}</button>
 						</form>
 					</div>
 				</div>
