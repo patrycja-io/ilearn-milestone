@@ -1,10 +1,20 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import HttpResponse
+from django.views.decorators.http import require_POST
 from django.contrib import messages
+from django.conf import settings
 
 from .forms import OrderForm
-from basket.contexts import basket_ebooks
+from .models import Order, OrderEbook
+
+from myprofile.models import UserAccount
+from myprofile.forms import UserAccountForm
+
+from courses.models import Course
+from basket.context import basket_ebooks
 
 import stripe
+import json
 
 
 def checkout(request):
