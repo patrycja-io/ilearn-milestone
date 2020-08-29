@@ -5,7 +5,8 @@ from courses.models import Course
 
 
 def home(request, *args, **kwargs):
-    """ Renders home page with 6 random featured products in featured listing section """
+    """ Renders home page with 6 random featured products in featured
+          listing section """
 
     featured_products = Course.objects.filter(featured=True).order_by('?')[:6]
     context = {
