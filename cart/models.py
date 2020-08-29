@@ -27,6 +27,15 @@ class Order(models.Model):
         """
         return uuid.uuid4().hex.upper()
 
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
 
 class OrderEbook(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
