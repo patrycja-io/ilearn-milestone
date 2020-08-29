@@ -7,8 +7,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderItem
 
-from myaccount.models import UserAccount
-from myaccount.forms import UserAccountForm
+from myprofile.models import UserAccount
+from myprofile.forms import UserAccountForm
 
 from courses.models import Course
 from basket.context import basket_ebooks
@@ -122,14 +122,14 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        myaccount = UserAccount.objects.get(user=request.user)
+        myprofile = UserAccount.objects.get(user=request.user)
         # Attach the user's profile to the order
-        order.user_myaccount = myaccount
+        order.user_myprofile = myprofile
         order.save()
 
         # Save the user's info
         if save_info:
-            myaccount_data = {
+            myprofile_data = {
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
@@ -138,10 +138,10 @@ def checkout_success(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            user_myaccount_form = UserAccountForm(myaccount_data,
-                                                instance=myaccount)
-            if user_myaccount_form.is_valid():
-                user_myaccount_form.save()
+            user_myprofile_form = UserAccountForm(myprofile_data,
+                                                instance=myprofile)
+            if user_myprofile_form.is_valid():
+                user_myprofile_form.save()
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
@@ -150,7 +150,7 @@ def checkout_success(request, order_number):
     if 'basket' in request.session:
         del request.session['basket']
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/approved.html'
     context = {
         'order': order,
     }
