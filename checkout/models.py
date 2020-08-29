@@ -34,7 +34,7 @@ class Order(models.Model):
         if it hasn't been set already.
         """
         if not self.order_number:
-            self.order_number = self._generate_order_number()
+            self.order_number = self._create_order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
