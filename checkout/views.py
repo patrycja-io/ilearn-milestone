@@ -64,11 +64,11 @@ def checkout(request):
                 try:
                     course = Course.objects.get(id=course_id)
                     if isinstance(item_data, int):
-                        order_line_item = OrderItem(
+                        order_item = OrderItem(
                             order=order,
                             course=course,
                         )
-                        order_line_item.save()
+                        order_item.save()
                 except Course.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your basket wasn't found in our database. "
@@ -78,7 +78,7 @@ def checkout(request):
                     return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success',
+            return redirect(reverse('approved',
                                     args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
@@ -97,8 +97,25 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                myprofile = UserAccount.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'name': myprofile.user.get_name(),
+                    'surname': myprofile.user.get_surname(),
+                    'email': myprofile.user.email,
+                    'phone_number': myprofile.default_phone_number,
+                    'country': myprofile.default_country,
+                    'postcode': myprofile.default_postcode,
+                    'town_or_city': myprofile.default_town_or_city,
+                    'street_address1': myprofile.default_street_address1,
+                    'street_address2': myprofile.default_street_address2,
+                    'county': myprofile.default_county,
+                })
+            except UserAccount.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -114,7 +131,7 @@ def checkout(request):
     return render(request, template, context)
 
 
-def checkout_success(request, order_number):
+def approved(request, order_number):
     """
     Handle successful checkouts
     """
@@ -139,7 +156,7 @@ def checkout_success(request, order_number):
                 'default_county': order.county,
             }
             user_myprofile_form = UserAccountForm(myprofile_data,
-                                                instance=myprofile)
+                                                  instance=myprofile)
             if user_myprofile_form.is_valid():
                 user_myprofile_form.save()
 
