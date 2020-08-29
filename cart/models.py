@@ -21,6 +21,13 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
+    def _create_order_number(self):
+        """
+        Generate a random, unique order number using UUID
+        """
+        return uuid.uuid4().hex.upper()
+
+
 class OrderEbook(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
