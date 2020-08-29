@@ -42,7 +42,7 @@ class Order(models.Model):
 
 class OrderEbook(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, null=False, blank=False, on_delete=models.CASCADE)
     total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
 
@@ -51,9 +51,9 @@ class OrderEbook(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.total = self.product.price * self.quantity
+        self.total = self.course.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}'
+        return f'SKU {self.course.sku} on order {self.order.order_number}'
    
