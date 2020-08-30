@@ -49,6 +49,7 @@
         <div class="message-container">
             {% for message in messages %}
                 {% with message.level as level %}
+                
                     {% if level == 40 %}
                         {% include 'components/bootstrap_toasts/error.html' %}
                     {% elif level == 30 %}
@@ -58,6 +59,7 @@
                     {% else %}
                         {% include 'components/bootstrap_toasts/info.html' %}
                     {% endif %}
+
                 {% endwith %}
             {% endfor %}
         </div>
