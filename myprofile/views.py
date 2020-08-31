@@ -16,8 +16,13 @@ def myprofile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Account updated successfully')
+            else:
+            messages.error(request,
+                           ('Update failed. Please ensure '
+                            'the form is valid.'))
 
-    form = UserAccountForm(instance=myprofile)
+    else:
+        form = UserAccountForm(instance=myprofile)
     orders = myprofile.orders.all()
 
     template = 'myprofile/myprofile.html'
@@ -38,7 +43,7 @@ def order_history(request, order_number):
         'A confirmation email was sent on the order date.'
     ))
 
-    template = 'checkout/approved.html'
+    template = 'checkout/payment_approved.html'
     context = {
         'order': order,
         'from_myprofile': True,
