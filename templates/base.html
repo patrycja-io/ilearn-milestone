@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block favicon %}
-<link rel="icon" type="image/png" href="images/fav.png">
+
 {% endblock %}
 
 {% block corecss %}
@@ -24,16 +24,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,500">
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
 <link href="{% static 'css/night-mode.css' %}" rel="stylesheet">
+<link href="{% static 'css/stripe.css' %}" rel="stylesheet">
+
 
 
 {% endblock %}
 
-{% block extracss %}
-
-<link href=" {% static 'css/responsive.css' %}" rel="stylesheet">
-<link href=" {% static 'css/semantic/semantic.min.css' %}" rel="stylesheet">
-
-{% endblock %}s
 
 
     <title>iLearn {% block extratitle %}{% endblock %}</title>
