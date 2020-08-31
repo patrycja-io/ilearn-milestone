@@ -32,6 +32,7 @@ def cache_data(request):
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -52,28 +53,40 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_basket = json.dumps(basket)
+            order.save()
             for course_id, item_data in basket.items():
                 try:
                     course = Course.objects.get(id=course_id)
-                except Product.DoesNotExist:
+                    if isinstance(item_data, int):
+                        order_ebook = OrderEbook(
+                            order=order,
+                            course=course,
+                            quantity=item_data,
+                        )
+                        order_ebook.save()
+                except Course.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
-                    return redirect(reverse('view_bag'))
+                    return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('payment_approved', args=[order.order_number]))
+            return redirect(reverse('payment_approved',
+                                    args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
-                Please double check your information.') 
+                Please double check your information.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
-           messages.error(request, "There's nothing in your basket yet")
-           return redirect(reverse('courses'))
+            messages.error(request, "There's nothing in your basket yet")
+            return redirect(reverse('courses'))
 
     current_basket = basket_ebooks(request)
     total = current_basket['total']
@@ -97,7 +110,8 @@ def checkout(request):
         'client_secret': intent.client_secret,
     }
 
-    return render(request, template, context) 
+    return render(request, template, context)
+
 
 def payment_approved(request, order_number):
     """
@@ -105,6 +119,29 @@ def payment_approved(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    if request.user.is_authenticated:
+        myprofile = UserAccount.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_account = myprofile
+        order.save()
+
+        # Save the user's info
+        if save_info:
+            myprofile_data = {
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_postcode': order.postcode,
+                'default_town_or_city': order.town_or_city,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_county': order.county,
+            }
+            user_account_form = UserAccountForm(myprofile_data, 
+                                                instance=myprofile)
+            if user_account_form.is_valid():
+                user_account_form.save()
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
