@@ -296,72 +296,7 @@ input[type=text] {
     float: none;
   }
 
-  .wrapper {
-    margin-left: 240px;
-  }
-
-  .wrapper__minify {
-    margin-left: 0;
-  }
-
 }
-
-/*--- Left Side Footer ---*/
-
-.alrt_dot {
-    position: absolute;
-    right: 15px;
-    font-size: 10px;
-    font-weight: 500;
-    color: #fff;
-    background: #ed2a26;
-    overflow: hidden;
-    width: 5px;
-    height: 5px;
-    text-align: center;
-    border-radius: 100%;
-    top: 45%;
-}
-
-.left_footer {
-    padding: 15px 14px;
-}
-
-.left_footer ul li {
-    display: inline-block;
-}
-
-.left_footer a {
-    font-size: 13px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-    line-height: 24px;
-    padding: 0 3px;
-	color: #333;
-}
-
-.left_footer a:hover {
-	color: #ed2a26 !important;
-}
-
-.left_footer_content {
-    padding-top: 15px;
-}
-
-.left_footer_content p {
-    font-size: 12px;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    color: #afafaf;
-    text-align: left;
-    line-height: 24px;
-}
-
-.left_section {
-    border-bottom: 1px solid #e5e5e5;
-}
-
 /*--- Header ---*/
 
 header {
@@ -1762,77 +1697,7 @@ i.icon1 {
 	color: #333 !important;
 }
 
-/*--- All Live Streams ---*/
 
-.main-loader {
-	float: left;
-	width: 100%;
-	margin-bottom: 20px;
-}
-
-/* === Animation Loader === */
-
-.spinner {
-    margin: 0 auto 0;
-    width: 50px;
-    text-align: center;
-    height: 20px;
-    border-radius: 100px;
-    background-color: #fff;
-    line-height: 20px;
-    border: 1px solid #efefef;
-    cursor: pointer;
-}
-
-.spinner > div {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-  background-color: #333;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-  background-color: #333;
-  opacity: 0.702;
-}
-
-.spinner .bounce3 {
-  -webkit-animation-delay: -0.12s;
-  animation-delay: -0.12s;
-  background-color: #333;
-  opacity: 0.4;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% { 
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
-}
-
-.live1452 {
-    margin-bottom: 25px;
-    float: left;
-    width: 100%;
-}
 
 /*Floating CSS Start*/
 .live1452 iframe {
@@ -2272,7 +2137,7 @@ i.icon2 {
 	padding: 60px 0 0 !important;
 }
 
-._215b01 {
+.black_background{
 	float: left;
 	width: 100%;
 	background: #333;
@@ -3796,9 +3661,6 @@ i.icon2 {
     color: #fff !important;
     background: #333;
 }
-
-
-
 
 /* --- Signup Signin Page --- */
 
