@@ -5,7 +5,7 @@
 	<header class="header clearfix">
 		<div class="main_logo" id="logo">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>iLearn</strong></h2>
+                    <h2 class="logo-font text-black my-0">iLearn</h2>
          </a>
 		</div>
         
@@ -22,17 +22,15 @@
 				</div>
 			</div>
 		</div>
-       
- <form method="GET" action="{% url 'courses' %}">
-        <div class="wrap">
-         <div class="search">
-          <input type="text" class="searchTerm" placeholder="Search for courses">
-          <button type="submit" class="searchButton">
-          <i class="uil uil-search-alt icon icon1"></i>
-         </button>
-         </div>
-        </div>
-         </form>
+
+<div class="header_right">
+  <form class="search-container" method="GET" action="{% url 'courses' %}">
+  <input id="search-box" type="text" class="search-box" name="q" />
+
+   <label for="search-box"><span class="glyphicon glyphicon-search search-icon"> <i class="uil uil-search-alt icon icon1"></i></span></label>
+  <input type="submit" id="search-submit" />
+</form>
+</div>
 
 		<div class="header_right">
 			<ul>
@@ -67,10 +65,8 @@
                   </li>
                  <li>
 			     <div class="night_mode_switch__btn">
-                 <i class="uil uil-moon"></i>
-					Night mode
+                 <i class="uil uil-moon"></i>Night mode
 				  <a href="#" id="night-mode" class="btn-night-mode night_mode_switch__btn">
-                
 					<span class="btn-night-mode-switch">
 			            <span class="uk-switch-button"></span>
 					</span>
