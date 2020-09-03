@@ -33,10 +33,11 @@
         </div>
     </div>
 
+
     <div class="mb4d25">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
+          <div class="container">
+			  <div class="row justify-content-lg-center justify-content-md-center">
+                <div class="col-lg-6 col-md-8">
                  {% if basket_items %}
                        {% for course in basket_items %}
                     <div class="fcrse_1">
@@ -59,9 +60,8 @@
                         </div>
                     </div>
                      {% endfor %}
-                    
                 </div>
-
+               
                 <div class="col-lg-4">
                     <div class="membership_chk_bg rght1528">
                         <div class="checkout_title">
@@ -79,17 +79,18 @@
                
 
                 {% else %}
-                <p class="lead mb-5">Your basket is empty.</p>
-                <a href="{% url 'courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
+					<div class="sign_form">
+                     <p class="lead mb-5">Your basket is empty.</p>
+								<a href="{% url 'courses' %}" class="btn_back_red">
+                                <i class="fas fa-chevron-left"></i>
+							    <span> Keep shopping </span>
+							    </a>
+                </div>
                 {% endif %}
+                </div>
+               </div>
             </div>
         </div>
-    </div>
-
-</div>
+        
+ 
 {% endblock %}
