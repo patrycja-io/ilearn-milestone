@@ -22,20 +22,20 @@
 				</div>
 			</div>
 		</div>
-        <form method="GET" action="{% url 'courses' %}">
-		<div class="search120">
-			<div class="ui search">
-			  <div class="ui left icon input swdh10">
-				<input class="prompt srch10" type="text" name="q" placeholder="Search ..">
-				<i class="uil uil-search-alt icon icon1"></i>
-			  </div>
-			</div>
-		</div>
-        </form>
+       
+ <form method="GET" action="{% url 'courses' %}">
+        <div class="wrap">
+         <div class="search">
+          <input type="text" class="searchTerm" placeholder="Search for courses">
+          <button type="submit" class="searchButton">
+          <i class="uil uil-search-alt icon icon1"></i>
+         </button>
+         </div>
+        </div>
+         </form>
+
 		<div class="header_right">
 			<ul>
-                  
-
 				<li>
 					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
                     <i class="uil uil-shopping-cart"></i>
@@ -48,13 +48,13 @@
                     </strong>
                     </a>
 				</li>
-                	
-                <div class="ui simple dropdown item">
-					<a href="" class="upload_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                 <li>
+                <div class="dropdown">
+					<a href="" role="button" class="upload_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_course' %}" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'add_course' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'myprofile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -64,12 +64,11 @@
                             {% endif %}
                         </div>
                     </div>
-
+                  </li>
                  <li>
 			     <div class="night_mode_switch__btn">
                  <i class="uil uil-moon"></i>
 					Night mode
-                   
 				  <a href="#" id="night-mode" class="btn-night-mode night_mode_switch__btn">
                 
 					<span class="btn-night-mode-switch">
