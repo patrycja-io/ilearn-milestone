@@ -11,13 +11,13 @@
         
         <div class="top-category">
 			<div class="compact cate-dpdwn">
-				<div class="ui simple dropdown item">
-					<a href="#" class="option_links p-0" title="categories"><i class="uil uil-apps"></i></a>
-					<div class="menu dropdown_category5">
-						<a href="{% url 'courses' %}?category=html" class="item channel_item">HTML & CSS</a>
-						<a href="{% url 'courses' %}?category=javascript" class="item channel_item">Javascript & Frameworks</a>
-						<a href="{% url 'courses' %}?category=php" class="item channel_item">PHP & Laravel</a>
-						<a href="{% url 'courses' %}?category=python" class="item channel_item">Python & Frameworks</a>
+			     <div class="dropdown">
+					<a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="option_links p-0" title="categories"><i class="uil uil-apps"></i></a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<a href="{% url 'courses' %}?category=html" class="dropdown-item">HTML & CSS</a>
+						<a href="{% url 'courses' %}?category=javascript" class="dropdown-item">Javascript & Frameworks</a>
+						<a href="{% url 'courses' %}?category=php" class="dropdown-item">PHP & Laravel</a>
+						<a href="{% url 'courses' %}?category=python" class="dropdown-item">Python & Frameworks</a>
 					</div>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
                                 {% endif %}
                                 <a href="{% url 'myprofile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
+                                 {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
