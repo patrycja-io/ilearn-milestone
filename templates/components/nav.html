@@ -5,7 +5,7 @@
 	<header class="header clearfix">
 		<div class="main_logo" id="logo">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">iLearn</h2>
+                    <h1 class="logo-font text-dark my-0"><strong>iLearn</strong></h1>
          </a>
 		</div>
         
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 
-<div class="header_right">
+<div class="search_position">
   <form class="search-container" method="GET" action="{% url 'courses' %}">
   <input id="search-box" type="text" class="search-box" name="q" />
 
@@ -35,7 +35,7 @@
 		<div class="header_right">
 			<ul>
 				<li>
-					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-black{% endif %} nav-link">
+					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-dark{% endif %} nav-link">
                     <i class="uil uil-shopping-cart"></i>
                     <strong class="my-0">
                                     {% if total %}
