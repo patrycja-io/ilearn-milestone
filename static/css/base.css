@@ -2133,6 +2133,18 @@ i.icon2 {
 
 /*--- Course Detail View Page ---*/
 
+
+.price_tag {
+	font-size: 26px;
+	font-weight: 600;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	line-height: 26px;
+	margin-top: 0;
+	text-shadow: 1px 10px 6px rgba(0,0,0,0.2);
+}
+
 ._bg4586 {
 	padding: 60px 0 0 !important;
 }
@@ -2186,8 +2198,7 @@ i.icon2 {
     text-align: left;
     line-height: 26px;
 }
-
-._215b05 {
+.div_description {
     margin-top: 20px;
     color: #fff;
     font-size: 14px;
@@ -2396,7 +2407,7 @@ i.icon2 {
 	border: 1px solid #c72127;
 }
 
-.btn_buy {
+.btn_back {
     height: 40px;
     border: 0;
     padding: 0 25px;
@@ -2409,10 +2420,10 @@ i.icon2 {
 	border: 1px solid #fff;
 }
 
-.btn_buy:hover {
+.btn_back:hover {
 	color: #fff;
-    background: #c72127;
-	border: 1px solid #c72127;
+    background: #fdcc0d;
+	border: 1px solid #fdcc0d;
 }
 
 ._215fgt1 {
@@ -3969,16 +3980,7 @@ i.icon2 {
     margin-top: 0;
 }
 
-.thnk_title1 {
-	font-size: 24px;
-	font-weight: 400;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-	line-height: 26px;
-	margin-top: 0;
-	text-shadow: 1px 10px 6px rgba(0,0,0,0.2);
-}
+
 
 .thnk_des {
 	font-size: 16px;
