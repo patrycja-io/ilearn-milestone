@@ -7,7 +7,7 @@ from .forms import UserAccountForm
 
 from checkout.models import Order
 
-
+@login_required
 def myprofile(request):
     """ Display the user's profile. """
     myprofile = get_object_or_404(UserAccount, user=request.user)
@@ -17,7 +17,11 @@ def myprofile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-
+        else:
+            messages.error(request,
+                           ('Update failed. Please ensure '
+                            'the form is valid.'))
+    else:
     form = UserAccountForm(instance=myprofile)
     orders = myprofile.orders.all()
 
@@ -25,7 +29,7 @@ def myprofile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_myprofile_page': True
     }
 
     return render(request, template, context)
