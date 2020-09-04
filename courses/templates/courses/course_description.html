@@ -60,9 +60,13 @@
                                
 									<div class="_215b03">
 										<h2>{{ course.name }}</h2>
+                                        <p>
+                                        The course you need to learn web development</p>
+                                        </div>
                                          {% if course.category %}
                                         <a class="_215b04" href="{% url 'courses' %}?category={{ course.category.name }}">
-                            <i class="_215b04"></i>The course you need to learn web development - {{ course.category.friendly_name }}
+                            <i class="_215b04">
+                            </i> {{ course.category.friendly_name }}
                         </a>
                                         {% endif %}
 									</div>
@@ -74,12 +78,12 @@
 										</div>
                                          {% endif %}
 									</div>
-									<div class="_215b06">										
-										<div class="_215b07">										
+										<div class="details_div">									
+																		
 											<span><i class="uil uil-comment"></i></span>
 											English
 										</div>
-									</div>
+									
 									<div class="details_div">										
 										Last updated 1/2020
 									</div>
