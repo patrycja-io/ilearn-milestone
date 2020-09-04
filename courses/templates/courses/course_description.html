@@ -31,62 +31,9 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-       
-	<div class="wrapper _bg4586">
-     <div class="container">
-            <div class="row">
-		<div class="black_background">
-			<div class="container-fluid">			
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section3125">							
-							<div class="row justify-content-center">						
-								<div class="col-xl-4 col-lg-5 col-md-6">						
-									<div class="preview_video">						
-										<a href="{{ course.image.url }}" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
-                                           {% if course.image %}
-											<img src="{{ course.image.url }}" alt="">
-                                            {% endif%}
-										</a>
-									</div>
-								</div>
-								<div class="col-xl-8 col-lg-7 col-md-6">
-                               
-									<div class="_215b03">
-										<h2>{{ course.name }}</h2>
-                                        <p>
-                                        The course you need to learn web development</p>
-                                        </div>
-                                         {% if course.category %}
-                                        <a class="_215b04" href="{% url 'courses' %}?category={{ course.category.name }}">
-                            <i class="_215b04">
-                            </i> {{ course.category.friendly_name }}
-                        </a>
-                                        {% endif %}
-									</div>
-                                     
-									<div class="details_div">
-                                    {% if course.rating %}
-										<div class="crse_reviews mr-2">
-											<i class="uil uil-star"></i>{{ course.rating }}/5
-										</div>
-                                         {% endif %}
-									</div>
-										<div class="details_div">									
-																		
-											<span><i class="uil uil-comment"></i></span>
-											English
-										</div>
-									
-									<div class="details_div">										
-										Last updated 1/2020
-									</div>
-=======
     </div>
   </div>
 </div>
->>>>>>> c955f0c2868b459c6bdb1483e09e021bb767c49c
 
 <div class="wrapper _bg4586">
   <div class="container">
@@ -102,8 +49,6 @@
                       <a
                         href="{{ course.image.url }}"
                         class="fcrse_img"
-                        data-toggle="modal"
-                        data-target="#videoModal"
                       >
                         {% if course.image %}
                         <img src="{{ course.image.url }}" alt="" />
@@ -125,9 +70,9 @@
                       {% endif %}
                     </div>
 
-                    <div class="details_div">
+                    <div class="course_reviews">
                       {% if course.rating %}
-                      <div class="crse_reviews mr-2">
+                      <div class="course_reviews mr-2">
                         <i class="uil uil-star"></i>{{ course.rating }}/5
                       </div>
                       {% endif %}
