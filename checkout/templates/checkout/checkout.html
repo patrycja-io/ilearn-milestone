@@ -45,7 +45,6 @@ follow{% endblock %} {% block content %}
 						<div class="checkout_bg">
 							<div class="checkout_title">
 								<h4>Billing Details</h4>
-								<img src="images/line.svg" alt="">
 							</div>
                            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
 			{% csrf_token %}
@@ -133,7 +132,7 @@ follow{% endblock %} {% block content %}
 		<div class="checkout_bg checkout_bg_right">
 			<div class="checkout_title">
 				<h4>Order Summary {{ course_count }}</h4>
-									</div>
+			</div>
 	
 				<div class="order_dt_section">
 					{% for course in basket_items %}
