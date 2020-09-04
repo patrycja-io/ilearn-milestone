@@ -5,8 +5,9 @@ from django.contrib.auth.decorators import login_required
 from .models import UserAccount
 from .forms import UserAccountForm
 
+from checkout.models import Order
 
-@login_required
+
 def myprofile(request):
     """ Display the user's profile. """
     myprofile = get_object_or_404(UserAccount, user=request.user)
@@ -15,21 +16,16 @@ def myprofile(request):
         form = UserAccountForm(request.POST, instance=myprofile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Account updated successfully')
-            else:
-            messages.error(request,
-                           ('Update failed. Please ensure '
-                            'the form is valid.'))
+            messages.success(request, 'Profile updated successfully')
 
-    else:
-        form = UserAccountForm(instance=myprofile)
+    form = UserAccountForm(instance=myprofile)
     orders = myprofile.orders.all()
 
     template = 'myprofile/myprofile.html'
     context = {
         'form': form,
         'orders': orders,
-        'on_myprofile_page': True
+        'on_profile_page': True
     }
 
     return render(request, template, context)
