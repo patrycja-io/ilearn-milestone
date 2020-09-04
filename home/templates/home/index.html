@@ -1,157 +1,179 @@
 <!DOCTYPE html>
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
+{% extends "base.html" %} {% load static %} {% block page_header %}
 <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
-{% block content %}
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
 
 <div class="top-banner">
-    <div class="top-banner__wrapper">
-        <div class="top-banner__wrapper__image">
-            <div class="top-banner__wrapper__image__content">
-
-                <div class="title129 mt-35 mt-15">  
-                        <h1>Improving Lives Through Learning</h1>
-                </div>
-                   
-                <h3>Explore thousands of courses starting at £13.99 each.</h3>
-        
-               
-                <div class="top-banner__wrapper__image__content__buttons">
-                    <a href="{% url 'courses' %}" class="crer_btn_link">Browse Courses</a>
-                    <a href="{% url 'account_login' %}" class="crer_btn_link">Log In</a>
-                </div>
-            </div>
+  <div class="top-banner__wrapper">
+    <div class="top-banner__wrapper__image">
+      <div class="top-banner__wrapper__image__content">
+        <div class="title129 mt-35 mt-15">
+          <h1>Improving Lives Through Learning</h1>
         </div>
+
+        <h3>Explore thousands of courses starting at £13.99 each.</h3>
+
+        <div class="top-banner__wrapper__image__content__buttons">
+          <a href="{% url 'courses' %}" class="crer_btn_link">Browse Courses</a>
+          <a href="{% url 'account_login' %}" class="crer_btn_link">Log In</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <div class="container">
-	<div class="ud-component--logged-out-home--billboard"
-		data-component-props="{&quot;image_responsive_udlite&quot;:&quot;https://unsplash.com/photos/XkKCui44iM0&quot;,&quot;title&quot;:&quot;Learn on your schedule&quot;,&quot;image_responsive&quot;:&quot;https://img-a.udemycdn.com/notices/home_banner/image_responsive/354ab47b-2132-49ac-8316-28dc01d9a5ed.jpg&quot;,&quot;subtitle_responsive&quot;:&quot;Study any topic, anytime. Explore thousands of courses starting at \u00a313.99 each.&quot;,&quot;image&quot;:&quot;https://img-a.udemycdn.com/notices/home_banner/image/5e733138-2116-4fdd-a927-c27a916dc488.jpg&quot;,&quot;title_responsive&quot;:&quot;Learn on your schedule&quot;,&quot;image_udlite&quot;:&quot;https://img-a.udemycdn.com/notices/home_banner/image_udlite/f8324ecd-1a8d-4260-8e15-ec8aaeffa1d1.jpg&quot;,&quot;subtitle&quot;:&quot;Study any topic, anytime. Explore thousands of courses starting at \u00a313.99 each.&quot;,&quot;url&quot;:&quot;&quot;,&quot;id&quot;:13023}"
-		ng-non-bindable="">
-	</div>
+  <div
+    class="ud-component--logged-out-home--billboard"
+    data-component-props='{"image_responsive_udlite":"https://unsplash.com/photos/XkKCui44iM0","title":"Learn on your schedule","image_responsive":"https://img-a.udemycdn.com/notices/home_banner/image_responsive/354ab47b-2132-49ac-8316-28dc01d9a5ed.jpg","subtitle_responsive":"Study any topic, anytime. Explore thousands of courses starting at \u00a313.99 each.","image":"https://img-a.udemycdn.com/notices/home_banner/image/5e733138-2116-4fdd-a927-c27a916dc488.jpg","title_responsive":"Learn on your schedule","image_udlite":"https://img-a.udemycdn.com/notices/home_banner/image_udlite/f8324ecd-1a8d-4260-8e15-ec8aaeffa1d1.jpg","subtitle":"Study any topic, anytime. Explore thousands of courses starting at \u00a313.99 each.","url":"","id":13023}'
+    ng-non-bindable=""
+  ></div>
 </div>
 
-    <div class="wrapper _bg4586 _new89">       
-        <div class="_215cd2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">                     
-                        <div class="course_tabs">
-                            <nav>
-                                <div class="nav nav-tabs tab_crse  justify-content-center">
-                                   <a class="nav-item nav-link active" href="about_us.html">About</a>
-                                </div>
-                            </nav>                      
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="wrapper _bg4586 _new89">
+  <div class="_215cd2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="course_tabs">
+            <nav>
+              <div class="nav nav-tabs tab_crse justify-content-center">
+                <a class="nav-item nav-link active" href="about_us.html"
+                  >About</a
+                >
+              </div>
+            </nav>
+          </div>
         </div>
-        <div class="_215td5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title589 text-center">
-                            <h2>Our Features</h2>
-                            <p>On Cursus, you have access to:</p>
-                            <img class="line-title" src="" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-sm-6">
-                        <div class="feature125">
-                            <i class="uil uil-mobile-android-alt"></i>
-                            <h4>Mobile learning</h4>
-                            <p>Quisque nec volutpat sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-sm-6">
-                        <div class="feature125">
-                            <i class="uil uil-users-alt"></i>
-                            <h4>Academic & Technical Support</h4>
-                            <p>Quisque nec volutpat sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-sm-6">
-                        <div class="feature125">
-                            <i class="uil uil-award"></i>
-                            <h4>Sharable Certificates</h4>
-                            <p>Quisque nec volutpat sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3  col-sm-6">
-                        <div class="feature125">
-                            <i class="uil uil-globe"></i>
-                            <h4>An Inclusive Experience</h4>
-                            <p>Quisque nec volutpat sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </div>
+  <div class="_215td5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="title589 text-center">
+            <h2>Our Features</h2>
+            <p>On Cursus, you have access to:</p>
+            <img class="line-title" src="" alt="" />
+          </div>
         </div>
-        <div class="_215zd5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="title478">
-                            <h2>Our Story</h2>
-                            <img class="line-title" src="images/line.svg" alt="">
-                            <p>High-quality content alone isn’t sufficient. Our marketplace content model ensures that we always have the most recent and high-quality content that makes learning enjoyable. We’ll always have the latest skills on the most important topics your employees need to stay ahead of the curve. Driving effective learning is a challenge — but it doesn’t have to be that way. We are the true learning partner that helps impact your business from top to bottom. From strategy to execution, we’re alongside you throughout this journey.</p >
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="story125">
-                            <img src="images/about/stroy_img.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature125">
+            <i class="uil uil-mobile-android-alt"></i>
+            <h4>Mobile learning</h4>
+            <p>
+              Quisque nec volutpat sem. Interdum et malesuada fames ac ante
+              ipsum primis in faucibus.
+            </p>
+          </div>
         </div>
-        <div class="_215td5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title589 text-center">
-                            <h2>Our Global Reach</h2>
-                            <p>Cursus is the leading global marketplace for teaching and learning, connecting millions of students to the skills they need to succeed.</p >
-                            <img class="line-title" src="images/line.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="p__metric">
-                            27+
-                            <span>Courses</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="p__metric">
-                            14k
-                            <span>Course enrollments</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="p__metric">
-                            10+
-                            <span>Programming Languages</span>
-                        </div>
-                    </div>
-                 
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="p__metric">
-                            295
-                            <span>Countries</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature125">
+            <i class="uil uil-users-alt"></i>
+            <h4>Academic & Technical Support</h4>
+            <p>
+              Quisque nec volutpat sem. Interdum et malesuada fames ac ante
+              ipsum primis in faucibus.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature125">
+            <i class="uil uil-award"></i>
+            <h4>Sharable Certificates</h4>
+            <p>
+              Quisque nec volutpat sem. Interdum et malesuada fames ac ante
+              ipsum primis in faucibus.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="feature125">
+            <i class="uil uil-globe"></i>
+            <h4>An Inclusive Experience</h4>
+            <p>
+              Quisque nec volutpat sem. Interdum et malesuada fames ac ante
+              ipsum primis in faucibus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="_215zd5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="title478">
+            <h2>Our Story</h2>
+            <img class="line-title" src="images/line.svg" alt="" />
+            <p>
+              High-quality content alone isn’t sufficient. Our marketplace
+              content model ensures that we always have the most recent and
+              high-quality content that makes learning enjoyable. We’ll always
+              have the latest skills on the most important topics your employees
+              need to stay ahead of the curve. Driving effective learning is a
+              challenge — but it doesn’t have to be that way. We are the true
+              learning partner that helps impact your business from top to
+              bottom. From strategy to execution, we’re alongside you throughout
+              this journey.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="story125">
+            <img src="images/about/stroy_img.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="_215td5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="title589 text-center">
+            <h2>Our Global Reach</h2>
+            <p>
+              Cursus is the leading global marketplace for teaching and
+              learning, connecting millions of students to the skills they need
+              to succeed.
+            </p>
+            <img class="line-title" src="images/line.svg" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="p__metric">
+            27+
+            <span>Courses</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="p__metric">
+            14k
+            <span>Course enrollments</span>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="p__metric">
+            10+
+            <span>Programming Languages</span>
+          </div>
         </div>
 
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="p__metric">
+            295
+            <span>Countries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-{% endblock %}
+  {% endblock %}
+</div>
