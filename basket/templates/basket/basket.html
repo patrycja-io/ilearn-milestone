@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <div class="mb4d25">
+  <div class="basket">
     <div class="container">
       <div class="row justify-content-lg-center justify-content-md-center">
         <div class="col-lg-6 col-md-8">
@@ -66,16 +66,16 @@
         </div>
 
         <div class="col-lg-4">
-          <div class="membership_chk_bg rght1528">
+          <div class="checkout_bg checkout_bg_right">
             <div class="checkout_title">
               <h4>Order Summary</h4>
             </div>
-            <div class="order_dt_section">
+            <div class="summary">
               <div class="order_title">
                 <h2>Total</h2>
-                <div class="order_price5">£{{ total|floatformat:2 }}</div>
+                <div class="order_price_">£{{ total|floatformat:2 }}</div>
               </div>
-              <a href="{% url 'checkout' %}" class="chckot_btn">Checkout Now</a>
+              <a href="{% url 'checkout' %}" class="checkout_btn">Checkout Now</a>
             </div>
           </div>
         </div>
