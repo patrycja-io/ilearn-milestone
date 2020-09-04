@@ -1718,7 +1718,7 @@ i.icon1 {
 	background-image: linear-gradient(transparent, rgba(51,51,51,.3) 90%);
 }
 
-.crse_reviews {
+.course_reviews {
     color: #fff;
     background: #fdcc0d;
     display: inline-block;
@@ -1729,7 +1729,7 @@ i.icon1 {
     font-family: 'Roboto', sans-serif;
 }
 
-.crse_reviews i {
+.course_reviews i {
     margin-right: 2px;
 }
 
@@ -5045,7 +5045,6 @@ i.icon2 {
 
 .invoice_header_item {
     float: left;
-    width: 100%;
     text-align: center;
 }
 
@@ -5059,7 +5058,7 @@ i.icon2 {
 }
 
 .invoice_header_item p {
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #fff;
@@ -5099,8 +5098,10 @@ i.icon2 {
 }
 
 .vdt-list span {
-    color: #333;
+    color: #000;
     margin-right: 10px;
+    
+
 }
 
 .invoice_header_main {
