@@ -2929,6 +2929,7 @@ i.icon2 {
     padding: 20px 0 0;
     background: #fff;
 	margin-bottom: 17px;
+    margin-top: 20px;
 }
 
 .course_tabs {
@@ -3078,7 +3079,7 @@ i.icon2 {
     margin-bottom: 0;
 }
 
-._5f7g11 {
+.list {
     display: block;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
@@ -3088,7 +3089,7 @@ i.icon2 {
 	line-height: 26px;
 }
 
-._5f7g11::before {
+.list::before {
 	content: '\f111';
 	display: inline-block;
 	font-style: normal;
@@ -3973,21 +3974,23 @@ i.icon2 {
 	float: right;
 }
 
-.ttl121 .breadcrumb {
+.path .breadcrumb {
     background-color: #fff !important;
 	padding: 0 !important;
 }
 
-.ttl121 .breadcrumb-item a {
+.path .breadcrumb-item a {
 	color: #333;
 }
 
-.ttl121 .breadcrumb-item {
+.path .breadcrumb-item {
 	font-size: 14px;
 	font-weight: 400;
 	color: #333;
 	font-family: 'Roboto', sans-serif;
 	line-height: 24px;
+    margin-top: 7px;
+    margin-bottom: 15px;
 }
 
 .title126 {
@@ -4685,14 +4688,6 @@ i.icon2 {
 	text-decoration: underline !important;
 }
 
- 
-
-.contact1256 {
-    float: left;
-    width: 100%;
-	margin-top: 17px;
-	margin-bottom: 64px;
-}
 
 .contact_link_step {
 	background: #fff;
@@ -5133,10 +5128,10 @@ i.icon2 {
 /* --- Night Mode Btn --- */
 
 .night_mode_switch__btn {
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-.night_mode_switch__btn a {
+.night_mode_switch__btn a 
     display: block;
     font-size: 14px;
     transition: 0.3s;
@@ -5146,7 +5141,6 @@ i.icon2 {
     color: #333;
     padding: 15px;
     position: relative;
-	display: flex;
     align-items: center;
 }
 
@@ -5154,7 +5148,7 @@ i.icon2 {
     font-size: 120%;
 	height: 30px;
 	Width: 30px;
-	background: #ffecec;
+	background: #fff;
 	border-radius: 100%;
 	margin-right: 10px;
 	padding: 6px 4px 0;
