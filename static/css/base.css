@@ -1188,6 +1188,151 @@ i.icon1 {
     color: #fff !important;
 }
 
+
+/*--- Checkout ---*/
+
+.checkout_bg {
+	background: #fff;
+    width: 100%;
+    float: left;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    transition: all .2s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.checkout_bg_right {
+    position: sticky;
+    top: 90px;
+}
+
+.summary {
+	float: left;
+	width: 100%;
+    margin-top: 7px;
+}
+
+.order_dt_section {
+	float: left;
+	width: 100%;
+    margin-top: 7px;
+}
+
+.order_title {
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.order_title h4 {
+	font-size: 16px;
+	font-weight: 600;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	float: left;
+	margin-bottom: 0;
+	line-height: 24px;
+	width: 70%;
+	text-align: left;
+}
+
+.order_title .order_price {
+	font-size: 16px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	color: #686f7a;
+	text-align: right;
+	float: right;
+	width: 30%;
+	margin-bottom: 0;
+}
+
+.order_title h6 {
+	font-size: 16px;
+	font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+	color: #686f7a;
+	float: left;
+	width: 70%;
+	text-align: left;
+	line-height: 24px;
+	margin-bottom: 0;
+}
+
+.order_title h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    float: left;
+    width: 70%;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.order_title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    float: left;
+    width: 70%;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.order_title .order_price_ {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    text-align: right;
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+}
+.checkout_btn {
+    height: 40px;
+    padding: 10px 20px;
+    border: 0;
+    margin-top: 30px;
+    float: right;
+    color: #fff;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: #ed2a26;
+	display: block;
+}
+.checkout_btn_stripe {
+    height: 40px;
+    padding: 10px 20px;
+    border: 0;
+    float: right;
+    color: #fff;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: #ed2a26;
+	display: block;
+}
+
+.checkout_btn:hover {
+    color: #fff !important;
+    background: #333;
+}
+
+.basket {
+    float: left;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
 /*--- Index Homepage ---*/
 
 .wrapper {
