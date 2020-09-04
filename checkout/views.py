@@ -16,6 +16,7 @@ from basket.context import basket_ebooks
 import stripe
 import json
 
+
 @require_POST
 def cache_data(request):
     try:
@@ -69,10 +70,7 @@ def checkout(request):
                         )
                         order_ebook.save()
                 except Course.DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
-                    )
+                    messages.error(request, ("Product not found"))
                     order.delete()
                     return redirect(reverse('view_basket'))
 
