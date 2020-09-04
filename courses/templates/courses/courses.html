@@ -66,19 +66,17 @@
             <div class="col-lg-3 col-md-4">
               <div class="fcrse_1 mt-30">
                 {% if course.image %}
-                <a
-                  href="{% url 'course_description' course.id %}"
-                  class="fcrse_img"
-                >
+                <a href="{% url 'course_description' course.id %}"
+                  class="fcrse_img">
                   <img src="{{ course.image.url }}" alt="{{ course.name }}" />
                   {% endif %}
                   <div class="course-overlay">
                     {% if course.rating %}
-                    <div class="crse_reviews">
+                 <div class="course_reviews mr-2">
                       <i class="uil uil-star"></i>{{ course.rating }} / 5
                     </div>
                     {% else %}
-                    <div class="crse_reviews">
+                  <div class="course_reviews mr-2">
                       <i class="uil uil-star"></i>no stars yet
                     </div>
                     {% endif %}
@@ -94,17 +92,13 @@
                   {% endif %} {% if course.category %}
                   <a
                     href="{% url 'courses' %}?category={{ course.category.name }}"
-                    class="crse-cate"
-                  >
-                    <i></i>{{ course.category.friendly_name }}</a
-                  >
+                    class="crse-cate">
+                    <i></i>{{ course.category.friendly_name }}</a>
                   {% endif %} {% if request.user.is_superuser %}
-                  <small class="ml-3">
+                  <small>
                     <a href="{% url 'edit_course' course.id %}">Edit</a> |
-                    <a
-                      class="text-danger"
-                      href="{% url 'delete_course' course.id %}"
-                      >Delete</a
+                    <a class="text-danger"
+                      href="{% url 'delete_course' course.id %}">Delete</a
                     >
                   </small>
                   {% endif %}
