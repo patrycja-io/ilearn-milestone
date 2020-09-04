@@ -22,8 +22,8 @@ def myprofile(request):
                            ('Update failed. Please ensure '
                             'the form is valid.'))
     else:
-    form = UserAccountForm(instance=myprofile)
-    orders = myprofile.orders.all()
+        form = UserAccountForm(instance=myprofile)
+        orders = myprofile.orders.all()
 
     template = 'myprofile/myprofile.html'
     context = {
