@@ -2,28 +2,32 @@
 {% load static %}
 
 <!-- Header Start -->
-	<header class="header clearfix">
-		<div class="main_logo" id="logo">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h1 class="logo-font text-dark my-0"><strong>iLearn</strong></h1>
-         </a>
-		</div>
-        
-        <div class="top-category">
+	
+    <nav class="navbar header clearfix">
+		<div class="top-category">
 			<div class="compact cate-dpdwn">
 			     <div class="dropdown">
 					<a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="option_links p-0" title="categories"><i class="uil uil-apps"></i></a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 						<a href="{% url 'courses' %}?category=html" class="dropdown-item">HTML & CSS</a>
+                        <div class="dropdown-divider"></div>
 						<a href="{% url 'courses' %}?category=javascript" class="dropdown-item">Javascript & Frameworks</a>
+                        <div class="dropdown-divider"></div>
 						<a href="{% url 'courses' %}?category=php" class="dropdown-item">PHP & Laravel</a>
+                        <div class="dropdown-divider"></div>
 						<a href="{% url 'courses' %}?category=python" class="dropdown-item">Python & Frameworks</a>
 					</div>
 				</div>
 			</div>
 		</div>
+        <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h1 class="logo-font text-dark my-0"><strong>iLearn</strong></h1>
+         </a>
+		
+      
+        
 
-<div class="search_position">
+<div class="search_position  d-none	d-sm-none d-md-block">
   <form class="search-container" method="GET" action="{% url 'courses' %}">
   <input id="search-box" type="text" class="search-box" name="q" />
 
@@ -31,49 +35,58 @@
   <input type="submit" id="search-submit" />
 </form>
 </div>
-
+ 
 		<div class="header_right">
 			<ul>
 				<li>
-					<a href="{% url 'view_basket' %}" class="{% if total %}text-warning font-weight-bold{% else %}text-dark{% endif %} nav-link">
-                    <i class="uil uil-shopping-cart"></i>
-                    <strong class="my-0">
-                                    {% if total %}
-                                        ${{ total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                    </strong>
-                    </a>
+					<a href="{% url 'view_basket' %}"
+						class="{% if total %}text-danger font-weight-bold{% else %}text-dark{% endif %} nav-link">
+						<i class="uil uil-shopping-cart"></i>
+						<strong class="my-0">
+		                                    {% if total %}
+		                                        ${{ total|floatformat:2 }}
+		                                    {% else %}
+		                                        £0.00
+		                                    {% endif %}
+		                    </strong>
+					</a>
 				</li>
-                 <li>
-                <div class="dropdown">
-					<a href="" role="button" class="upload_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Profile</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="{% url 'add_course' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="{% url 'myprofile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                  </li>
-                 <li>
-			     <div class="night_mode_switch__btn">
-                 <i class="uil uil-moon"></i>Night mode
-				  <a href="#" id="night-mode" class="btn-night-mode night_mode_switch__btn">
-					<span class="btn-night-mode-switch">
-			            <span class="uk-switch-button"></span>
-					</span>
-				  </a>
-			    </div>
-                </li>
-               
+				<li>
+					<div class="dropdown">
+						<a href="" role="button" class="upload_btn" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="true">
+                            My
+							Profile</a>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							{% if request.user.is_authenticated %}
+							{% if request.user.is_superuser %}
+							<a href="{% url 'add_course' %}" class="dropdown-item">Add New Course</a>
+                            <div class="dropdown-divider"></div>
+							{% endif %}
+							<a href="{% url 'myprofile' %}" class="dropdown-item">My Profile</a>
+                            <div class="dropdown-divider"></div>
+							<a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+							{% else %}
+							<a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                             <div class="dropdown-divider"></div>
+							<a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+							{% endif %}
+						</div>
+					</div>
+				</li>
+				<li >
+					<div class="night_mode_switch__btn d-noned-sm-none d-md-block ">
+                         
+						<a href="#" id="night-mode" class="btn-night-mode night_mode_switch__btn">
+							<span class="btn-night-mode-switch">
+					            <span class="uk-switch-button"></span>
+							</span>
+						</a>
+					</div>
+				</li>
+		
 			</ul>
 		</div>
-	</header>
+        	
+            </nav>
+	
