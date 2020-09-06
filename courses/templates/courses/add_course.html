@@ -11,28 +11,59 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Course Management</h2>
-                <h5 class="text-muted">Add a Course</h5>
-                <hr>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_course' %}" class="form mb-2" enctype="multipart/form-data">
+<div class="wrapper bg_top _new89">
+  <div class="top_overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="title125">
+            <div class="titleleft">
+              <div class="path">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                      My Profile
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                    Course Management
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="title126">
+            <h2>Add New Course</h2>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="mb4d25">
+			<div class="container">			
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="checkout_bg">
+							<div class="checkout_title">
+								<h4>Add New Course</h4>
+							</div>
+                            <form method="POST" action="{% url 'add_course' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'courses' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Course</button>
+                        <a class="btn_back_small" href="{% url 'courses' %}">Cancel</a>
+                        <button id="submit-button" class="checkout_btn_stripe" type="submit">Add Course</button>
                     </div>
                 </form>
-            </div>            
-        </div>
+   </div>
     </div>
+  </div>
+</div>
+</div>
+
 {% endblock %}
