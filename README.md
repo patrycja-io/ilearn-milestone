@@ -45,7 +45,7 @@
 
 ### Target Audience Goals:
 
-* Browse various products and be offered information about that product.
+* Browse various courses and be offered information about that course.
 * Purchase products shown on the webstore.
 * Create an account to track orders and purchase items on the webstore.
 * A visually appealing and intuitive design.
@@ -56,18 +56,18 @@
 
 * Provide users with a safe and secure e-commerce platform in order to generate revenue from sales.
 * Encourage user sales with promotions and discounts.
-* Build awareness for the brand and attract  suppliers.
+* Build awareness for the brand and attract new buyers.
 * Collect user session data for market research purposes.
 
 ### User Stories:
 
-<p>Tim Says: "Ive been looking for a website for a while now that works just as well on my phone as it does my laptop, im far too busy to be sitting at my computer all day 
+<p>Jenny Says: "Ive been looking for a website for a while now that works just as well on my phone as it does my laptop, im far too busy to be sitting at my computer all day 
 so I need a site that I can use just as well on my phone."</p>
 
-<p>Mark Says: "Im often skeptical of purchasing on online sites, I like to know that I have a line of communication with the company im paying with just incase there would be an issue
+<p>Tom Says: "Im often skeptical of buying online courses, I like to know that I have a line of communication with the company im paying with just incase there would be an issue
 at some point down the line with the order."</p>
 
-<p>Gabe Says: "Shopping on an e-commerce website has got to be easy, if you flood the user with too much choice you can cause them to panic and potentially leave the site and go elsewhere,
+<p>Sarah Says: "Shopping on an e-commerce website has got to be easy, if you flood the user with too much choice you can cause them to panic and potentially leave the site and go elsewhere,
 make it easy for the user to choose which items they want and buy them, simple!"</p>
 
 ### User Requirements and Expectations:
@@ -134,27 +134,8 @@ $main-background-color: $white-color;
 $main-panel-color: darken($off-white-color, 5%);
 ```
 
-Shadows:
-
-```scss
-$panel-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-$text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
-```
-
-Transitions: 
-```scss
-$fast-transition: 0.25s all ease-in-out;
-$slow-transition: 0.5s all ease-in-out;
-```
-
-Borders: 
-
-```scss
-$default-border-radius: 6px;
-```
-
 ### Images:
-<p>The images used across the website have been sourced from royalty free image website such as <a href="https://unsplash.com/">this</a>. The images are related toin says or  This helps to provide lifestyle imagery to the user and potentially entice them into making a purchase.</p>
+<p>The banner image used on the website main banner have been sourced from royalty free image website <a href="https://unsplash.com/photos/2FPjlAyMQTA">here</a>. The images are related to learning and it helps to provide lifestyle imagery to the user and potentially entice them into making a purchase.</p>
 
 ## Wireframes/Flowcharts: 🔧
 <p>I used Balsamiq</a> to develop the wireframes forthe website, this seemless tool allowed me to easily make a wireframe for each page aswell as a wireframe for each device. I could then easily export them via the tool to .png files in order to save to the project.</p> 
