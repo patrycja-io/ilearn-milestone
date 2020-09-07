@@ -55,7 +55,7 @@
 											<li><div class="vdt-list">{{ order.full_name }}</div></li>
 											<li><div class="vdt-list">{{ order.street_address1 }}</div></li>
                                              {% if order.street_address2 %}
-											<li><div class="vdt-list">{ order.street_address2 }}</div></li>
+											<li><div class="vdt-list">{{ order.street_address2 }}</div></li>
                                              {% endif %} {% if order.county %}
 											<li><div class="vdt-list">{{ order.county }}</div></li>
                                              {% endif %}
@@ -83,39 +83,39 @@
 						</div>
 						<div class="invoice_table">
 							<div class="table-responsive-md">
-								<table class="table table-borderless">
+                            <table class="table table-borderless">
 									<thead>
 										<tr>
 										  <th scope="col">Item</th>
-										  
-										  
 										  <th scope="col">Price</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>{% for item in order.courses %}
+                                        
+                                        <tr>
 											<th scope="row">
 												<div class="user_dt_trans">
-													<p>{{ item.product.name }}</p>
+													<p>{{ course.name }}</p>
 												</div>
 											</th>
-											
+										
 											<td>
 												<div class="user_dt_trans">														
-													<p>£{{ item.product.price }}</p>
+													<p>£ {{ course.price }}</p>
 												</div>
-											</td>
-                                             {% endfor %}												
-										</tr>
-										<tr>
+											</td>									
+										</tr>	
+										<tr>	
+                                         {% for order in orders %}
 											<td colspan="1"></td>
 											<td colspan="3">
 												<div class="user_dt_trans jsk1145">														
-													<div class="totalinv2">Invoice Total :£{{ order.total }}</div>
+													<div class="totalinv2">Invoice Total :£ £{{ order.total }}</div>
 													<p>Paid via Stripe</p>
 												</div>
 											</td>												
-										</tr>											
+										</tr>
+                                       		{% endfor %}		
 									</tbody>
 								</table>														
 							</div>
@@ -134,13 +134,10 @@
 			</div>
 		</div>	
 	</div>
-
-
-
   <div class="row">
    {% if from_profile %}
     <div class="col-12 col-lg-7 text-right">
-      <a href="{% url 'profiles' %}" class="btn btn-black rounded-0 my-2">
+      <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
         <span class="icon mr-2">
           <i class="fas fa-angle-left"></i>
         </span>
@@ -158,9 +155,5 @@
       </div>
        {% endif %}
 </div>
-
-
-
-   
 
 {% endblock %}
