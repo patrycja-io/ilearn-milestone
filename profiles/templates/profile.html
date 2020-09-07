@@ -43,7 +43,7 @@
 							<div class="checkout_title">
 								<h4>Customer details</h4>
 							</div>
-							<form class="mt-3" action="{% url 'myprofile' %}" method="POST" id="profile-update-form">
+							<form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
 								{% csrf_token %} {{ form|crispy }}
 								<button class="checkout_btn_stripe float-right">Update Information</button>
 							</form>
