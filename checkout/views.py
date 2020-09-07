@@ -69,6 +69,7 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_ebook.save()
+                    
                 except Course.DoesNotExist:
                     messages.error(request, ("Product not found"))
                     order.delete()
