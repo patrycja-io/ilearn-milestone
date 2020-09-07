@@ -163,22 +163,11 @@ Night Mood
 	background: #171717 !important;
 }
 
-.night-mode .channel_my {
-    padding: 15px !important;
-    border-bottom: 1px solid #242424 !important;
-    min-width: 100%;
-    max-width: 100%;
-    white-space: normal;
-}
 
 .night-mode  .pd_content p {
     color: #c7c7c7 !important;
 }
 
-.night-mode .ui.dropdown .menu>.channel_my:hover {
-    color: #fff !important;
-    background: #333 !important;
-}
 
 .night-mode .vbm_btn {
     width: 100%;
@@ -276,22 +265,13 @@ Night Mood
     border-bottom: 1px solid #242424;
 }
 
-.night-mode .stream_1 {
-    background: rgba(51,51,51, 0.5);
-}
+
 
 .night-mode .fcrse_1 {
     background: #333;
     border: 1px solid #242424;
 }
 
-.night-mode .vdtodt {
-    color: #c7c7c7;
-}
-
-.night-mode .cr1fot {
-    color: #c7c7c7;
-}
 
 .night-mode .prce142 {
     color: #fff;
@@ -406,22 +386,11 @@ Night Mood
 	background-color: #333;
 }
 
-.night-mode .value_props {
-    background: #333;
-}
-
-.night-mode  .value_icon i {
-    color: #fff;
-    background: #242424;
-}
-
 .night-mode .crse14s {
     color: #fff !important;
 }
 
-.night-mode .value_content p {
-    color: #c7c7c7;
-}
+
 
 .night-mode .tutor_name {
     color: #fff !important;
@@ -444,9 +413,6 @@ Night Mood
     color: #c7c7c7;
 }
 
-.night-mode .stream_bg p {
-    color: #c7c7c7;
-}
 
 .night-mode .footer {
     background: #242424;
@@ -1212,10 +1178,6 @@ Night Mood
     color: #fff !important;
 }
 
-.night-mode .reviews_left {
-    background: #333;
-    border: 1px solid #242424;
-}
 
 .night-mode ._rate002 {
     color: #fff;
@@ -1282,23 +1244,6 @@ Night Mood
     background: #313131;
 }
 
-.night-mode .value_props50 {
-    background: #333;
-    border: 1px solid #242424;
-}
-
-.night-mode .value_props51 {
-    background: #333;
-    border: 1px solid #242424;
-}
-
-.night-mode .rqst152 {
-    color: #fff !important;
-}
-
-.night-mode .rqst152:hover {
-    background: #cc2622;
-}
 
 .night-mode .ht_title {
     color: #fff;
@@ -1383,9 +1328,7 @@ Night Mood
     background: #cc2622;
 }
 
-.night-mode .purchased_badge {
-    background: #fa8305;
-}
+
 
 .night-mode .blogleft12 li {
     border-bottom: 1px solid #242424;
@@ -1432,15 +1375,6 @@ Night Mood
     color: #dbdbdb;
 }
 
-
-.night-mode .billing-percentages-progress-bar__labels li {
-    color: #fff;
-}
-
-.night-mode .radio-label_1 {
-    color: #fff;
-    background: #333;
-}
 
 .night-mode .pymnt_title span {
     color: #fff;
@@ -1607,9 +1541,7 @@ Night Mood
     border-bottom: 0;
 }
 
-.night-mode .cr1fot50 {
-    color: #fff !important;
-}
+
 
 .night-mode .my_courses_tabs .nav-pills .nav-link.active, .night-mode .my_courses_tabs .nav-pills .show>.nav-link {
     color: #fff !important;
@@ -1878,10 +1810,6 @@ Night Mood
     background: #cc2622;
 }
 
-.night-mode .total_rating {
-    background: #242424;
-    border: 1px solid #242424;
-}
 
 .night-mode ._rate001 {
     color: #fff;
