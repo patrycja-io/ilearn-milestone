@@ -40,4 +40,3 @@ def create_update_myprofile(sender, instance, created, **kwargs):
         UserAccount.objects.create(user=instance)
     # Existing users: just save the profile
     instance.useraccount.save()
-    
