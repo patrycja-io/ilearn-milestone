@@ -251,6 +251,10 @@ input[type=text] {
 	width: 110px !important;
 }
 
+.navbar{
+    	background-color: #fff;
+}
+
 .nav.dropdown {
     cursor: pointer;
     position: relative;
@@ -263,7 +267,6 @@ input[type=text] {
     transition: box-shadow 0.1s ease, width 0.1s ease, -webkit-box-shadow 0.1s ease;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 
 
 .upload_btn {
@@ -939,12 +942,6 @@ header {
 	display: flex !important;
 	align-items: center;
 	box-shadow: 0px 0.052083333in 11.25pt -9px rgba(0,0,0,.1);
-}
-
-.main_logo {
-    float: left;
-    width: 135px;
-    margin-left: 20px;
 }
 
 .logo-inverse {
@@ -2902,8 +2899,8 @@ i.icon2 {
 	text-shadow: 1px 10px 6px rgba(0,0,0,0.2);
 }
 
-._bg4586 {
-	padding: 60px 0 0 !important;
+.bg_top {
+	padding: 0px 0 0 !important;
 }
 
 .black_background{
@@ -3189,6 +3186,18 @@ i.icon2 {
 	color: #000;
     
 	border: 1px solid  #000;
+}
+
+.btn_back_small {
+    height: 40px;
+    padding: 10px 20px;
+    border: 0;
+    float: right;
+     color: #000;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: block;
 }
 
 
@@ -4449,7 +4458,6 @@ i.icon2 {
 
 .sign_in_up_bg:before {
     content: "";
-    background: url(../images/sign.svg) no-repeat center;
     left: 0;
     right: 0;
     top: 0;
@@ -5025,7 +5033,7 @@ i.icon2 {
 }
 
 .search_position {
-    margin-left: 7%;
+    margin-left: 1%;
     float: right;
     padding-right: 15px;
 }
@@ -5380,7 +5388,7 @@ i.icon2 {
 /*-- Night Mode Btn --- */
 
 .night_mode_switch__btn {
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 1px rgb(255, 253, 253);
 }
 .night_mode_switch__btn a {
 
@@ -5389,22 +5397,21 @@ i.icon2 {
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
-    color: #333;
     padding: 15px;
-    position: relative;
     display: flex;
     align-items: center;
 }
+
 .night_mode_switch__btn a i {
     font-size: 120%;
     height: 30px;
     Width: 30px;
-    background: #FFECEC;
     border-radius: 100%;
     margin-right: 10px;
     padding: 6px 4px 0;
     display: inline-block;
 }
+
 .btn-night-mode .btn-night-mode-switch {
     display: inline-block;
     height: 18px;
@@ -5414,7 +5421,8 @@ i.icon2 {
     position: absolute;
 }
 
-/*-- Night Mode Btn --- */
+/*-- Stripe --- */
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
