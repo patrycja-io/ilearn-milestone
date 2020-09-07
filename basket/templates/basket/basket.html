@@ -31,40 +31,27 @@
 
   <div class="basket">
     <div class="container">
-      <div class="row justify-content-lg-center justify-content-md-center">
-        <div class="col-lg-6 col-md-8">
-          {% if basket_items %} {% for course in basket_items %}
-          <div class="fcrse_1">
-            <a href="#" class="hf_img">
-              <img class="cart_img" src="{{ course.image.url }}" alt="" />
-            </a>
-            <div class="hs_content">
-              <div class="eps_dots">
-                <a href="{% url 'delete_from_basket' course.id %}"
-                  ><i class="uil uil-times-square"></i
-                ></a>
-              </div>
-              <a
-                href="{% url 'course_description' course.id %}"
-                class="crse14s title900 pt-2"
-                >{{ course.name }}</a
-              >
-              <p class="my-0 small text-muted">SKU: {{ course.sku|upper }}</p>
-              {% if course.category %}
-              <a
-                href="{% url 'courses' %}?category={{ course.category.name }}"
-                class="crse-cate"
-                >{{ course.category.friendly_name }}
-              </a>
-              {% endif %}
-              <div class="auth1lnkprce">
-                <div class="prce142">£ {{ course.price }}</div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-
+      <div class="row">
+       
+<div class="col-lg-8">{% if basket_items %} {% for course in basket_items %}
+						<div class="fcrse_1">
+							<a href="{% url 'course_description' course.id %}" class="hf_img">
+								<img class="cart_img" src="{{ course.image.url }}" alt="">
+							</a>
+							<div class="hs_content">
+								<div class="eps_dots eps_dots10 more_dropdown">
+									<a href="{% url 'delete_from_basket' course.id %}"><i class="uil uil-times"></i></a>																										
+								</div>
+								<a href="{% url 'course_description' course.id %}" class="crse14s title900 pt-2">{{ course.name }}</a>
+                                  {% if course.category %}
+								<a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate">{{ course.category.friendly_name }}</a>
+                                {% endif %}
+							     <div class="prce142">£ {{ course.price }}</div>
+								
+							</div>
+						</div>	
+                        {% endfor %}							
+					</div>
         <div class="col-lg-4">
           <div class="checkout_bg checkout_bg_right">
             <div class="checkout_title">

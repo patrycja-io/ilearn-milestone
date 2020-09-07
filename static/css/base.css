@@ -273,6 +273,13 @@ input[type=text] {
 	display: none;
 }
 
+.hs_content {
+    padding: 0px 15px 0px 20px;
+    float: left;
+    width: 70%;
+    position: relative;
+}
+
 .header_right ul li:nth-child(2) {
 	display: none !important;
 }
@@ -395,15 +402,8 @@ input[type=text] {
 }
 
 .hf_img {
-    width: 100% !important;
+    width: 40% !important;
     float: left;
-    position: relative;
-}
-
-.hs_content {
-    padding: 10px 5px !important;
-    float: left;
-    width: 100% !important;
     position: relative;
 }
 
@@ -632,12 +632,6 @@ input[type=text] {
     position: relative;
 }
 
-.hs_content {
-    padding: 10px 5px !important;
-    float: left;
-    width: 100% !important;
-    position: relative;
-}
 
 .eps_dots10 {
     top: 10px !important;
@@ -801,13 +795,6 @@ input[type=text] {
     position: relative;
 }
 
-.hs_content {
-    padding: 10px 5px !important;
-    float: left;
-    width: 100% !important;
-    position: relative;
-}
-
 .eps_dots10 {
     top: 10px !important;
 }
@@ -899,9 +886,6 @@ body {
     width: 40% !important;
 }
 
-.hs_content {
-    width: 60% !important;
-}
 
 .ml_item {
 	width: 78% !important;
@@ -921,10 +905,6 @@ body {
 
 .hf_img {
     width: 40% !important;
-}
-
-.hs_content {
-    width: 60% !important;
 }
 
 .container-fluid {
