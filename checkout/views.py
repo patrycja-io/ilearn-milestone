@@ -69,7 +69,7 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_ebook.save()
-                    
+
                 except Course.DoesNotExist:
                     messages.error(request, ("Product not found"))
                     order.delete()
@@ -138,6 +138,8 @@ def payment_approved(request, order_number):
             }
             user_profile_form = UserProfileForm(profile_data,
                                                 instance=profile)
+            
+            
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
