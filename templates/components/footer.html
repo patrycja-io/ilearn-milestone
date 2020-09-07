@@ -6,16 +6,16 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-6">
 						<div class="item_f1">
-							<a href="about_us.html">Home</a>
-                            <a href="about_us.html">Shop</a>
-                            <a href="about_us.html">About</a>
+							<a href="{% url 'home' %}">Home</a>
+                            <a href="{% url 'courses' %}">Shop</a>
+                            <a href="{% url 'home' %}">About</a>
                             <a href="terms_of_use.html">T&C</a>					
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="item_f1">		
-                        <a href="about_us.html">Register</a>
-                        <a href="about_us.html">Sign In</a>									
+                        <a href="{% url 'account_signup' %}">Register</a>
+                        <a href="{% url 'account_login' %}">Sign In</a>									
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6">
