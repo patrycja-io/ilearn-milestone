@@ -7,8 +7,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderEbook
 
-from myprofile.models import UserAccount
-from myprofile.forms import UserAccountForm
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 
 from courses.models import Course
 from basket.context import basket_ebooks
@@ -120,14 +120,14 @@ def payment_approved(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        myprofile = UserAccount.objects.get(user=request.user)
+        profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
-        order.user_account = myprofile
+        order.user_profile = profile
         order.save()
 
         # Save the user's info
         if save_info:
-            myprofile_data = {
+            profile_data = {
                 'default_phone_number': order.phone_number,
                 'default_country': order.country,
                 'default_postcode': order.postcode,
@@ -136,14 +136,14 @@ def payment_approved(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            user_account_form = UserAccountForm(myprofile_data, 
-                                                instance=myprofile)
-            if user_account_form.is_valid():
-                user_account_form.save()
+            user_profile_form = UserProfileForm(profile_data,
+                                                instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        Your order number is { order_number }. A confirmation \
+        email will be sent to { order.email }.')
 
     if 'basket' in request.session:
         del request.session['basket']
