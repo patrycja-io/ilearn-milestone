@@ -14,7 +14,7 @@ import os
 import dj_database_url
 from os import path
 if path.exists("env.py"):
-   import env
+    import env
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'pages',
-    'myprofile',
+    'profiles',
 
     # Other
     'crispy_forms',
