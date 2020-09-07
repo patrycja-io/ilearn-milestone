@@ -75,10 +75,10 @@ follow{% endblock %} {% block content %}
 		                type="checkbox"
 		                id="id-save-info"
 		                name="save-info"
-		                checked
-		              />
+		                checked/>
 		              {% else %}
-					<label class="form-check-label" for="id-save-info">
+                      
+					<label class="form-check-label" for="id-save-info">You are making this purchase as a guest
 		                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a>
 		                or
 		                <a class="text-info" href="{% url 'account_login' %}">Login</a>
