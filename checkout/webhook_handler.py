@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .models import Order, OrderEbook
 from courses.models import Course
-from myprofile.models import UserAccount
+from profiles.models import UserProfile
 
 
 import json
@@ -57,20 +57,20 @@ class StripeWH_Handler:
         total = round(intent.charges.data[0].amount / 100, 2)
 
 
-        # Update profile information if save_info was checked
-        myprofile = None
+       # Update profile information if save_info was checked
+        profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
-            profile = UserAccount.objects.get(user__username=username)
+            profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                myprofile.default_phone_number = shipping_details.phone
-                myprofile.default_country = shipping_details.address.country
-                myprofile.default_postcode = shipping_details.address.postal_code
-                myprofile.default_town_or_city = shipping_details.address.city
-                myprofile.default_street_address1 = shipping_details.address.line1
-                myprofile.default_street_address2 = shipping_details.address.line2
-                myprofile.default_county = shipping_details.address.state
-                myprofile.save()
+                profile.default_phone_number = shipping_details.phone
+                profile.default_country = shipping_details.address.country
+                profile.default_postcode = shipping_details.address.postal_code
+                profile.default_town_or_city = shipping_details.address.city
+                profile.default_street_address1 = shipping_details.address.line1
+                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_county = shipping_details.address.state
+                profile.save()
 
         order_exists = False
         attempt = 1
