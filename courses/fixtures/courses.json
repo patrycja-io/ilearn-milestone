@@ -76,6 +76,7 @@
             "name": "React.js: Building Production Ready Apps, Start to Finish",
             "category": 2,
             "price": 13.99,
+            "rating": 4.6,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "02_react.jpg"
         }
@@ -114,6 +115,7 @@
             "name": "Vue JS - Mastering Web Apps",
             "category": 2,
             "price": 13.99,
+            "rating": 4.6,
             "image_url": "",
             "image": "vue00.jpg"
            
@@ -127,6 +129,7 @@
             "name": "JavaScript the Basics - JavaScript for Beginners",
             "category": 2,
             "price": 13.99,
+            "rating": 4.2,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "js10.jpg"
         }
@@ -139,6 +142,7 @@
             "name":"Build a Responsive Website with HTML5, CSS3 and Bootstrap 4",
             "category": 3,
             "price": 13.99,
+            "rating": 4.1,
             "image_url": "",
             "image": "html04.jpg"
         }
@@ -151,6 +155,7 @@
             "name": "Beginner Full Stack Web Development: HTML, CSS, React & Node",
             "category": 2,
             "price": 99.99,
+            "rating": 4.8,
             "image_url": "",
             "image": "html05.jpg"
         }
@@ -163,6 +168,7 @@
             "name": "The Complete Web Development Tutorial Using React and Redux",
             "category": 2,
             "price": 13.99,
+            "rating": 4.9,
             "image_url": "",
             "image": "04_react.jpg"
         }
@@ -175,6 +181,7 @@
             "name": "Getting Started with NodeJS for Beginners",
             "category": 2,
             "price": 99.99,
+            "rating": 4.5,
             "image_url": "",
             "image": "nodejs00.jpg"
             
@@ -188,6 +195,7 @@
             "name": "React Redux React-Router: From Beginner to Paid Professional",
             "category": 2,
             "price": 13.99,
+            "rating": 4.5,
             "image_url": "",
             "image": "react02.jpg"
            
@@ -229,6 +237,7 @@
             "name": "JavaScript Game Development: Create Your Own Breakout Game",
             "category": 2,
             "price": 13.99,
+            "rating": 4.1,
             "image_url": "",
             "image": "js00.jpg"
             
@@ -242,6 +251,7 @@
             "name": "HTML5 and CSS3 for beginners: Create a Website from Scratch",
             "category": 3,
             "price": 13.99,
+            "rating": 4.5,
             "image_url": "",
             "image": "html03.jpg"
           
@@ -255,6 +265,7 @@
             "name":"Javascript from Beginner to Advanced Level",
             "category": 2,
             "price": 89.99,
+            "rating": 4.5,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "js01.jpg"
             
@@ -268,6 +279,7 @@
             "name": "CSS Web Development Crash Course",
             "price": 19.99,
             "category": 3,
+            "rating": 4.2,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "css00.jpg"
             
@@ -281,6 +293,7 @@
             "name": "Bootstrap 4: Exploring New Features",
             "category": 3,
             "price": 13.99,
+            "rating": 4.4,
             "image_url": "",
             "image": "bootstrap00.jpg"
            
@@ -336,6 +349,7 @@
             "name": "JavaScript Complete for beginners with real world Apps",
             "category": 2,
             "price": 99.99,
+            "rating": 5.0,
             "image_url": "",
             "image": "js03.jpg"
           
@@ -363,6 +377,7 @@
             "name": "The Complete JavaScript, HTML and CSS Tutorial For Beginners",
             "category": 2,
             "price": 39.99,
+            "rating": 4.5,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "js05.jpg"
            
@@ -390,6 +405,7 @@
             "name": "Learn By Example: The Foundations of HTML, CSS & Javascript",
             "category": 2,
             "price": 49.99,
+            "rating": 5.0,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
             "image": "html06.jpg"
            
@@ -403,6 +419,7 @@
             "name": "JavaScript manipulation of the DOM Document Object Model",
             "category": 2,
             "price": 19.99,
+            "rating": 5.0,
             "image_url": "",
             "image": "js05.jpg"
            
@@ -414,8 +431,9 @@
         "fields": {
             "sku": 169,
             "name":"Learn React JS from scratch",
-             "category": 2,
+            "category": 2,
             "price": 99.99,
+            "rating": 4.0,
             "image_url": "",
             "image": "react01.jpg"
            
@@ -429,6 +447,7 @@
             "name": "Build Your Own Calculator App with Javascript, HTML5 & CSS",
             "category": 2,
             "price": 49.99,
+            "rating": 4.0,
             "image_url": "",
             "image": "html07.jpg"
           
@@ -442,6 +461,7 @@
             "name":"Introduction to Node.js for Beginners",
             "category": 2,
             "price": 79.99,
+            "rating": 4.0,
             "image_url": "https://www.udemy.com/introduction-to-nodejs-for-beginners/",
             "image": "nodejs01.jpg"
             
@@ -455,6 +475,7 @@
             "name":"Supreme NodeJS Course - For Beginners",
             "category": "2",
             "price": 199.99,
+            "rating": 4.8,
             "image_url": "https://www.udemy.com/supreme-node-js-course/",
             "image": "nodejs02.jpg"
             
@@ -468,6 +489,7 @@
             "name": "JavaScript - Tricks and Workarounds",
             "category": 2,
             "price": 99.99,
+            "rating": 4.0,
             "image_url": "https://www.udemy.com/javascript-tricks-and-workarounds/",
             "image": "js09.jpg"
             
@@ -481,6 +503,7 @@
             "name": "Learn PHP from scratch!",
             "category": 1,
             "price": 19.99,
+            "rating": 4.0,
             "image_url": "https://www.udemy.com/learn-php-from-scratch-by-niveditajain/",
             "image": "php01.jpg"
            
@@ -508,6 +531,7 @@
             "name": "VueJS V1 Introduction to VueJS JavaScript Framework",
             "category": 2,
             "price": 99.99,
+            "rating": 4.3,
             "image_url": "",
             "image": "vue01.jpg"
           
@@ -521,6 +545,7 @@
             "name": "Learn By Example: PHP For Dynamic Websites",
             "category": 1,
             "price": 49.99,
+            "rating": 4.3,
             "image_url": "",
             "image": "php03.jpg"
             }
@@ -534,6 +559,7 @@
             "name": "Web Design How to Create a Website HTML CSS Bootstrap",
             "category": 3,
             "price": 69.99,
+            "rating": 4.4,
             "image_url": "",
              "image": "00_html_css.jpg"
            
@@ -547,6 +573,7 @@
             "name": "Master Angular 4 by Example - Build 7 Awesome Apps!",
             "category": 2,
             "price": 119.99,
+            "rating": 4.3,
             "image_url": "",
             "image": "angular01.jpg"
            
@@ -560,6 +587,7 @@
             "name": "JavaScript in Action JavaScript Projects",
             "category": 2,
             "price": 149.99,
+            "rating": 4.5,
             "image_url": "",
             "image": "js08.jpg"
             
@@ -573,6 +601,7 @@
            "name": "Modern Web Development with Laravel 5.2 (PHP Framework)",
            "category": 1,
             "price": 119.99,
+            "rating": 4.2,
             "image_url": "https://www.udemy.com/modern-web-development-with-laravel/",
             "image": "laravel04.jpg"
                     }
@@ -586,6 +615,7 @@
             "name": "Vue JS 2: From Beginner to Professional",
             "image_url": "https://www.udemy.com/vuejs-from-beginner-to-professional/",
             "image": "vue02.jpg",
+            "rating": 4.9,
             "category": 2,
             "price": 99.99
             
@@ -598,6 +628,7 @@
             "sku": 418386,
             "category": 1,
             "price": 45,
+            "rating": 4.9,
             "name": "Create a REAL Social Network like Facebook in PHP + MySQL",
             "image_url": "https://www.udemy.com/make-a-social-media-website/",
             "image": "php00.jpg"
@@ -613,6 +644,7 @@
             "name": "Become a HTML and CSS Developer - Build a Responsive Site",
             "category": 3,
             "price": 13.99,
+            "rating": 5.0,
             "image_url": "",
             "image": "html00.jpg"
             
