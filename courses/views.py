@@ -131,6 +131,6 @@ def delete_course(request, course_id):
 
     course = get_object_or_404(Course, pk=course_id)
     course.delete()
-    messages.success(request, 'Course deleted!')
+    messages.danger(request, 'Course deleted!')
     return redirect(reverse('courses'))
     
