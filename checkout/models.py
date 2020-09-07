@@ -7,12 +7,12 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from courses.models import Course
-from myprofile.models import UserAccount
+from profiles.models import UserProfile
 
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    user_account = models.ForeignKey(UserAccount, on_delete=models.SET_NULL,
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
                                      related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -29,7 +29,6 @@ class Order(models.Model):
     original_basket = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
-    
 
     def _create_order_number(self):
         """
@@ -54,7 +53,6 @@ class OrderEbook(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, null=False, blank=False, on_delete=models.CASCADE)
     total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-
 
     def save(self, *args, **kwargs):
         """
