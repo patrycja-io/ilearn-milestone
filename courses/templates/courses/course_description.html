@@ -108,7 +108,7 @@
                     </form>
                     {% if request.user.is_superuser %}
                     <small >
-                      <a href="{% url 'edit_course' course.id %}">Edit</a> |
+                      <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
                       <a
                         class="text-danger"
                         href="{% url 'delete_course' course.id %}"
