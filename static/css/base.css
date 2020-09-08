@@ -1814,6 +1814,7 @@ i.icon1 {
     height: 40px;
     border-radius: 20px;
     margin: 10px;
+    padding:7px;
     color: #000;
     font-size: 22px;
     font-weight: 500;
@@ -2576,7 +2577,6 @@ i.icon1 {
 .contact_map {
 	background: #fff;
     border-radius: 10px;
-    padding: 10px;
     border: 1px solid #efefef;
     box-shadow: none;
     width: 100%;

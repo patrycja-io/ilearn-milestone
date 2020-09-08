@@ -102,11 +102,25 @@ Night Mood
 .night-mode .dropdown-menu {
     background-color: #333;
 }
+
 .night-mode .checkout_bg {
-    color: #333;
+   background: #333;
 }
-.night-mode .order_title .order_price {
+
+.night-mode .order_title .order_price_ {
   color: #fff;
+}
+.night-mode h2.invoice_title {
+     color: #000 !important;
+}
+.night-mode .vhls140 h4{
+    color: #000 !important;
+}
+.night-mode .invoice_footer h6 {
+    color: #000 !important;
+}
+.night-mode .invoice_footer h4 {
+    color: #000 !important;
 }
 
 .night-mode .srch10 {
