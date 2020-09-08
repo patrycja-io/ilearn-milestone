@@ -168,24 +168,6 @@ Night Mood
     color: #c7c7c7 !important;
 }
 
-
-.night-mode .vbm_btn {
-    width: 100%;
-    text-align: center;
-    float: left;
-    padding: 15px 0;
-    background: #ed2a26;
-    font-size: 14px;
-    color: #fff !important;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-.night-mode .vbm_btn:hover {
-    background: #cc2622;
-    color: #fff !important;
-}
-
 .night-mode  .option_links:hover, .night-mode  .option_links:focus {
     color: #fff !important;
 }
@@ -391,29 +373,6 @@ Night Mood
 }
 
 
-
-.night-mode .tutor_name {
-    color: #fff !important;
-}
-
-.night-mode .tutor_cate {
-    color: #c7c7c7;
-}
-
-.night-mode .tut1250 {
-    color: #c7c7c7;
-}
-
-.night-mode .fcrse_4 {
-    background: #333;
-    border: 1px solid #242424;
-}
-
-.night-mode .say_content p {
-    color: #c7c7c7;
-}
-
-
 .night-mode .footer {
     background: #242424;
 }
@@ -422,70 +381,8 @@ Night Mood
     color: #fff !important;
 }
 
-.night-mode .fcrse_2 {
-    background: #333;
-    border: 1px solid #242424;
-}
-
-.night-mode .fcrse_3 {
-    background: #333;
-    border: 1px solid #242424;
-}
-
-.night-mode .cater_ttle {
-    border-bottom: 1px solid #242424;
-}
-
-.night-mode .live_icon i {
-    background: #242424;
-    border: 1px solid #242424;
-}
-
-.night-mode .live-content p {
-    color: #c7c7c7;
-}
-
-.night-mode .livinfo {
-    color: #c7c7c7;
-}
-
-.night-mode .live_link {
-    background: #ed2a26;
-    color: #fff !important;
-}
-
-.night-mode .live_link:hover {
-	color: #fff;
-    background: #cc2622;
-}
-
 .night-mode .tutor_social_links li a {
     color: #fff !important;
-}
-
-.night-mode .get1452 {
-    border: 1px solid #242424;
-}
-
-.night-mode .strttech120 {
-    background: #333;
-    border: 1px solid #242424;
-}
-
-.night-mode .strttech120 p {
-    color: #c7c7c7;
-}
-
-.night-mode .back_link a {
-    color: #fff !important;
-    background: transparent;
-    border: 1px solid #fff;
-}
-
-.night-mode .back_link a:hover {
-    color: #fff !important;
-    background: #ed2a26;
-    border: 1px solid #ed2a26;
 }
 
 .night-mode .toggle_menu i {
@@ -501,13 +398,7 @@ Night Mood
     color: #c7c7c7 !important;
 }
 
-.night-mode .course_tabs .nav-tabs .nav-item.show .nav-link, .night-mode .course_tabs .nav-tabs .nav-link.active {
-    color: #fff !important;
-}
 
-.night-mode .course_tabs .nav-tabs .nav-link:hover {
-    color: #fff !important;
-}
 
 .night-mode .title589 p {
     color: #c7c7c7;
@@ -572,10 +463,6 @@ Night Mood
     color: #fff;
 }
 
-.night-mode .group-form label {
-    color: #fff;
-}
-
 .night-mode .slive_tabs .nav-link {
     border: 1px solid #fff !important;
     background-color: transparent !important;
@@ -595,28 +482,9 @@ Night Mood
     border-radius: 20px;
 }
 
-.night-mode ._dlor1 {	
-	background: #242424 !important;
-    border: 0 !important;
-    color: #dbdbdb !important;
-}
-
-.night-mode ._6tf7s:hover {
-    background: #cc2622;
-    color: #fff;
-}
-
-.night-mode ._145d1:hover {
-    background: #cc2622;
-    color: #fff;
-}
 
 .night-mode .ui.toggle.checkbox .box:before, .night-mode .ui.toggle.checkbox label:before {
     background-color: rgba(36, 36, 36) !important;
-}
-
-.night-mode ._1457s2 label {
-    color: #c7c7c7 !important;
 }
 
 .night-mode .ui.toggle.checkbox input:checked~.box, .night-mode .ui.toggle.checkbox input:checked~label {
@@ -627,21 +495,6 @@ Night Mood
     color: #fff !important;
 }
 
-.night-mode .srch_explore {
-    background: #333 !important;
-    border: 1px solid #242424 !important;
-    color: #787878 !important;
-	box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3) !important;
-}
-
-.night-mode i.icon2 {
-    font-size: 20px !important;
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.night-mode .ui[class*="left icon"].swdh11.input>input:focus {
-	background-color: #fff !important;
-}
 
 .night-mode .srch_explore:focus+.icon2 {
 	color: #333 !important;
@@ -877,11 +730,6 @@ Night Mood
     background: #cc2622;
 }
 
-.night-mode ._cate101 {
-    background: #333;
-    color: #fff;
-}
-
 .night-mode ._215certibg {
     background: #333;
 }
@@ -1112,10 +960,6 @@ Night Mood
     color: #c7c7c7;
 }
 
-.night-mode ._abc123 {
-    color: #fff;
-}
-
 .night-mode ._htgdrt {
     background: #333;
     border: 1px solid #242424;
@@ -1129,85 +973,6 @@ Night Mood
     color: #fff;
 }
 
-.night-mode .accordion-header {
-    border: solid 1px #242424;
-	background: #333;
-}
-
-.night-mode .accordion-header .section-title-text {
-    color: #fff;
-}
-
-.night-mode .ui-accordion-content .lecture-container {
-    background-color: #171717;
-    border-bottom: 1px solid #242424;
-    color: #c7c7c7;
-}
-
-.night-mode .ui-accordion-content {
-    border-left: 1px solid #242424;
-    border-right: 1px solid #242424;
-    background: #333;
-}
-
-.night-mode .ui-accordion-content .title {
-    color: #c7c7c7;
-}
-
-.night-mode .accordion-header .num-items-in-section {
-    color: #c7c7c7;
-}
-
-.night-mode .accordion-header .section-header-length {
-    color: #c7c7c7;
-}
-
-.night-mode .ui-accordion-content .content-summary {
-    color: #c7c7c7;
-}
-
-.night-mode .btn1458 {
-    border: 1px solid #242424;
-    background: #333;
-    color: #fff !important;
-}
-
-.night-mode .btn1458:hover {
-    border: 1px solid #242424;
-    background: #242424;
-    color: #fff !important;
-}
-
-
-.night-mode ._rate002 {
-    color: #fff;
-}
-
-.night-mode .review_all120 {
-    background: #333;
-}
-
-.night-mode .rpt100 span {
-    color: #c7c7c7;
-}
-
-
-.night-mode .radio-label {
-    color: #c7c7c7;
-}
-
-.night-mode .review_item {
-    border-bottom: 1px solid #242424;
-}
-
-.night-mode .caption-content {
-    background-color: #333;
-    border: 242424);
-}
-
-.night-mode .caption-content span {
-    color: #c7c7c7;
-}
 
 .night-mode ._df7852 {
     color: #fff !important;
@@ -1239,11 +1004,6 @@ Night Mood
 .night-mode .sign_footer {
     color: #fff;
 }
-
-.night-mode ._215v12 {
-    background: #313131;
-}
-
 
 .night-mode .ht_title {
     color: #fff;
@@ -1363,18 +1123,6 @@ Night Mood
     color: #f7f7f7;
 }
 
-.night-mode .rs6t_title {
-    color: #fff;
-}
-
-.night-mode .filter_selector {
-    color: #fff;
-}
-
-.night-mode  .filter__counter {
-    color: #dbdbdb;
-}
-
 
 .night-mode .pymnt_title span {
     color: #fff;
@@ -1413,31 +1161,6 @@ Night Mood
     color: #fff;
 }
 
-.night-mode .main-tabs .nav-tabs {
-    border-top: 1px solid #242424;
-    border-left: 1px solid #242424;
-    border-right: 1px solid #242424;
-    background: #333;
-}
-
-.night-mode .main-tabs .nav-tabs .nav-item {
-    border-right: 1px solid #242424;
-}
-
-.night-mode .main-tabs .nav-tabs .nav-item:last-child {
-    border-right: 0;
-}
-
-.night-mode .main-tabs .nav-tabs .nav-item .nav-link:hover {
-    color: #fff !important;
-	border-bottom: 2px solid #fff;
-}
-
-.night-mode .main-tabs .nav-tabs .nav-item.show .nav-link, .night-mode .main-tabs .nav-tabs .nav-link.active {
-    color: #fff !important;
-    background-color: none !important;
-    border-bottom: 2px solid #ed2a26 !important;
-}
 
 .night-mode .sgntrm145 a {
     color: #fff !important;
@@ -1811,10 +1534,6 @@ Night Mood
 }
 
 
-.night-mode ._rate001 {
-    color: #fff;
-}
-
 .night-mode .review_item_course_title a {
     color: #fff !important;
     border-bottom: 1px solid #242424;
@@ -1968,13 +1687,6 @@ Night Mood
     border: 1px solid #ed2a26;
 }
 
-.night-mode .result_stitles {
-    padding: 0px 0 15px;
-    border-bottom: 1px solid #242424;
-    margin-bottom: 0;
-    float: left;
-    width: 100%;
-}
 
 .night-mode .adcrse1250 {
 	border: 1px solid #242424;
