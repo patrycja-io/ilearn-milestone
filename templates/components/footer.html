@@ -2,54 +2,62 @@
 {% load static %}
 
     <footer class="footer mt-30">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="item_f1">
-							<a href="{% url 'home' %}">Home</a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f1">
+                            <a href="{% url 'home' %}">Home</a>
                             <a href="{% url 'courses' %}">Shop</a>
-                            <a href="{% url 'home' %}">About</a>
-                            <a href="terms_of_use.html">T&C</a>					
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-                        <div class="item_f1">		
+                            <a href="{% url 'home' %}">About</a>                
+                        </div>
+                    </div>
+                 
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f1">
+                           {% if request.user.is_authenticated %}
+                   
+                        <a href="{% url 'profile' %}" >My Profile</a>
+                        <a href="{% url 'account_logout' %}" >Logout</a>
+                          {% else %}        
                         <a href="{% url 'account_signup' %}">Register</a>
-                        <a href="{% url 'account_login' %}">Sign In</a>									
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="item_f1">
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6">
-						<div class="item_f3">
+                        <a href="{% url 'account_login' %}">Sign In</a> 
+                         {% endif %}                                
+                        </div>
+                        
+                    </div>
+                   
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f1">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f3">
                         <a href="{% url 'home' %}">
                         <h1 class=" text-white mb-3"><strong>iLearn &trade;</strong></h1>
                         </a>
-							<a href="{% url 'contact' %}" class="btn1542">Contact Us</a>
+                            <a href="{% url 'contact' %}" class="btn1542">Contact Us</a>
                             </div>
-					</div>
-					<div class="col-lg-12">
-						<div class="footer_bottm">
-							<div class="row">
-								<div class="col-md-6">
-									<ul class="fotb_left">
-										<li>
-											<p>© 2020 <strong>Patrycja.io</strong>. All Rights Reserved.</p>
-										</li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<div class="edu_social_links">
-										<a href="#"><i class="fab fa-facebook-f"></i></a>
-										<a href="#"><i class="fab fa-twitter"></i></a>
-										<a href="#"><i class="fab fa-linkedin-in"></i></a>
-								</div>		
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-            	</div>
-		</footer>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="footer_bottm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="fotb_left">
+                                        <li>
+                                            <p>© 2020 <strong>Patrycja.io</strong>. All Rights Reserved.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="edu_social_links">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </footer>
