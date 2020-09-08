@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<div class="wrapper bg_top _new89">
+<div class="wrapper bg_top up">
   <div class="top_overlay">
     <div class="container">
       <div class="row">
@@ -35,6 +35,7 @@
     <div class="section3125 mt-30">
       <div class="col-md-12">
         <div class="course_tabs">
+         <a href="{% url 'courses' %}" class="see150">See all</a>
           <div class="nav nav-tabs tab_crse justify-content-center">
             <a
               href="{% url 'courses' %}?category=html"
@@ -56,10 +57,11 @@
               class="nav-item nav-link"
               >Python & Frameworks</a
             >
+
           </div>
         </div>
 
-        <a href="{% url 'courses' %}" class="see150">See all</a>
+        
         <div class="_14d25">
           <div class="row">
             {% for course in courses %}

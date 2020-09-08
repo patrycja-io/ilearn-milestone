@@ -10,7 +10,7 @@
  {% block content %}
 
 
- <div class="wrapper bg_top _new89">        
+ <div class="wrapper bg_top up">        
         <div class="container">
             <div class="row justify-content-md-center">
              <div class="col-md-8">
@@ -85,17 +85,17 @@
                                     </thead>
                                     <tbody>
                                        
-                                        {% for course in orderebooks %}
+                                       {% for course in order.ebooks.all %}
                                         <tr>
                                             <th scope="row">
                                                 <div class="user_dt_trans">
-                                                    <p>{{ course.course.name }}</p>
+                                                    <p> {{ course.course.name }}</p>
                                                 </div>
                                             </th>
                                         
                                             <td>
                                                 <div class="user_dt_trans">                                                     
-                                                    <p>£ {{ course.course.price }</p>
+                                                    <p>£ {{ course.course.price }}</p>
                                                 </div>
                                             </td>                                   
                                         </tr>   
@@ -105,7 +105,7 @@
                                             <td colspan="1"></td>
                                             <td colspan="3">
                                                 <div class="user_dt_trans jsk1145">                                                     
-                                                    <div class="totalinv2">Invoice Total :£ {{ order.total }}</div>
+                                                    <div class="totalinv2">Invoice Total :£{{ total | floatformat:2 }}</div>
                                                     <p>Paid via Stripe</p>
                                                 </div>
                                             </td>                                               

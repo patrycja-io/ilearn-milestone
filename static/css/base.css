@@ -331,10 +331,6 @@ input[type=text] {
     margin-top: 30px;
 }
 
-.tab_crse .nav-link {
-    padding: .5rem 1rem !important;
-}
-
 ._216b12 {
     display: none !important;
 }
@@ -1741,18 +1737,18 @@ i.icon1 {
 
 .tab_crse .nav-link {
     border-top: 0 !important;
-    border-bottom: 2px solid transparent !important;
     border-left: 0 !important;
     border-right: 0 !important;
-    border-top-left-radius: 0 !important;
+    border-top-left-radius: 2 !important;
     border-top-right-radius: 0 !important;
 	color: #333 !important;
 	font-weight: 500 !important;
+    font-size:20px;
     font-family: 'Roboto', sans-serif !important;
 }
 
 .tab_crse .nav-link {
-    padding: .5rem 1.5rem !important;
+    padding: 2rem 1.5rem !important;
 }
 
 ._215b17 {
@@ -2039,7 +2035,7 @@ i.icon1 {
 
 /* --- Help Page --- */
 
-._new89 {
+.up {
     margin-left: 0 !important;
     float: left;
     width: 100%;
