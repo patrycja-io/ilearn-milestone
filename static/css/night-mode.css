@@ -2,6 +2,7 @@
 Night Mood
 ****************/
 
+
 .btn-night-mode .btn-night-mode-switch {
     display: inline-block;
     height: 18px;
@@ -500,48 +501,6 @@ Night Mood
 	color: #333 !important;
 }
 
-/* === Animation Loader === */
-
-.night-mode .spinner {
-    margin: 0 auto 0;
-    width: 50px;
-    text-align: center;
-    height: 20px;
-    border-radius: 100px;
-    background-color: #333;
-    line-height: 20px;
-    border: 1px solid #242424;
-    cursor: pointer;
-}
-
-.night-mode .spinner > div {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-}
-
-.night-mode .spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-  background-color: #c7c7c7;
-}
-
-.night-mode .spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-  background-color: #c7c7c7;
-  opacity: 0.702;
-}
-
-.night-mode .spinner .bounce3 {
-  -webkit-animation-delay: -0.12s;
-  animation-delay: -0.12s;
-  background-color: #c7c7c7;
-  opacity: 0.4;
-}
 
 @-webkit-keyframes sk-bouncedelay {
   0%, 80%, 100% { -webkit-transform: scale(0) }
@@ -562,9 +521,6 @@ Night Mood
     background: #333;
 }
 
-.night-mode .ttl121 .breadcrumb {
-    background-color: #333 !important;
-}
 
 .night-mode .breadcrumb-item.active {
     color: #fff !important;
@@ -1619,14 +1575,6 @@ Night Mood
     color: #c7c7c7 !important;
 }
 
-.night-mode .apply_instructor_btn {
-    color: #fff !important;
-}
-
-.night-mode .apply_instructor_btn:hover {
-    color: #fff !important;
-    background: #cc2622;
-}
 
 .night-mode .alert_verification {
     background: #333;
