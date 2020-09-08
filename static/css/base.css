@@ -246,7 +246,27 @@ input[type=text] {
 
 /* Extra small devices (portrait phones, less than 576px) */
  @media (max-width: 575.98px) {
+.navbar{
+    	background-color: #fff;
+}
 
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.nav.dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-align: left;
+    -webkit-transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
+    transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
+    transition: box-shadow 0.1s ease, width 0.1s ease;
+    transition: box-shadow 0.1s ease, width 0.1s ease, -webkit-box-shadow 0.1s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 
 .upload_btn {
@@ -702,7 +722,7 @@ i.icon1 {
 .option_links:hover, .option_links:focus {
     color: #333 !important;
 }
-s
+
 .upload_btn {
     font-size: 14px;
     font-weight: 500;
@@ -1789,16 +1809,17 @@ s
 	border: 1px solid #fff;
 }
 
+
 .btn_back_red {
     height: 40px;
-    padding: 0 25px;
     border-radius: 20px;
+    margin: 10px;
     color: #000;
     font-size: 22px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     background: transparent;
-	border: 1px solid #fff;
+    border: 1px solid #fff;
 }
 
 .btn_back_red:hover {
@@ -2900,18 +2921,20 @@ s
     float: right;
 }
 
+
 .print_btn {
-	float: right;
-	height: 40px;
-	background: #ed2a26;
-	padding: 11px 30px;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	font-size: 14px;
-	text-align: center;
-	text-transform: uppercase;
-	border-radius: 20px;
+    float: right;
+    height: 40px;
+    background: #ed2a26;
+    padding: 11px 30px;
+    margin-top: 10px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 20px;
 }
 
 .print_btn:hover {
@@ -2996,7 +3019,8 @@ s
 /*-- Night Mode Btn --- */
 
 .night_mode_switch__btn {
-    border-bottom: 1px rgb(255, 253, 253);
+    border-bottom: 0px rgb(255, 253, 253);
+    margin-left: 10px;
 }
 .night_mode_switch__btn a {
 
