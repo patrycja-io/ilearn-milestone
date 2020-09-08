@@ -99,6 +99,16 @@ Night Mood
     background: #242424;
 }
 
+.night-mode .dropdown-menu {
+    background-color: #333;
+}
+.night-mode .checkout_bg {
+    color: #333;
+}
+.night-mode .order_title .order_price {
+  color: #fff;
+}
+
 .night-mode .srch10 {
     background: rgba(255, 255, 255, 0.15)!important;
     border: 0 !important;
@@ -248,7 +258,9 @@ Night Mood
     border-bottom: 1px solid #242424;
 }
 
-
+.night-mode .path .breadcrumb {
+    background-color:  #333;
+}
 
 .night-mode .fcrse_1 {
     background: #333;
