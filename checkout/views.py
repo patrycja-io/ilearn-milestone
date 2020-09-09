@@ -59,7 +59,7 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
-            order.save()
+            order_form.save()
             for course_id, item_data in basket.items():
                 try:
                     course = Course.objects.get(id=course_id)
