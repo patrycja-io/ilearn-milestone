@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.shortcuts import HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -118,6 +119,8 @@ def payment_approved(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    current_basket = basket_ebooks(request)
+    total = current_basket['total']
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
