@@ -176,7 +176,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
-STATIC_HOST = os.environ.get('DJANGO_STATIC_HOST', '')
+STATIC_HOST = os.environ.get('DJANGO_STATIC_HOST')
 STATIC_URL = STATIC_HOST + '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
