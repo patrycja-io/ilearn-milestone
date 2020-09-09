@@ -35,7 +35,7 @@
   </div>
 </div>
 
-<div class="wrapper _bg4586">
+<div class="wrapper">
   <div class="container">
     <div class="row">
       <div class="black_background">
@@ -57,12 +57,12 @@
                     </div>
                   </div>
                   <div class="col-xl-8 col-lg-7 col-md-6">
-                    <div class="_215b03">
+                    <div class="course_name">
                       <h2>{{ course.name }}</h2>
                       {% if course.category %}
                    
-                      <a class="_215b04" href="{% url 'courses' %}?category={{ course.category.name }}" >
-                        <i class="_215b04"></i>{{ course.category.friendly_name }}
+                      <a class="course_category" href="{% url 'courses' %}?category={{ course.category.name }}" >
+                        <i class="course_category"></i>{{ course.category.friendly_name }}
                       </a>
                       {% endif %}
                     </div>
@@ -75,7 +75,7 @@
                       {% endif %}
                     </div>
                     <div class="details_div">
-                      <div class="_215b07">
+                      <div class="language">
                         <span><i class="uil uil-comment"></i></span>
                         This eBook is in English
                       </div>
@@ -88,7 +88,7 @@
                       method="POST"
                     >
                       {% csrf_token %}
-                      <ul class="_215b31">
+                      <ul class="course_price">
                         <li>
                           <h5 class="price_tag">
                             £ {{ course.price }} &nbsp;&nbsp;
@@ -117,7 +117,7 @@
                     </small>
                     {% endif %}
 
-                    <div class="_215fgt1">Delivery free - 30-Day Money-Back Guarantee</div>
+                    <div class="moneyback">Delivery free - 30-Days Money-Back Guarantee</div>
                     <div class="details_div">
                       <a href="{% url 'courses' %}" class="btn_back">
                         <i class="fas fa-chevron-left"></i>
@@ -131,7 +131,7 @@
           </div>
         </div>
       </div>
-      <div class="_215b17">
+      <div class="description">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
@@ -142,32 +142,32 @@
                     id="nav-about"
                     role="tabpanel"
                   >
-                    <div class="_htg451">
-                      <div class="_htg452">
+                    <div class="desc_details">
+                      <div class="caption_ebook">
                       <h4>All E-Books are send to user by email after approved payment!</h4>
                       <hr>
                       <br>
                         <h3>Requirements</h3>
                         <ul>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               >Have a computer with Internet</span
                             >
                           </li>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               >Be ready to learn an insane amount of awesome
                               stuff</span
                             >
                           </li>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               >Prepare to build real web apps!</span
                             >
                           </li>
                         </ul>
                       </div>
-                      <div class="_htg452 mt-35">
+                      <div class="caption_ebook mt-35">
                         <h3>Description</h3>
                         <p>
                           There are a lot of options for online developer
@@ -188,30 +188,30 @@
                           Throughout the course we cover tons of tools and
                           technologies including:
                         </p>
-                        <ul class="_abc124">
+                        <ul class="technologies">
                           <li>
-                            <span class="_5f7g11"><strong>HTML5</strong></span>
+                            <span class="point"><strong>HTML5</strong></span>
                           </li>
                           <li>
-                            <span class="_5f7g11"><strong>CSS3</strong></span>
+                            <span class="point"><strong>CSS3</strong></span>
                           </li>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               ><strong>JavaScript</strong></span
                             >
                           </li>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               ><strong>Bootstrap 4</strong></span
                             >
                           </li>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               ><strong>SemanticUI</strong></span
                             >
                           </li>
                           <li>
-                            <span class="_5f7g11"
+                            <span class="point"
                               ><strong>DOM Manipulation</strong></span
                             >
                           </li>
@@ -224,14 +224,14 @@
                           development can be!
                         </p>
                       </div>
-                      <div class="_htgdrt mt-35">
+                      <div class="forwho mt-35">
                         <h3>Who this course is for :</h3>
-                        <div class="_scd123">
+                        <div class="reasons">
                           <div class="row">
                             <div class="col-lg-6">
-                              <ul class="_htg452 _abcd145">
+                              <ul class="caption_ebook arguments">
                                 <li>
-                                  <div class="_5f7g15">
+                                  <div class="bullet">
                                     <i class="fas fa-check-circle"></i
                                     ><span
                                       >This course is for anyone who wants to
@@ -241,7 +241,7 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="_5f7g15">
+                                  <div class="bullet">
                                     <i class="fas fa-check-circle"></i
                                     ><span
                                       >It's perfect for complete beginners with
@@ -250,7 +250,7 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="_5f7g15">
+                                  <div class="bullet">
                                     <i class="fas fa-check-circle"></i
                                     ><span
                                       >It's also great for anyone who does have
@@ -261,7 +261,7 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="_5f7g15">
+                                  <div class="bullet">
                                     <i class="fas fa-check-circle"></i
                                     ><span
                                       >If you want to take ONE COURSE to learn
@@ -287,12 +287,5 @@
   </div>
 </div>
 <!-- Body End -->
-
-<script src="js/vertical-responsive-menu.min.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="vendor/semantic/semantic.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/night-mode.js"></script>
 
 {% endblock %}
