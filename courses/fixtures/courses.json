@@ -8,7 +8,7 @@
             "price": 75.99,
             "rating": 4.1,
             "image": "html01.jpg",
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp"
+            "image_url": ""
         }
     },
     {
@@ -77,7 +77,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.6,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "02_react.jpg"
         }
     },
@@ -130,7 +130,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.2,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "js10.jpg"
         }
     },
@@ -224,7 +224,7 @@
             "category": 2,
             "price": 39.99,
             "rating": 4.6,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "angular00.jpg"
            
         }
@@ -266,7 +266,7 @@
             "category": 2,
             "price": 89.99,
             "rating": 4.5,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "js01.jpg"
             
         }
@@ -280,7 +280,7 @@
             "price": 19.99,
             "category": 3,
             "rating": 4.2,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "css00.jpg"
             
         }
@@ -308,7 +308,7 @@
             "category": 1,
             "price": 149.99,
             "rating": 4.1,
-           "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+           "image_url": "",
             "image": "laravel02.jpg"
            
         }
@@ -364,7 +364,7 @@
             "category": 2,
             "price": 19.99,
             "rating": 4.6,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "js04.jpg"
            
         }
@@ -378,7 +378,7 @@
             "category": 2,
             "price": 39.99,
             "rating": 4.5,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "js05.jpg"
            
         }
@@ -406,7 +406,7 @@
             "category": 2,
             "price": 49.99,
             "rating": 5.0,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "",
             "image": "html06.jpg"
            
         }
@@ -462,7 +462,7 @@
             "category": 2,
             "price": 79.99,
             "rating": 4.0,
-            "image_url": "https://www.udemy.com/introduction-to-nodejs-for-beginners/",
+            "image_url": "",
             "image": "nodejs01.jpg"
             
         }
@@ -476,7 +476,7 @@
             "category": "2",
             "price": 199.99,
             "rating": 4.8,
-            "image_url": "https://www.udemy.com/supreme-node-js-course/",
+            "image_url": "",
             "image": "nodejs02.jpg"
             
         }
@@ -490,7 +490,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.0,
-            "image_url": "https://www.udemy.com/javascript-tricks-and-workarounds/",
+            "image_url": "",
             "image": "js09.jpg"
             
             }
