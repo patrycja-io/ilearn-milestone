@@ -47,9 +47,8 @@
                   <div class="col-xl-4 col-lg-5 col-md-6">
                     <div class="preview_video">
                       <a
-                        href="{{ course.image.url }}"
-                        class="fcrse_img"
-                      >
+                        href=""
+                        class="fcrse_img">
                         {% if course.image %}
                         <img src="{{ course.image.url }}" alt="" />
                         {% endif%}
@@ -109,10 +108,7 @@
                     {% if request.user.is_superuser %}
                     <small >
                       <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
-                      <a
-                        class="text-danger"
-                        href="{% url 'delete_course' course.id %}"
-                        >Delete</a
+                      <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a
                       >
                     </small>
                     {% endif %}
