@@ -2225,6 +2225,9 @@ i.icon1 {
 	margin-bottom: 0;
 }
 
+.story img {
+    max-width: 500px;
+}
 .our_story {
     float: left;
     width: 100%;
