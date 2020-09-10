@@ -33,10 +33,11 @@
     <div class="container">
       <div class="row">
        
-<div class="col-lg-8">{% if basket_items %} {% for course in basket_items %}
+<div class="col-lg-8">
+ {% for course in basket_items %}
 						<div class="fcrse_1">
 							<a href="{% url 'course_description' course.id %}" class="hf_img">
-								<img class="cart_img" src="{{ course.image.url }}" alt="">
+								<img class="cart_img" src="" alt="">
 							</a>
 							<div class="hs_content">
 								<div class="eps_dots eps_dots10 more_dropdown">

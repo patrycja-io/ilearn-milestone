@@ -29,80 +29,6 @@ time, mark, audio, video {
     text-decoration: none;
     
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-::-moz-selection { /* Code for Firefox */
-	background-color: #cce2ff;
-    color: rgba(0,0,0,.87);
-}
-
-::selection {
-	background-color: #cce2ff;
-    color: rgba(0,0,0,.87);
-}
-
-ol, ul {
-	list-style: none;
-	margin-bottom: 0 !important;
-}
-a:hover {
-	color: inherit !important;
-	text-decoration: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-button {
-outline: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-* {
-	margin:0;
-	padding: 0;
-}
-
-a {
- text-decoration: none;
- }
-
-a:focus {
-	text-decoration: none;
-	outline: none;
-}
-a:hover {
-	text-decoration: none !important;
-}
-button {
-	outline: none;
-}
-
-button:focus {
-	outline: none !important;
-}
-
-input {
-	outline: none;
-}
-textarea {
-	outline: none;
-}
-
-p {
-	font-size: 14px;
-	line-height: 26px;
-	color: #686f7a;
-}
 
 /* ================ Typography Css =============== */
 h1 {
@@ -368,14 +294,6 @@ input[type=text] {
     background: none !important;
 }
 
-
-.hde151 {
-	display: none;
-}
-
-.hde152 {
-	display: block !important;
-}
 
 .titleright {
 	float: left !important;
@@ -2128,13 +2046,13 @@ i.icon1 {
     opacity: 0.1;
 }
 
-.title129 {
+.title_banner {
     float: left;
     width: 100%;
     padding-bottom: 20px;
 }
 
-.title129 h2 {
+.title_banner h2 {
     font-size: 24px;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;

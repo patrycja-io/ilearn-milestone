@@ -129,8 +129,11 @@ def delete_course(request, course_id):
         messages.error(request, 'Sorry, only course creator can do that.')
         return redirect(reverse('home'))
 
-    course = get_object_or_404(Course, pk=course_id)
-    course.delete()
-    messages.danger(request, 'Course deleted!')
-    return redirect(reverse('courses'))
+    course = Course.objects.get(pk=course_id)
+    if request.method == "POST":
+        course.delete()
+        messages.danger(request, 'Course deleted!')
+    return redirect('/')
+    return render(request, 'home')
+    
     
