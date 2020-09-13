@@ -50,6 +50,11 @@ Night Mood
     background: #fff;
 }
 
+.night-mode.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #495057;;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
 
 .night-mode html , 
 .night-mode body , 
@@ -488,25 +493,6 @@ Night Mood
 
 .night-mode .stm_key {
     color: #fff;
-}
-
-.night-mode .slive_tabs .nav-link {
-    border: 1px solid #fff !important;
-    background-color: transparent !important;
-    color: #fff !important;
-}
-
-.night-mode .slive_tabs .nav-link:hover {
-    border: 1px solid #fff !important;
-    background-color: #fff !important;
-    color: #08090f !important;
-}
-
-.night-mode .slive_tabs .nav-item.show .nav-link, .night-mode .slive_tabs .nav-link.active {
-    color: #fff !important;
-    background-color: #ed2a26 !important;
-    border-color: #ed2a26 !important;
-    border-radius: 20px;
 }
 
 
@@ -979,19 +965,6 @@ Night Mood
     background: #cc2622;
 }
 
-.night-mode .live_input {
-    color: #333;
-	background: #242424;
-}
-
-.night-mode .live_comment {
-    border-top: 1px solid #242424;
-}
-
-.night-mode .live_input:focus {
-	background: #fff;
-}
-
 .night-mode .membership_bg {
     background: #333;
     border: 1px solid #242424;
@@ -1026,12 +999,6 @@ Night Mood
 .night-mode .panel-title a {
     color: #fff !important;
 }
-
-.night-mode .sbbc145:hover {
-    color: #fff;
-    background: #cc2622;
-}
-
 
 
 .night-mode .blogleft12 li {
