@@ -68,6 +68,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
      'whitenoise.middleware.WhiteNoiseMiddleware',
+     
 ]
 
 ROOT_URLCONF = 'ilearn.urls'
@@ -182,7 +183,7 @@ STATIC_URL =  '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
