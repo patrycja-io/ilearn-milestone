@@ -57,7 +57,7 @@
         "model": "courses.course",
         "fields": {
             "sku": 28,
-           "name": "Javascript ES6! A Complete Reference Guide to Javascript ES6",
+            "name": "Javascript ES6! A Complete Reference Guide to Javascript ES6",
             "category": 2,
             "price": 99.99,
             "rating": 4.6,
