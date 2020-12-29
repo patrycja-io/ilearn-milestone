@@ -64,7 +64,7 @@ def course_description(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
 
     context = {
-        'course': course,
+        'courses': course,
     }
 
     return render(request, 'courses/course_description.html', context)
@@ -84,7 +84,8 @@ def add_course(request):
             messages.success(request, 'Added new course!')
             return redirect(reverse('course_description', args=[course.id]))
         else:
-            messages.error(request, 'Failed to add course. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add course. Please ensure
+                           the form is valid.')
     else:
         form = CourseForm()
 
@@ -137,5 +138,3 @@ def delete_course(request, course_id):
         messages.danger(request, 'Course deleted!')
     return redirect('/')
     return render(request, 'home')
-    
-    
