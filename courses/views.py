@@ -84,8 +84,7 @@ def add_course(request):
             messages.success(request, 'Added new course!')
             return redirect(reverse('course_description', args=[course.id]))
         else:
-            messages.error(request, 'Failed to add course. Please ensure
-                           the form is valid.')
+            messages.error(request, 'Failed to add course. Please ensure the form is valid.')
     else:
         form = CourseForm()
 
