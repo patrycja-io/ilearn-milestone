@@ -50,7 +50,7 @@
                         href=""
                         class="fcrse_img">
                         {% if course.image %}
-                        <img src="{{ course.image.url }}" alt="" />
+                        <img src="{{ MEDIA_URL }}{{ course.image }}" alt="" />
                         {% endif%}
                       </a>
                     </div>

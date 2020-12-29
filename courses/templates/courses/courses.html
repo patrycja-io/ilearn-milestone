@@ -70,7 +70,7 @@
                 {% if course.image %}
                 <a href="{% url 'course_description' course.id %}"
                   class="fcrse_img">
-                  <img src="{{ MEDIA_URL }}{{ course.image}}" alt="{{ course.name }}" />
+                  <img src="{{ MEDIA_URL }}{{ course.image }}" alt="{{ course.name }}" />
                   {% endif %}
                   <div class="course-overlay">
                     {% if course.rating %}
