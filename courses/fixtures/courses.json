@@ -8,7 +8,7 @@
             "price": 75.99,
             "rating": 4.1,
             "image": "html01.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html01.jpg"
         }
     },
     {
@@ -21,7 +21,7 @@
             "price": 199.99,
             "rating": 4.6,
             "image": "bootstrap01.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/bootstrap01.jpg"
             
         }
     },
@@ -35,7 +35,7 @@
             "price": 20,
             "rating": 4.6,
             "image": "html02.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html02.jpg"
             
         }
     },
@@ -49,9 +49,7 @@
             "price": 13.99,
             "rating": 4.9,
             "image": "00_react.jpg",
-            "image_url": ""
-            
-
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/00_react.jpg"
         }
     },
     {
@@ -64,7 +62,7 @@
             "price": 99.99,
             "rating": 4.6,
             "image": "js07.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js07.jpg"
             
         }
     },
@@ -77,7 +75,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.6,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/02_react.jpg",
             "image": "02_react.jpg"
         }
     },
