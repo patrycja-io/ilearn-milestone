@@ -49,7 +49,7 @@ def all_courses(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'courses': courses,
+        'course': course,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -64,7 +64,7 @@ def course_description(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
 
     context = {
-        'courses': courses,
+        'course': course,
     }
 
     return render(request, 'courses/course_description.html', context)
