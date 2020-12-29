@@ -55,7 +55,7 @@ def all_courses(request):
         'current_sorting': current_sorting,
 
     }
-    return render(request, 'courses/courses.html', context)
+    return render(request, 'course/courses.html', context)
 
 
 def course_description(request, course_id):
