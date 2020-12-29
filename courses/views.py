@@ -55,7 +55,7 @@ def all_courses(request):
         'current_sorting': current_sorting,
 
     }
-    return render(request, 'course/courses.html', context)
+    return render(request, 'courses/courses.html', context)
 
 
 def course_description(request, course_id):
@@ -64,10 +64,11 @@ def course_description(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
 
     context = {
-        'courses': courses,
+        'course': course,
     }
 
     return render(request, 'courses/course_description.html', context)
+
 
 @login_required
 def add_course(request):
@@ -86,13 +87,14 @@ def add_course(request):
             messages.error(request, 'Failed to add course. Please ensure the form is valid.')
     else:
         form = CourseForm()
-        
+
     template = 'courses/add_course.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_course(request, course_id):
@@ -117,7 +119,7 @@ def edit_course(request, course_id):
     template = 'courses/edit_course.html'
     context = {
         'form': form,
-        'courses': courses,
+        'courses': course,
     }
 
     return render(request, template, context)
