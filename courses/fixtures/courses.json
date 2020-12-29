@@ -26,6 +26,20 @@
         }
     },
     {
+        "pk": 100,
+        "model": "courses.course",
+        "fields": {
+            "sku": 102,
+            "name": "The Complete Bootstrap Masterclass Course - Build 4 Projects",
+            "category": 3,
+            "price": 199.99,
+            "rating": 4.6,
+            "image": "bootstrap01.jpg",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/bootstrap01.jpg"
+            
+        }
+    },
+    {
         "pk": 3,
         "model": "courses.course",
         "fields": {
