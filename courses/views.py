@@ -124,6 +124,7 @@ def edit_course(request, course_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_course(request, course_id):
     """ Delete a course from the platform """
