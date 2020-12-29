@@ -67,15 +67,15 @@
             {% for course in courses %}
             <div class="col-lg-3 col-md-4">
               <div class="fcrse_1 mt-30">
-                {% if course.image %}
+                {% if Course.image %}
                 <a href="{% url 'course_description' course.id %}"
                   class="fcrse_img">
-                  <img src="{{ MEDIA_URL }}{{ course.image }}" alt="{{ course.name }}" />
+                  <img src="{{ MEDIA_URL }}{{ Course.image }}" alt="{{ Course.name }}" />
                   {% endif %}
                   <div class="course-overlay">
-                    {% if course.rating %}
+                    {% if Course.rating %}
                  <div class="course_reviews mr-2">
-                      <i class="uil uil-star"></i>{{ course.rating }} / 5
+                      <i class="uil uil-star"></i>{{ Course.rating }} / 5
                     </div>
                     {% else %}
                   <div class="course_reviews mr-2">
