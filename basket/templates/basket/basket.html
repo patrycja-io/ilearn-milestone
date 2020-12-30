@@ -35,9 +35,8 @@
   <div class="basket">
     <div class="container">
       <div class="row">
-       
+       {% for item in basket_items %}
 <div class="col-lg-8">
-    {% for item in basket_items %}
 						<div class="fcrse_1">
 							<a href="{% url 'course_description' item.id %}" class="hf_img">
 								<img class="cart_img" src="{{ item.course.image.url }}" alt="">
@@ -68,15 +67,15 @@
             </div>
           </div>
         </div>
-        {% else %}
-                <div class="sign_form">
-                    <p class="lead mb-5">Your basket is empty.</p>
-                    <a href="{% url 'courses' %}" class="btn_back_red">
-                        <i class="fas fa-chevron-left"></i>
+{% endfor %}
+{% else %}
+        <div class="sign_form">
+            <p class="lead mb-5">Your basket is empty.</p>
+                <a href="{% url 'courses' %}" class="btn_back_red">
+                    <i class="fas fa-chevron-left"></i>
                         <span> Keep shopping </span>
-                    </a>
-                </div>
-        {% endfor %}
+                </a>
+        </div>
 {% endif %}
       </div>
     </div>
