@@ -49,7 +49,7 @@ def all_courses(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'courses': course,
+        'courses': courses,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -61,10 +61,10 @@ def all_courses(request):
 def course_description(request, course_id):
     """ A view to show individual course details """
 
-    course = get_object_or_404(Course, pk=course_id)
+    courses = get_object_or_404(Course, pk=course_id)
 
     context = {
-        'courses': course,
+        'courses': courses,
     }
 
     return render(request, 'courses/course_description.html', context)
