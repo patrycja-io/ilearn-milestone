@@ -1,18 +1,5 @@
 [
    {
-      "pk":1,
-      "model":"courses.course",
-      "fields":{
-         "sku":1,
-         "name":"Learn Web Designing & HTML5/CSS3 Essentials in 4-Hours",
-         "category":3,
-         "price":75.99,
-         "rating":4.1,
-         "image":"html01.jpg",
-         "image_url":"https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html01.jpg"
-      }
-   },
-   {
       "pk":2,
       "model":"courses.course",
       "fields":{
