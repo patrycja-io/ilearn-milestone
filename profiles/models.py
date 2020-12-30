@@ -30,10 +30,10 @@ class UserProfile(models.Model):
                                    null=True, blank=True)
 
     def __str__(self):
-        return self.user.username
+        return self.userprofile.username
 
 
-@receiver(post_save, sender=User)
+@receiver(post_save, sender=userprofile)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile
