@@ -16,20 +16,7 @@
       "pk":2,
       "model":"courses.course",
       "fields":{
-         "sku":6,
-         "name":"The Complete Bootstrap Masterclass Course - Build 4 Projects",
-         "category":3,
-         "price":199.99,
-         "rating":4.6,
-         "image":"bootstrap01.jpg",
-         "image_url":"https://ilearn-django.s3.eu-west-2.amazonaws.com/media/bootstrap01.jpg"
-      }
-   },
-   {
-      "pk":100,
-      "model":"courses.course",
-      "fields":{
-         "sku":102,
+         "sku":2,
          "name":"The Complete Bootstrap Masterclass Course - Build 4 Projects",
          "category":3,
          "price":199.99,
@@ -42,7 +29,20 @@
       "pk":3,
       "model":"courses.course",
       "fields":{
-         "sku":8,
+         "sku":3,
+         "name":"The Complete Bootstrap Masterclass Course - Build 4 Projects",
+         "category":3,
+         "price":199.99,
+         "rating":4.6,
+         "image":"bootstrap01.jpg",
+         "image_url":"https://ilearn-django.s3.eu-west-2.amazonaws.com/media/bootstrap01.jpg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"courses.course",
+      "fields":{
+         "sku":4,
          "name":"HTML Tutorial: HTML & CSS for Beginners",
          "category":3,
          "price":20,
@@ -52,10 +52,10 @@
       }
    },
    {
-      "pk":4,
+      "pk":5,
       "model":"courses.course",
       "fields":{
-         "sku":18,
+         "sku":5,
          "name":"React JS and Redux - Mastering Web Apps",
          "category":2,
          "price":13.99,
@@ -65,10 +65,10 @@
       }
    },
    {
-      "pk":5,
+      "pk":6,
       "model":"courses.course",
       "fields":{
-         "sku":28,
+         "sku":6,
          "name":"Javascript ES6! A Complete Reference Guide to Javascript ES6",
          "category":2,
          "price":99.99,
@@ -78,10 +78,10 @@
       }
    },
    {
-      "pk":6,
+      "pk":7,
       "model":"courses.course",
       "fields":{
-         "sku":31,
+         "sku":7,
          "name":"React.js: Building Production Ready Apps, Start to Finish",
          "category":2,
          "price":13.99,
@@ -91,10 +91,10 @@
       }
    },
    {
-      "pk":7,
+      "pk":8,
       "model":"courses.course",
       "fields":{
-         "sku":34,
+         "sku":8,
          "name":"Projects in Laravel: Learn Laravel Building 10 Projects",
          "category":1,
          "price":49.99,
@@ -104,10 +104,10 @@
       }
    },
    {
-      "pk":8,
+      "pk":9,
       "model":"courses.course",
       "fields":{
-         "sku":40,
+         "sku":9,
          "name":"Complete React JS web developer with ES6 - Build 10 projects",
          "category":2,
          "price":13.99,
@@ -117,10 +117,10 @@
       }
    },
    {
-      "pk":9,
+      "pk":10,
       "model":"courses.course",
       "fields":{
-         "sku":41,
+         "sku":10,
          "name":"Vue JS - Mastering Web Apps",
          "category":2,
          "price":13.99,
@@ -130,10 +130,10 @@
       }
    },
    {
-      "pk":10,
+      "pk":11,
       "model":"courses.course",
       "fields":{
-         "sku":42,
+         "sku":11,
          "name":"JavaScript the Basics - JavaScript for Beginners",
          "category":2,
          "price":13.99,
@@ -143,10 +143,10 @@
       }
    },
    {
-      "pk":11,
+      "pk":12,
       "model":"courses.course",
       "fields":{
-         "sku":43,
+         "sku":12,
          "name":"Build a Responsive Website with HTML5, CSS3 and Bootstrap 4",
          "category":3,
          "price":13.99,
@@ -156,10 +156,10 @@
       }
    },
    {
-      "pk":12,
+      "pk":13,
       "model":"courses.course",
       "fields":{
-         "sku":46,
+         "sku":13,
          "name":"Beginner Full Stack Web Development: HTML, CSS, React & Node",
          "category":2,
          "price":99.99,
@@ -169,10 +169,10 @@
       }
    },
    {
-      "pk":13,
+      "pk":14,
       "model":"courses.course",
       "fields":{
-         "sku":52,
+         "sku":14,
          "name":"The Complete Web Development Tutorial Using React and Redux",
          "category":2,
          "price":13.99,
@@ -182,10 +182,10 @@
       }
    },
    {
-      "pk":14,
+      "pk":15,
       "model":"courses.course",
       "fields":{
-         "sku":57,
+         "sku":15,
          "name":"Getting Started with NodeJS for Beginners",
          "category":2,
          "price":99.99,
@@ -195,10 +195,10 @@
       }
    },
    {
-      "pk":15,
+      "pk":16,
       "model":"courses.course",
       "fields":{
-         "sku":69,
+         "sku":16,
          "name":"React Redux React-Router: From Beginner to Paid Professional",
          "category":2,
          "price":13.99,
@@ -208,7 +208,7 @@
       }
    },
    {
-      "pk":16,
+      "pk":100,
       "model":"courses.course",
       "fields":{
          "sku":70,
