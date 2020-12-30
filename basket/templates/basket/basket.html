@@ -51,10 +51,8 @@
 								<a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
                                 {% endif %}
 							     <div class="prce142">£ {{ item.course.price }}</div>
-								
 							</div>
-						</div>	
-      {% endfor %}							
+						</div>							
 					</div>
         <div class="col-lg-4">
           <div class="checkout_bg checkout_bg_right">
@@ -70,6 +68,15 @@
             </div>
           </div>
         </div>
+        {% else %}
+                <div class="sign_form">
+                    <p class="lead mb-5">Your basket is empty.</p>
+                    <a href="{% url 'courses' %}" class="btn_back_red">
+                        <i class="fas fa-chevron-left"></i>
+                        <span> Keep shopping </span>
+                    </a>
+                </div>
+        {% endfor %}
 {% endif %}
       </div>
     </div>
