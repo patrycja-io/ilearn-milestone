@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .models import Order, OrderEbook
 from courses.models import Course
-from profiles.models import UserProfile
+#from profiles.models import UserProfile
 
 
 import json
