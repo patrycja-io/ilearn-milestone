@@ -8,8 +8,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderEbook
 
-#from profiles.models import UserProfile
-#from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 
 from courses.models import Course
 from basket.context import basket_ebooks
