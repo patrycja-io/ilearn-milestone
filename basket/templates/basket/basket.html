@@ -31,13 +31,13 @@
       </div>
     </div>
   </div>
-% if basket_items %}
+{% if basket_items %}
   <div class="basket">
     <div class="container">
       <div class="row">
        
 <div class="col-lg-8">
- {% for item in basket_items %}
+    {% for item in basket_items %}
 						<div class="fcrse_1">
 							<a href="{% url 'course_description' item.id %}" class="hf_img">
 								<img class="cart_img" src="{{ item.course.image.url }}" alt="">
@@ -47,14 +47,14 @@
 									<a href="{% url 'delete_from_basket' item.id %}"><i class="uil uil-times"></i></a>																										
 								</div>
 								<a href="{% url 'course_description' course.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a>
-                                  {% if course.category %}
+                                {% if course.category %}
 								<a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
                                 {% endif %}
 							     <div class="prce142">£ {{ item.course.price }}</div>
 								
 							</div>
 						</div>	
-    {% endfor %}							
+      {% endfor %}							
 					</div>
         <div class="col-lg-4">
           <div class="checkout_bg checkout_bg_right">
