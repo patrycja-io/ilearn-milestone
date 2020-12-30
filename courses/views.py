@@ -49,7 +49,7 @@ def all_courses(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'course': courses,
+        'courses': courses,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
