@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 
 from courses.models import Course
@@ -6,15 +6,14 @@ from courses.models import Course
 
 def view_basket(request):
     """ A view  that renders basket page """
-
     return render(request, 'basket/basket.html')
 
 
 def add_to_basket(request, course_id):
     """ Add a quantity of the specified product to the shopping basket """
     redirect_url = request.POST.get('redirect_url')
-    basket = request.session.get('basket', {})
-    course = Course.objects.get(pk=course_id)
+    basket = request.session.get('basket', [])
+    course = get_object_or_404(Course, pk=course_id)
 
     if course_id not in basket:
         basket[course_id] = course_id
@@ -31,7 +30,7 @@ def delete_from_basket(request, course_id):
     """Delete item from cart"""
 
     course = Course.objects.get(pk=course_id)
-    basket = request.session.get('basket', {})
+    basket = request.session.get('basket', [])
 
     if course_id in basket:
         del basket[course_id]
