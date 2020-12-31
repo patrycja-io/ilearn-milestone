@@ -40,7 +40,7 @@ def all_courses(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter search criteria!")
                 return redirect(reverse('courses'))
 
             queries = Q(name__icontains=query)
@@ -84,7 +84,7 @@ def add_course(request):
             messages.success(request, 'Added new course!')
             return redirect(reverse('course_description', args=[course.id]))
         else:
-            messages.error(request, 'Failed to add course. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add course')
     else:
         form = CourseForm()
 
@@ -111,7 +111,7 @@ def edit_course(request, course_id):
             messages.success(request, 'Successfully updated course!')
             return redirect(reverse('course_description', args=[course.id]))
         else:
-            messages.error(request, 'Failed to update the course. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update the course')
     else:
         form = CourseForm(instance=course)
         messages.info(request, f'You are editing {course.name}')
