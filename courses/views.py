@@ -61,10 +61,10 @@ def all_courses(request):
 def course_description(request, course_id):
     """ A view to show individual course details """
 
-    courses = get_object_or_404(Course, pk=course_id)
+    course = get_object_or_404(Course, pk=course_id)
 
     context = {
-        'courses': courses,
+        'course': course,
     }
 
     return render(request, 'courses/course_description.html', context)
