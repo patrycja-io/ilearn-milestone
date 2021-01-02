@@ -15,7 +15,7 @@ from courses.models import Course
 from basket.context import basket_ebooks
 
 import stripe
-import jsonx
+import json
 
 
 @require_POST
