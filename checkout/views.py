@@ -60,16 +60,16 @@ def checkout(request):
             order = order_form.save()
             for item_data in basket:
                 try:
-                   course = course.objects.get(id=item_data['product'])
+                   course = course.objects.get(id=item_data['course'])
                     order_line_item = OrderLineItem(
                         sub_total=item_data['sub_total'],
                         order=order,
-                        product=product,
+                        course=course,
                         quantity=item_data['quantity'],
                     )
                     total += item_data['sub_total']
                     order_line_item.save()
-                except Product.DoesNotExist:
+                except Course.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
@@ -124,14 +124,12 @@ def checkout(request):
 
 
 
-def payment_approved(request, order_number):
+def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    current_basket = basket_ebooks(request)
-    total = current_basket['total']
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -150,21 +148,18 @@ def payment_approved(request, order_number):
                 'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
-            user_profile_form = UserProfileForm(profile_data,
-                                                instance=profile)
-            
-            
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is { order_number }. A confirmation \
-        email will be sent to { order.email }.')
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
 
     if 'basket' in request.session:
         del request.session['basket']
 
-    template = 'checkout/payment_approved.html'
+    template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
