@@ -12,7 +12,7 @@ def view_basket(request):
 def add_to_basket(request, course_id):
     """ Add a quantity of the specified product to the shopping basket """
     redirect_url = request.POST.get('redirect_url')
-    basket = request.session.get('basket', [])
+    basket = request.session.get('basket', {})
     course = get_object_or_404(Course, pk=course_id)
 
     if course_id not in basket:
