@@ -8,7 +8,7 @@ def basket_ebooks(request):
 
     basket_items = set()
     total = 0
-    basket = request.session.get('basket', {})
+    basket = request.session.get('basket', [])
 
     for course_id in basket.keys():
         course = get_object_or_404(Course, pk=course_id)
