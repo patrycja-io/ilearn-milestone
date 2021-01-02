@@ -60,7 +60,7 @@ def checkout(request):
             order = order_form.save()
             for item_data in basket:
                 try:
-                   course = course.objects.get(id=item_data['course'])
+                    course = course.objects.get(id=item_data['course'])
                     order_line_item = OrderLineItem(
                         sub_total=item_data['sub_total'],
                         order=order,
