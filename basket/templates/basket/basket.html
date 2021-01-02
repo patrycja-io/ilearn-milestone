@@ -45,7 +45,7 @@
 								<div class="eps_dots eps_dots10 more_dropdown">
 									<a href="{% url 'delete_from_basket' item.id %}"><i class="uil uil-times"></i></a>																										
 								</div>
-								<a href="{% url 'course_description' course.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a>
+								<a href="{% url 'course_description' item.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a>
                                 {% if course.category %}
 								<a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
                                 {% endif %}

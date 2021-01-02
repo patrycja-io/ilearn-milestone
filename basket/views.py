@@ -9,31 +9,31 @@ def view_basket(request):
     return render(request, 'basket/basket.html')
 
 
-def add_to_basket(request, course_id):
+def add_to_basket(request, item_id):
     """ Add a quantity of the specified product to the shopping basket """
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
-    course = get_object_or_404(Course, pk=course_id)
+    course = get_object_or_404(Course, pk=item_id)
 
     if course_id not in basket:
-        basket[course_id] = course_id
+        basket[item_id] = item_id
 
     else:
-        basket[course_id] = course_id
+        basket[item_id] = item_id
         messages.success(request, f'Added {course.name} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
 
 
-def delete_from_basket(request, course_id):
+def delete_from_basket(request, item_id):
     """Delete item from cart"""
 
-    course = get_object_or_404(Course, pk=course_id)
+    course = get_object_or_404(Course, pk=item_id)
     basket = request.session.get('basket', [])
 
-    if course_id in basket:
-        del basket[course_id]
+    if item_id in basket:
+        del basket[item_id]
         messages.success(request, f'Removed {course.name} from your bag')
 
     request.session['basket'] = basket
