@@ -15,7 +15,7 @@ def add_to_basket(request, item_id):
     basket = request.session.get('basket', {})
     course = get_object_or_404(Course, pk=item_id)
 
-    if course_id not in basket:
+    if item_id not in basket:
         basket[item_id] = item_id
 
     else:
