@@ -35,12 +35,13 @@ def cache_data(request):
         return HttpResponse(content=e, status=400)
 
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        basket = request.session.get('basket', {})
+        basket = request.session.get('basket', [])
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -55,49 +56,58 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
-            order.original_basket = json.dumps(basket)
-            order_form.save()
-            for course_id, item_data in basket.items():
+            total = 0
+            order = order_form.save()
+            for item_data in basket:
                 try:
-                    course = get_object_or_404(Course, pk=item_id)
-                    if isinstance(item_data, int):
-                        order_ebook = OrderEbook(
-                            order=order,
-                            course=course,
-                            quantity=item_data,
-                        )
-                        order_ebook.save()
-
-                except course.DoesNotExist:
-                    messages.error(request, ("Product not found"))
+                   course = course.objects.get(id=item_data['product'])
+                    order_line_item = OrderLineItem(
+                        sub_total=item_data['sub_total'],
+                        order=order,
+                        product=product,
+                        quantity=item_data['quantity'],
+                    )
+                    total += item_data['sub_total']
+                    order_line_item.save()
+                except Product.DoesNotExist:
+                    messages.error(request, (
+                        "One of the products in your bag wasn't found in our database. "
+                        "Please call us for assistance!")
+                    )
                     order.delete()
                     return redirect(reverse('view_basket'))
 
+            grand_total = total
+            discount = 0
+            if total >= settings.BUNDLE_DISCOUNT_THRESHOLD:
+                grand_total = float(total) * 0.8
+                discount = total - grand_total
+
+            order.order_total = total
+            order.grand_total = grand_total
+            order.discount = discount
+            order.save()
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('payment_approved',
-                                    args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your basket yet")
-            return redirect(reverse('courses'))
+            messages.error(request, "There's nothing here yet")
+            return redirect(reverse('products'))
 
-    current_basket = basket_ebooks(request)
-    total = current_basket['total']
-    stripe_total = round(total * 100)
-    stripe.api_key = stripe_secret_key
-    intent = stripe.PaymentIntent.create(
-        amount=stripe_total,
-        currency=settings.STRIPE_CURRENCY,
-    )
+        current_basket = basket_contents(request)
+        current_total = current_basket['grand_total']
+        stripe_total = round(current_total * 100)
+        stripe.api_key = stripe_secret_key
+        intent = stripe.PaymentIntent.create(
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
+        )
 
-    order_form = OrderForm()
+        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -111,6 +121,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 
 def payment_approved(request, order_number):
