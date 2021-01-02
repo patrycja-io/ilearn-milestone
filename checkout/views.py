@@ -62,7 +62,7 @@ def checkout(request):
             order_form.save()
             for course_id, item_data in basket.items():
                 try:
-                    course = Course.objects.get(id=course_id)
+                    course = get_object_or_404(Course, pk=item_id)
                     if isinstance(item_data, int):
                         order_ebook = OrderEbook(
                             order=order,
@@ -71,7 +71,7 @@ def checkout(request):
                         )
                         order_ebook.save()
 
-                except Course.DoesNotExist:
+                except course.DoesNotExist:
                     messages.error(request, ("Product not found"))
                     order.delete()
                     return redirect(reverse('view_basket'))
