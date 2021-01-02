@@ -29,7 +29,7 @@ def add_to_basket(request, course_id):
 def delete_from_basket(request, course_id):
     """Delete item from cart"""
 
-    course = Course.objects.get(pk=course_id)
+    course = get_object_or_404(Course, pk=course_id)
     basket = request.session.get('basket', [])
 
     if course_id in basket:
