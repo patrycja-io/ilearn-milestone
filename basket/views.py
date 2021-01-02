@@ -5,8 +5,14 @@ from courses.models import Course
 
 
 def view_basket(request):
-    """ A view  that renders basket page """
-    return render(request, 'basket/basket.html')
+    courses = Course.objects.all()
+
+    context = {
+        'courses': courses,
+    }
+
+    return render(request, 'basket/basket.html', context)
+
 
 
 def add_to_basket(request, item_id):
