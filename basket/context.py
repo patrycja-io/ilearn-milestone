@@ -10,7 +10,7 @@ def basket_ebooks(request):
     basket = request.session.get('basket', [])
 
     for values in basket:
-        course_id = values['course']
+        course_id = data.values[]
         course = get_object_or_404(Course, pk=course_id)
         sub_total = course.price
         total += values['quantity'] * course.price
