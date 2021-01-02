@@ -79,9 +79,6 @@ def checkout(request):
 
             grand_total = total
             discount = 0
-            if total >= settings.BUNDLE_DISCOUNT_THRESHOLD:
-                grand_total = float(total) * 0.8
-                discount = total - grand_total
 
             order.order_total = total
             order.grand_total = grand_total
