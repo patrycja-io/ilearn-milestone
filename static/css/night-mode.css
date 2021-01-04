@@ -798,7 +798,7 @@ Night Mood
     border-right: 0; 
 }
 
-.night-mode.nav.nav-tabs.tab_crse.justify-content-center{
+.night-mode .nav .nav-tabs .tab_crse .justify-content-center{
     color: #fff;
     background-color: inherit;
     border-color: #dee2e6 #dee2e6 #fff;
