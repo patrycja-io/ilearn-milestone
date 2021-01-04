@@ -12,7 +12,7 @@ def basket_contents(request):
     basket = request.session.get('basket', [])
 
     for values in basket:
-        item_id = values['course']
+        item_id = values['course'],
         course = get_object_or_404(Course, pk=item_id)
         sub_total = course.price
         total += values['quantity'] * course.price
