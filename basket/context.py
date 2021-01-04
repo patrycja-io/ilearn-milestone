@@ -17,8 +17,7 @@ def basket_contents(request):
         sub_total = course.price
         total += values['quantity'] * course.price
 
-        
-        product_count += values['quantity']
+        course_count += values['quantity']
         basket_items.append({
             'sub_total': sub_total,
             'item_id': item_id,
