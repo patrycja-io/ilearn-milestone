@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderEbook
+from .models import Order, OrderLineItem
 
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -35,7 +35,6 @@ def cache_data(request):
         return HttpResponse(content=e, status=400)
 
 
-
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -43,13 +42,13 @@ def checkout(request):
     if request.method == 'POST':
         basket = request.session.get('basket', [])
 
-        order_form = OrderForm(form_data)
+        order_form = OrderForm(request.POST)
         if order_form.is_valid():
             total = 0
             order = order_form.save()
             for item_data in basket:
                 try:
-                    course = course.objects.get(id=item_data['course'])
+                    course = Course.objects.get(id=item_data['course'])
                     order_line_item = OrderLineItem(
                         sub_total=item_data['sub_total'],
                         order=order,
@@ -107,7 +106,6 @@ def checkout(request):
     }
 
     return render(request, template, context)
-
 
 
 def checkout_success(request, order_number):
