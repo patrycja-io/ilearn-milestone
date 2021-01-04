@@ -798,6 +798,12 @@ Night Mood
     border-right: 0; 
 }
 
+.nav.nav-tabs.tab_crse.justify-content-center{
+    color: #fff;
+    background-color: inherit;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
 .night-mode .checkout-tabs .nav-tabs {
     border-top: 1px solid #242424;
     border-left: 1px solid #242424;
