@@ -51,7 +51,7 @@ Night Mood
 }
 
 .night-mode.nav-tabs .nav-item.show .nav-link, .nav-tabs{
-    color: #495057;
+    color: #333;
     border-color: #dee2e6 #dee2e6 #fff;
 }
 
@@ -64,7 +64,6 @@ Night Mood
   color:  #fff !important;
 }
 
-}
 
 
 .night-mode html , 
