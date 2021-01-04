@@ -57,7 +57,6 @@ Night Mood
 
 .night-mode .main-tabs .nav-tabs .nav-item.show .nav-link, .night-mode .main-tabs .nav-tabs .nav-link.active {
     color: #fff !important;
-    background-color: none !important;
     border-bottom: 2px solid #ed2a26 !important;
 }
 
@@ -792,12 +791,6 @@ Night Mood
 
 .night-mode .checkout-tabs .nav-tabs .nav-item:last-child {
     border-right: 0; 
-}
-
-.night-mode .nav .nav-tabs .tab_crse .justify-content-center{
-    color: #fff;
-    background-color: inherit;
-    border-color: #dee2e6 #dee2e6 #fff;
 }
 
 .night-mode .checkout-tabs .nav-tabs {
