@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from courses.models import Course
 
 
-def basket_ebooks(request):
+def basket_contents(request):
 
     basket_items = set()
     total = 0
