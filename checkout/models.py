@@ -66,7 +66,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, null=False, blank=False, on_delete=models.CASCADE)
     sub_total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
     quantity = models.IntegerField(default=1)
