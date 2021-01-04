@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 
     # Other
     'crispy_forms',
-    'storages', 
+    'storages',
 
 ]
 
@@ -67,7 +67,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-     
+
 ]
 
 ROOT_URLCONF = 'ilearn.urls'
@@ -80,7 +80,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
-            os.path.join(BASE_DIR, 'db.sqlite3'),
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -179,12 +179,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-'django.contrib.staticfiles.finders.FileSystemFinder',
+ 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+ 'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 
 STATIC_HOST = os.environ.get('DJANGO_STATIC_HOST')
-STATIC_URL =  '/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
@@ -208,7 +208,7 @@ if 'USE_AWS' in os.environ:
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and media files
-    
+
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
@@ -220,6 +220,7 @@ if 'USE_AWS' in os.environ:
 
 
 # Stripe
+DISCOUNT = 9.99
 STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
