@@ -288,7 +288,7 @@ Night Mood
 .night-mode .fcrse_1 {
     background: #333;
     border-radius: 10px;
-    border: 1px solid #efefef;
+    border: 1px solid #efefef !important;
 }
 
 
