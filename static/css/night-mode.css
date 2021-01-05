@@ -287,7 +287,8 @@ Night Mood
 
 .night-mode .fcrse_1 {
     background: #333;
-    border: 1px solid #242424;
+    border-radius: 10px;
+    border: 1px solid #efefef;
 }
 
 
@@ -702,6 +703,8 @@ Night Mood
 
 .night-mode .sign_form {
     background: #242424;
+    border-radius: 10px;
+    border: 1px solid #efefef;
 }
 
 .night-mode .panel-default {
