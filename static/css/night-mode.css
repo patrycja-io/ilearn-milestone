@@ -1,5 +1,5 @@
 /****************
-Night Mood
+Night Mode
 ****************/
 
 .btn-night-mode .btn-night-mode-switch {
@@ -216,6 +216,8 @@ Night Mood
 }
 .night-mode .sign_form {
     background: #242424;
+    border-radius: 10px;
+    border: 1px solid #efefef;
 }
 .night-mode ._215b01 {
     background: #313131;
