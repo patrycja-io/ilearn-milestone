@@ -217,8 +217,8 @@ Night Mode
 .night-mode .sign_form {
     background: #242424;
     border-radius: 10px;
-    border: 1px solid #efefef;
-    
+    border: 1px solid #efefef !important;
+
 }
 .night-mode ._215b01 {
     background: #313131;
@@ -326,4 +326,7 @@ Night Mode
 .night-mode .uk-input,
 .night-mode .uk-input:disabled {
     border-color: rgba(255, 255, 255, 0.1);
+}
+.night-mode .fcrse_1{
+    border: 1px solid #efefef !important;
 }
