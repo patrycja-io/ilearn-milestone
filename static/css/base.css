@@ -731,7 +731,7 @@ i.icon1 {
 	float: left;
     padding: 10px;
     border-radius: 10px;
-	border: 1px solid #efefef;
+	border-color: 1px solid #efefef;
 	transition: all .2s ease-in-out;
     margin-bottom: 10px;
 }
