@@ -21,7 +21,7 @@
             "price": 199.99,
             "rating": 4.6,
             "image": "bootstrap01.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/bootstrap01.jpg"
             
         }
     },
@@ -49,7 +49,7 @@
             "price": 13.99,
             "rating": 4.9,
             "image": "00_react.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/00_react.jpg"
             
 
         }
@@ -64,7 +64,7 @@
             "price": 99.99,
             "rating": 4.6,
             "image": "js07.jpg",
-            "image_url": ""
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js07.jpg"
             
         }
     },
@@ -77,7 +77,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.6,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/02_react.jpg ",
             "image": "02_react.jpg"
         }
     },
@@ -90,7 +90,7 @@
             "category": 1,
             "price": 49.99,
             "rating": 4.1,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/laravel01.jpg",
             "image": "laravel01.jpg"
         }
     },
@@ -103,7 +103,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.2,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/03_react.jpg",
             "image": "03_react.jpg"
         }
     },
@@ -116,7 +116,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.6,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/vue00.jpg",
             "image": "vue00.jpg"
            
         }
@@ -143,7 +143,7 @@
             "category": 3,
             "price": 13.99,
             "rating": 4.1,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html04.jpg",
             "image": "html04.jpg"
         }
     },
@@ -156,7 +156,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.8,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html05.jpg",
             "image": "html05.jpg"
         }
     },
@@ -169,7 +169,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.9,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/04_react.jpg",
             "image": "04_react.jpg"
         }
     },
@@ -182,7 +182,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.5,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/nodejs00.jpg",
             "image": "nodejs00.jpg"
             
         }
@@ -196,7 +196,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.5,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/react02.jpg",
             "image": "react02.jpg"
            
         }
@@ -210,7 +210,7 @@
             "category": 4,
             "price": 119.99,
             "rating": 4.6,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/django00.jpg",
             "image": "django00.jpg"
            
         }
@@ -224,7 +224,7 @@
             "category": 2,
             "price": 39.99,
             "rating": 4.6,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/angular00.jpg",
             "image": "angular00.jpg"
            
         }
@@ -238,7 +238,7 @@
             "category": 2,
             "price": 13.99,
             "rating": 4.1,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js00.jpg",
             "image": "js00.jpg"
             
         }
@@ -252,7 +252,7 @@
             "category": 3,
             "price": 13.99,
             "rating": 4.5,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html03.jpg",
             "image": "html03.jpg"
           
         }
@@ -280,7 +280,7 @@
             "price": 19.99,
             "category": 3,
             "rating": 4.2,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/css00.jpg",
             "image": "css00.jpg"
             
         }
@@ -294,7 +294,7 @@
             "category": 3,
             "price": 13.99,
             "rating": 4.4,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/bootstrap00.jpg",
             "image": "bootstrap00.jpg"
            
         }
@@ -308,7 +308,7 @@
             "category": 1,
             "price": 149.99,
             "rating": 4.1,
-           "image_url": "",
+           "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/laravel02.jpg",
             "image": "laravel02.jpg"
            
         }
@@ -322,7 +322,7 @@
             "category": 2,
             "price": 99.99,
              "rating": 5.0,
-            "image_url": "https://www.udemy.com/become-professional-javascript-developer/",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js02.jpg",
             "image": "js02.jpg"
             
         }
@@ -378,7 +378,7 @@
             "category": 2,
             "price": 39.99,
             "rating": 4.5,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js05.jpg",
             "image": "js05.jpg"
            
         }
@@ -392,7 +392,7 @@
             "category": 2,
             "price": 49.99,
             "rating": 4.5,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/react00.jpg",
             "image": "react00.jpg"
            
         }
@@ -406,7 +406,7 @@
             "category": 2,
             "price": 49.99,
             "rating": 5.0,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html06.jpg",
             "image": "html06.jpg"
            
         }
@@ -420,7 +420,7 @@
             "category": 2,
             "price": 19.99,
             "rating": 5.0,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js05.jpg",
             "image": "js05.jpg"
            
         }
@@ -434,7 +434,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.0,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/react01.jpg",
             "image": "react01.jpg"
            
         }
@@ -462,7 +462,7 @@
             "category": 2,
             "price": 79.99,
             "rating": 4.0,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/nodejs01.jpg",
             "image": "nodejs01.jpg"
             
         }
@@ -476,7 +476,7 @@
             "category": "2",
             "price": 199.99,
             "rating": 4.8,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/nodejs02.jpg",
             "image": "nodejs02.jpg"
             
         }
@@ -490,7 +490,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.0,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/js09.jpg",
             "image": "js09.jpg"
             
             }
@@ -532,7 +532,7 @@
             "category": 2,
             "price": 99.99,
             "rating": 4.3,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/vue01.jpg",
             "image": "vue01.jpg"
           
         }
@@ -546,7 +546,7 @@
             "category": 1,
             "price": 49.99,
             "rating": 4.3,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/php03.jpg",
             "image": "php03.jpg"
             }
            
@@ -574,7 +574,7 @@
             "category": 2,
             "price": 119.99,
             "rating": 4.3,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/angular01.jpg",
             "image": "angular01.jpg"
            
         }
@@ -602,7 +602,7 @@
            "category": 1,
             "price": 119.99,
             "rating": 4.2,
-            "image_url": "https://www.udemy.com/modern-web-development-with-laravel/",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/laravel04.jpg",
             "image": "laravel04.jpg"
                     }
             
@@ -630,7 +630,7 @@
             "price": 45,
             "rating": 4.9,
             "name": "Create a REAL Social Network like Facebook in PHP + MySQL",
-            "image_url": "https://www.udemy.com/make-a-social-media-website/",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/php00.jpg",
             "image": "php00.jpg"
          
             
@@ -645,7 +645,7 @@
             "category": 3,
             "price": 13.99,
             "rating": 5.0,
-            "image_url": "",
+            "image_url": "https://ilearn-django.s3.eu-west-2.amazonaws.com/media/html00.jpg",
             "image": "html00.jpg"
             
         }
