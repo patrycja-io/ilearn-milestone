@@ -3,63 +3,63 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-   <div class="wrapper bg_top up">
-  <div class="top_overlay">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="title125">
-            <div class="titleleft">
-              <div class="path">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      My Profile
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div class="title126">
-            <h2>Course Edit</h2>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-       <div>
-			<div class="container">			
-				<div class="row justify-content-center">
-					<div class="col-lg-8">
-						<div class="checkout_bg">
-							<div class="checkout_title">
-								<h4>Edit a Course</h4>
-							</div>
-                <form method="POST" action="{% url 'edit_course' course.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="text-right">
-                        <a class="btn_back_small" href="{% url 'courses' %}">Cancel</a>
-                        <button id="submit-button" class="checkout_btn_stripe" type="submit">Add Course</button>
+<div class="wrapper bg_top up">
+    <div class="top_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title125">
+                        <div class="titleleft">
+                            <div class="path">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'home' %}">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            My Profile
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
-                </form>
-           </div>
+                    <div class="title126">
+                        <h2>Course Edit</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+<div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="checkout_bg">
+                    <div class="checkout_title">
+                        <h4>Edit a Course</h4>
+                    </div>
+                    <form method="POST" action="{% url 'edit_course' course.id %}" class="form mb-2"
+                        enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <div class="text-right">
+                            <a class="btn_back_small" href="{% url 'courses' %}">Cancel</a>
+                            <button id="submit-button" class="checkout_btn_stripe" type="submit">Add Course</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
