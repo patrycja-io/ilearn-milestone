@@ -937,6 +937,24 @@ i.icon1 {
     background: #c72127;
 }
 
+.btn_signup {
+	height: 10px;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background: #ed2a26;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.btn_signup:hover {
+    color: #fff !important;
+    background: #c72127;
+}
+
 .footer_bottm {
 	margin-top: 50px;
 	padding: 20px 0;
@@ -1694,6 +1712,10 @@ height: auto;
 
 .story {
     text-align: center;
+    max-width: 100%; 
+display:block; 
+height: auto;
+}
 
 .jmio125 p {
 	font-size: 14px;
