@@ -20,8 +20,6 @@ def add_to_basket(request, item_id):
 
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
-    
-    basket= request.session.get('basket'[])
     default_values = {
         'course': course.id,
         'sub_total': float(sub_total),
