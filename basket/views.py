@@ -1,16 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from django.contrib import messages
-
 from courses.models import Course
 
 
 def view_basket(request):
-    courses = Course.objects.all()
-
-    context = {
-        'courses': courses,
-    }
-
     return render(request, 'basket/basket.html', context)
 
 def add_to_basket(request, item_id):
