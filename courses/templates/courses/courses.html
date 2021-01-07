@@ -2,116 +2,95 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="wrapper bg_top up">
-  <div class="top_overlay">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="title125">
-            <div class="titleleft">
-              <div class="path">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      Courses
-                    </li>
-                  </ol>
-                </nav>
-              </div>
+    <div class="top_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title125">
+                        <div class="titleleft">
+                            <div class="path">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'home' %}">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Courses
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title126">
+                        <h2>Courses</h2>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="title126">
-            <h2>Courses</h2>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 <div class="container">
-  <div class="row">
-    <div class="section3125 mt-30">
-      <div class="col-md-12">
-        <div class="course_tabs mb-30">
-         <a href="{% url 'courses' %}" class="see150">See all</a>
-          <div class="nav nav-tabs tab_crse justify-content-center">
-            <a
-              href="{% url 'courses' %}?category=html"
-              class="nav-item nav-link"
-              >HTML & CSS
-            </a>
-            <a
-              href="{% url 'courses' %}?category=javascript"
-              class="nav-item nav-link"
-              >Javascript & Frameworks</a
-            >
-            <a href="{% url 'courses' %}?category=php"
-              class="inav-item nav-link"
-              >PHP & Laravel</a
-            >
-            <a href="{% url 'courses' %}?category=python"
-              class="nav-item nav-link"
-              >Python & Frameworks</a>
+    <div class="row">
+        <div class="section3125 mt-30">
+            <div class="col-md-12">
+                <div class="course_tabs mb-30">
+                    <a href="{% url 'courses' %}" class="see150">See all</a>
+                    <div class="nav nav-tabs tab_crse justify-content-center">
+                        <a href="{% url 'courses' %}?category=html" class="nav-item nav-link">HTML & CSS
+                        </a>
+                        <a href="{% url 'courses' %}?category=javascript" class="nav-item nav-link">Javascript &
+                            Frameworks</a>
+                        <a href="{% url 'courses' %}?category=php" class="inav-item nav-link">PHP & Laravel</a>
+                        <a href="{% url 'courses' %}?category=python" class="nav-item nav-link">Python & Frameworks</a>
 
-          </div>
-        </div>
-
-        
-        <div class="_14d25">
-          <div class="row">
-            {% for course in courses %}
-            <div class="col-lg-3 col-md-4">
-              <div class="fcrse_1 mt-30">
-                {% if course.image %}
-                <a href="{% url 'course_description' course.id %}"
-                  class="fcrse_img">
-                  <img src="{{ course.image.url }}" alt="{{ course.name }}" />
-                  {% endif %}
-                  <div class="course-overlay">
-                    {% if course.rating %}
-                 <div class="course_reviews mr-2">
-                      <i class="uil uil-star"></i>{{ course.rating }} / 5
                     </div>
-                    {% else %}
-                  <div class="course_reviews mr-2">
-                      <i class="uil uil-star"></i>no stars yet
-                    </div>
-                    {% endif %}
-                  </div>
-                </a>
-                {% if course.name %}
-                <div class="fcrse_content">
-                  <a
-                    href="{% url 'course_description' course.id %}"
-                    class="crse14s"
-                    >{{ course.name }}</a
-                  >
-                  {% endif %} {% if course.category %}
-                  <a
-                    href="{% url 'courses' %}?category={{ course.category.name }}"
-                    class="crse-cate">
-                    <i></i>{{ course.category.friendly_name }}</a>
-                  {% endif %} {% if request.user.is_superuser %}
-                  <small>
-                    <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
-                    <a class="text-danger"
-                      href="{% url 'delete_course' course.id %}">Delete</a
-                    >
-                  </small>
-                  {% endif %}
-                  <div class="totalprice">
-                    <div class="prce142">£{{ course.price }}</div>
-                  </div>
                 </div>
-              </div>
+                <div class="_14d25">
+                    <div class="row">
+                        {% for course in courses %}
+                        <div class="col-lg-3 col-md-4">
+                            <div class="fcrse_1 mt-30">
+                                {% if course.image %}
+                                <a href="{% url 'course_description' course.id %}" class="fcrse_img">
+                                    <img src="{{ course.image.url }}" alt="{{ course.name }}" />
+                                    {% endif %}
+                                    <div class="course-overlay">
+                                        {% if course.rating %}
+                                        <div class="course_reviews mr-2">
+                                            <i class="uil uil-star"></i>{{ course.rating }} / 5
+                                        </div>
+                                        {% else %}
+                                        <div class="course_reviews mr-2">
+                                            <i class="uil uil-star"></i>no stars yet
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </a>
+                                {% if course.name %}
+                                <div class="fcrse_content">
+                                    <a href="{% url 'course_description' course.id %}"
+                                        class="crse14s">{{ course.name }}</a>
+                                    {% endif %} {% if course.category %}
+                                    <a href="{% url 'courses' %}?category={{ course.category.name }}" class="crse-cate">
+                                        <i></i>{{ course.category.friendly_name }}</a>
+                                    {% endif %} {% if request.user.is_superuser %}
+                                    <small>
+                                        <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                    <div class="totalprice">
+                                        <div class="prce142">£{{ course.price }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-            {% endfor %}
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 {% endblock %}

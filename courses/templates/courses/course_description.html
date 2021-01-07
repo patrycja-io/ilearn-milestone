@@ -2,285 +2,246 @@
 
 {% extends "base.html" %} {% load static %} {% block content %}
 <div class="wrapper bg_top up">
-  <div class="top_overlay">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="title125">
-            <div class="titleleft">
-              <div class="path">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                      <a href="{% url 'courses' %}">Courses</a>
-                    </li>
+    <div class="top_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title125">
+                        <div class="titleleft">
+                            <div class="path">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'home' %}">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'courses' %}">Courses</a>
+                                        </li>
 
-                    <li class="breadcrumb-item active" aria-current="page">
-                      Course Details
-                    </li>
-                  </ol>
-                </nav>
-              </div>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Course Details
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title126">
+                        <h2>Course Details</h2>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="title126">
-            <h2>Course Details</h2>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <div class="wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="black_background">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section3125">
-                <div class="row justify-content-center">
-                  <div class="col-xl-4 col-lg-5 col-md-6">
-                    <div class="preview_video">
-                      <a
-                        href=""
-                        class="fcrse_img">
-                        {% if course.image %}
-                        <img src="{{ MEDIA_URL }}{{ course.image }}" alt="" />
-                        {% endif%}
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-xl-8 col-lg-7 col-md-6">
-                    <div class="course_name">
-                      <h2>{{ course.name }}</h2>
-                      {% if course.category %}
-                   
-                      <a class="course_category" href="{% url 'courses' %}?category={{ course.category.name }}" >
-                        <i class="course_category"></i>{{ course.category.friendly_name }}
-                      </a>
-                      {% endif %}
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="black_background">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section3125">
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-4 col-lg-5 col-md-6">
+                                        <div class="preview_video">
+                                            <a href="" class="fcrse_img">
+                                                {% if course.image %}
+                                                <img src="{{ MEDIA_URL }}{{ course.image }}" alt="" />
+                                                {% endif%}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-8 col-lg-7 col-md-6">
+                                        <div class="course_name">
+                                            <h2>{{ course.name }}</h2>
+                                            {% if course.category %}
 
-                    <div class="course_reviews mt-2">
-                      {% if course.rating %}
-                      <div class="course_reviews mr-2">
-                        <i class="uil uil-star"></i>{{ course.rating }}/5
-                      </div>
-                      {% endif %}
-                    </div>
-                    <div class="details_div">
-                      <div class="language">
-                        <span><i class="uil uil-comment"></i></span>
-                        This eBook is in English
-                      </div>
-                    </div>
-                    <div class="details_div">Last updated 1/2020</div>
+                                            <a class="course_category"
+                                                href="{% url 'courses' %}?category={{ course.category.name }}">
+                                                <i class="course_category"></i>{{ course.category.friendly_name }}
+                                            </a>
+                                            {% endif %}
+                                        </div>
 
-                    <form
-                      class="form"
-                      action="{% url 'add_to_basket' course.id %}"
-                      method="POST"
-                    >
-                      {% csrf_token %}
-                      <ul class="course_price">
-                        <li>
-                          <h5 class="price_tag">
-                            £ {{ course.price }} &nbsp;&nbsp;
-                          </h5>
-                        </li>
-                        <input
-                          type="submit"
-                          class="btn_adcart"
-                          value="Add to Cart"
-                        />
-                      </ul>
-                      <input
-                        type="hidden"
-                        name="redirect_url"
-                        value="{{ request.path }}"
-                      />
-                    </form>
-                    {% if request.user.is_superuser %}
-                    <small >
-                      <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
-                      <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a
-                      >
-                    </small>
-                    {% endif %}
+                                        <div class="course_reviews mt-2">
+                                            {% if course.rating %}
+                                            <div class="course_reviews mr-2">
+                                                <i class="uil uil-star"></i>{{ course.rating }}/5
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="details_div">
+                                            <div class="language">
+                                                <span><i class="uil uil-comment"></i></span>
+                                                This eBook is in English
+                                            </div>
+                                        </div>
+                                        <div class="details_div">Last updated 1/2020</div>
 
-                    <div class="moneyback">Delivery free - 30-Days Money-Back Guarantee</div>
-                    <div class="details_div">
-                      <a href="{% url 'courses' %}" class="btn_back">
-                        <i class="fas fa-chevron-left"></i>
-                        <span>Go back to browsing</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="description">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="course_tab_content">
-                <div class="tab-content" id="nav-tabContent">
-                  <div
-                    class="tab-pane fade show active"
-                    id="nav-about"
-                    role="tabpanel"
-                  >
-                    <div class="desc_details">
-                      <div class="caption_ebook">
-                      <h4>All E-Books are send to user by email after approved payment!</h4>
-                      <hr>
-                      <br>
-                        <h3>Requirements</h3>
-                        <ul>
-                          <li>
-                            <span class="point"
-                              >Have a computer with Internet</span
-                            >
-                          </li>
-                          <li>
-                            <span class="point"
-                              >Be ready to learn an insane amount of awesome
-                              stuff</span
-                            >
-                          </li>
-                          <li>
-                            <span class="point"
-                              >Prepare to build real web apps!</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="caption_ebook mt-35">
-                        <h3>Description</h3>
-                        <p>
-                          There are a lot of options for online developer
-                          training, but this course is without a doubt the most
-                          comprehensive and effective on the market. Here's why:
-                        </p>
+                                        <form class="form" action="{% url 'add_to_basket' course.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <ul class="course_price">
+                                                <li>
+                                                    <h5 class="price_tag">
+                                                        £ {{ course.price }} &nbsp;&nbsp;
+                                                    </h5>
+                                                </li>
+                                                <input type="submit" class="btn_adcart" value="Add to Cart" />
+                                            </ul>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}" />
+                                        </form>
+                                        {% if request.user.is_superuser %}
+                                        <small>
+                                            <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
+                                            <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
 
-                        <p>
-                          When you're learning to program you often have to
-                          sacrifice learning the exciting and current
-                          technologies in favor of the "beginner friendly"
-                          classes. With this course, you get the best of both
-                          worlds. This is a course designed for the complete
-                          beginner, yet it covers some of the most exciting and
-                          relevant topics in the industry.
-                        </p>
-                        <p>
-                          Throughout the course we cover tons of tools and
-                          technologies including:
-                        </p>
-                        <ul class="technologies">
-                          <li>
-                            <span class="point"><strong>HTML5</strong></span>
-                          </li>
-                          <li>
-                            <span class="point"><strong>CSS3</strong></span>
-                          </li>
-                          <li>
-                            <span class="point"
-                              ><strong>JavaScript</strong></span
-                            >
-                          </li>
-                          <li>
-                            <span class="point"
-                              ><strong>Bootstrap 4</strong></span
-                            >
-                          </li>
-                          <li>
-                            <span class="point"
-                              ><strong>SemanticUI</strong></span
-                            >
-                          </li>
-                          <li>
-                            <span class="point"
-                              ><strong>DOM Manipulation</strong></span
-                            >
-                          </li>
-                        </ul>
-                        <p>
-                          If you have any questions, please don't hesitate to
-                          contact me. I got into this industry because I love
-                          working with people and helping students learn. Sign
-                          up today and see how fun, exciting, and rewarding web
-                          development can be!
-                        </p>
-                      </div>
-                      <div class="forwho mt-35">
-                        <h3>Who this course is for :</h3>
-                        <div class="reasons">
-                          <div class="row">
-                            <div class="col-lg-6">
-                              <ul class="caption_ebook arguments">
-                                <li>
-                                  <div class="bullet">
-                                    <i class="fas fa-check-circle"></i
-                                    ><span
-                                      >This course is for anyone who wants to
-                                      learn about web development, regardless of
-                                      previous experience</span
-                                    >
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="bullet">
-                                    <i class="fas fa-check-circle"></i
-                                    ><span
-                                      >It's perfect for complete beginners with
-                                      zero experience</span
-                                    >
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="bullet">
-                                    <i class="fas fa-check-circle"></i
-                                    ><span
-                                      >It's also great for anyone who does have
-                                      some experience in a few of the
-                                      technologies(like HTML and CSS) but not
-                                      all</span
-                                    >
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="bullet">
-                                    <i class="fas fa-check-circle"></i
-                                    ><span
-                                      >If you want to take ONE COURSE to learn
-                                      everything you need to know about web
-                                      development, take this course</span
-                                    >
-                                  </div>
-                                </li>
-                              </ul>
+                                        <div class="moneyback">Delivery free - 30-Days Money-Back Guarantee</div>
+                                        <div class="details_div">
+                                            <a href="{% url 'courses' %}" class="btn_back">
+                                                <i class="fas fa-chevron-left"></i>
+                                                <span>Go back to browsing</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="description">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="course_tab_content">
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                                        <div class="desc_details">
+                                            <div class="caption_ebook">
+                                                <h4>All E-Books are send to user by email after approved payment!</h4>
+                                                <hr>
+                                                <br>
+                                                <h3>Requirements</h3>
+                                                <ul>
+                                                    <li>
+                                                        <span class="point">Have a computer with Internet</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point">Be ready to learn an insane amount of
+                                                            awesome
+                                                            stuff</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point">Prepare to build real web apps!</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="caption_ebook mt-35">
+                                                <h3>Description</h3>
+                                                <p>
+                                                    There are a lot of options for online developer
+                                                    training, but this course is without a doubt the most
+                                                    comprehensive and effective on the market. Here's why:
+                                                </p>
+
+                                                <p>
+                                                    When you're learning to program you often have to
+                                                    sacrifice learning the exciting and current
+                                                    technologies in favor of the "beginner friendly"
+                                                    classes. With this course, you get the best of both
+                                                    worlds. This is a course designed for the complete
+                                                    beginner, yet it covers some of the most exciting and
+                                                    relevant topics in the industry.
+                                                </p>
+                                                <p>
+                                                    Throughout the course we cover tons of tools and
+                                                    technologies including:
+                                                </p>
+                                                <ul class="technologies">
+                                                    <li>
+                                                        <span class="point"><strong>HTML5</strong></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point"><strong>CSS3</strong></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point"><strong>JavaScript</strong></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point"><strong>Bootstrap 4</strong></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point"><strong>SemanticUI</strong></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="point"><strong>DOM Manipulation</strong></span>
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    If you have any questions, please don't hesitate to
+                                                    contact me. I got into this industry because I love
+                                                    working with people and helping students learn. Sign
+                                                    up today and see how fun, exciting, and rewarding web
+                                                    development can be!
+                                                </p>
+                                            </div>
+                                            <div class="forwho mt-35">
+                                                <h3>Who this course is for :</h3>
+                                                <div class="reasons">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <ul class="caption_ebook arguments">
+                                                                <li>
+                                                                    <div class="bullet">
+                                                                        <i class="fas fa-check-circle"></i><span>This
+                                                                            course is for anyone who wants to
+                                                                            learn about web development, regardless of
+                                                                            previous experience</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="bullet">
+                                                                        <i class="fas fa-check-circle"></i><span>It's
+                                                                            perfect for complete beginners with
+                                                                            zero experience</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="bullet">
+                                                                        <i class="fas fa-check-circle"></i><span>It's
+                                                                            also great for anyone who does have
+                                                                            some experience in a few of the
+                                                                            technologies(like HTML and CSS) but not
+                                                                            all</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="bullet">
+                                                                        <i class="fas fa-check-circle"></i><span>If you
+                                                                            want to take ONE COURSE to learn
+                                                                            everything you need to know about web
+                                                                            development, take this course</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 <!-- Body End -->
 
