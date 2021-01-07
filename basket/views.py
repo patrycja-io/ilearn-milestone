@@ -9,21 +9,19 @@ def view_basket(request):
 def add_to_basket(request, item_id):
 
     course = get_object_or_404(Course, pk=item_id)
-    sub_total = course.price
-
-    quantity = 1
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    default_values = {
-        'course': course.id,
-        'sub_total': float(sub_total),
-        'quantity': quantity,
-        'id': len(basket) + 1,
-        }
-    basket.append(default_values)
-    messages.success(request, f'Added {course.name} to your basket')
+
+    if item_id in list(basket.keys()):
+            basket[item_id] += quantity
+            messages.success(request,
+                             (f'Updated {course.name} '
+                              f'quantity to {basket[item_id]}'))
+        else:
+            basket[item_id] = quantity
+            messages.success(request, f'Added {course.name} to your basket')
 
     request.session['basket'] = basket
-    print(request.session['basket'])
     return redirect(redirect_url)
 
 def delete_from_basket(request, item_id):
@@ -43,7 +41,7 @@ def delete_from_basket(request, item_id):
         request.session['basket'] = new_basket
         if removed_item:
             course = Course.objects.get(id=removed_item['course'])
-            messages.success(request, f'Removed {course.name} from your bag')
+            messages.success(request, f'Removed {course.name} from your basket')
         return HttpResponse(status=200)
 
     except Exception as e:
