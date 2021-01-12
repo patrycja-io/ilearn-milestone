@@ -32,7 +32,6 @@ def basket_contents(request):
         'basket_items': basket_items,
         'total': total,
         'course_count': course_count,
-        'grand_total': grand_total,
 
     }
 
