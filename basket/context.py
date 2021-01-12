@@ -7,21 +7,21 @@ def basket_contents(request):
 
     basket_items = []
     total = 0
-    product_count = 0
+    course_count = 0
     basket = request.session.get('basket', [])
 
     for values in basket:
-        item_id = values['product']
-        product = get_object_or_404(Product, pk=item_id)
-        sub_total = product.price
-        total += values['quantity'] * product.price
+        item_id = values['course']
+        course = get_object_or_404(Course, pk=item_id)
+        sub_total = course.price
+        total += values['quantity'] * course.price
        
-        product_count += values['quantity']
+        course_count += values['quantity']
         basket_items.append({
             'sub_total': sub_total,
             'item_id': item_id,
             'quantity': values['quantity'],
-            'product': product,
+            'course': course,
             'background': values['background'],
             'extra_requirements': values['extra_requirements'],
             'text_color': values['text_color'],
@@ -32,8 +32,7 @@ def basket_contents(request):
     context = {
         'basket_items': basket_items,
         'total': total,
-        'product_count': product_count,
-        'bundle_discount_threshold': settings.BUNDLE_DISCOUNT_THRESHOLD,
+        'course_count': course_count,
         'grand_total': grand_total,
         'discount': float(total) - float(grand_total),
     }
