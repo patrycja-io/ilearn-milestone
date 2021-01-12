@@ -4,27 +4,7 @@ from courses.models import Course
 
 
 def view_basket(request):
-    return render(request, 'basket/basket.html', context)
-
-#def add_to_basket(request, item_id):
-
-    #course = get_object_or_404(Course, pk=item_id)
-    #quantity = int(request.POST.get('quantity'))
-    #redirect_url = request.POST.get('redirect_url')
-
-    #if item_id in list(basket.keys()):
-     #   basket[item_id] += quantity
-      #  messages.success(request,
-      #                       (f'Updated {course.name} '
-      #                        f'quantity to {basket[item_id]}'))
-
-       # else:
-       #     basket[item_id] = quantity
-        #    messages.success(request, f'Added {course.name} to your basket')
-
-         #   request.session['basket'] = basket
-
-    #return redirect(redirect_url)
+    return render(request, 'basket/basket.html')
 
 def add_to_basket(request, item_id):
 
