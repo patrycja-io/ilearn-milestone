@@ -15,6 +15,7 @@ def basket_contents(request):
         course = get_object_or_404(Course, pk=item_id)
         sub_total = course.price
         total += values['quantity'] * course.price
+        grand_total = float(total) * 0.8
        
         course_count += values['quantity']
         basket_items.append({
@@ -28,8 +29,6 @@ def basket_contents(request):
             'id': values['id'],
         })
 
-    
-        grand_total = float(total) * 0.8
 
     context = {
         'basket_items': basket_items,
