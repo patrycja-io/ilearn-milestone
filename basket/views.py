@@ -6,24 +6,58 @@ from courses.models import Course
 def view_basket(request):
     return render(request, 'basket/basket.html', context)
 
+#def add_to_basket(request, item_id):
+
+    #course = get_object_or_404(Course, pk=item_id)
+    #quantity = int(request.POST.get('quantity'))
+    #redirect_url = request.POST.get('redirect_url')
+
+    #if item_id in list(basket.keys()):
+     #   basket[item_id] += quantity
+      #  messages.success(request,
+      #                       (f'Updated {course.name} '
+      #                        f'quantity to {basket[item_id]}'))
+
+       # else:
+       #     basket[item_id] = quantity
+        #    messages.success(request, f'Added {course.name} to your basket')
+
+         #   request.session['basket'] = basket
+
+    #return redirect(redirect_url)
+
 def add_to_basket(request, item_id):
 
     course = get_object_or_404(Course, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    sub_total = course.price
+
+    quantity = 1
     redirect_url = request.POST.get('redirect_url')
+    background = request.POST.get('background')
+    extra_requirements = request.POST.get('extra_requirements')
+    text_color = request.POST.get('text_color')
+    text_content = request.POST.get('text_content')
+    basket = request.session.get('basket', [])
+    if extra_requirements:
+        sub_total += 5
 
-    if item_id in list(basket.keys()):
-        basket[item_id] += quantity
-        messages.success(request,
-                             (f'Updated {course.name} '
-                              f'quantity to {basket[item_id]}'))
+    sub_total += Personalise.EXTRA_COST[background]
+    sub_total += Personalise.EXTRA_COST[text_color]
+    default_values = {
+        'course': course.id,
+        'sub_total': float(sub_total),
+        'quantity': quantity,
+        'background': background,
+        'extra_requirements': extra_requirements,
+        'text_color': text_color,
+        'text_content': text_content,
+        'id': len(basket) + 1,
+        }
+    basket.append(default_values)
+    messages.success(request, f'Added {course.name} to your basket')
 
-        else:
-            basket[item_id] = quantity
-            messages.success(request, f'Added {course.name} to your basket')
-
-            request.session['basket'] = basket
-            
+    request.session['basket'] = basket
+    print(request.session['basket'])
     return redirect(redirect_url)
 
 def delete_from_basket(request, item_id):
