@@ -23,11 +23,13 @@ def basket_contents(request):
             'quantity': values['quantity'],
             'course': course,
             'background': values['background'],
-            'extra_requirements': values['extra_requirements'],
             'text_color': values['text_color'],
             'text_content': values['text_content'],
             'id': values['id'],
         })
+
+    
+        grand_total = float(total) * 0.8
 
     context = {
         'basket_items': basket_items,
