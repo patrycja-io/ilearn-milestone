@@ -41,8 +41,7 @@ def add_to_basket(request, item_id):
     if extra_requirements:
         sub_total += 5
 
-    sub_total += Personalise.EXTRA_COST[background]
-    sub_total += Personalise.EXTRA_COST[text_color]
+    x
     default_values = {
         'course': course.id,
         'sub_total': float(sub_total),
