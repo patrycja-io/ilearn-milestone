@@ -13,8 +13,8 @@ def add_to_basket(request, item_id):
     redirect_url = request.POST.get('redirect_url')
 
     if item_id in list(basket.keys()):
-            basket[item_id] += quantity
-            messages.success(request,
+        basket[item_id] += quantity
+        messages.success(request,
                              (f'Updated {course.name} '
                               f'quantity to {basket[item_id]}'))
 
@@ -22,7 +22,8 @@ def add_to_basket(request, item_id):
             basket[item_id] = quantity
             messages.success(request, f'Added {course.name} to your basket')
 
-    request.session['basket'] = basket
+            request.session['basket'] = basket
+            
     return redirect(redirect_url)
 
 def delete_from_basket(request, item_id):
