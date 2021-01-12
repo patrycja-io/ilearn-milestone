@@ -41,7 +41,7 @@ def add_to_basket(request, item_id):
     if extra_requirements:
         sub_total += 5
 
-    x
+    
     default_values = {
         'course': course.id,
         'sub_total': float(sub_total),
