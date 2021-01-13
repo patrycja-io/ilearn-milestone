@@ -1,158 +1,180 @@
 <!DOCTYPE html>
 {% extends "base.html" %} {% load static %} {% block page_header %}
 <div class="container header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
+    <div class="row">
+        <div class="col"></div>
+    </div>
 </div>
 {% endblock %}
 
- {% block content %}
+{% block content %}
 
 
- <div class="wrapper bg_top up">        
-        <div class="container">
-            <div class="row justify-content-md-center">
-             <div class="col-md-8">
+<div class="wrapper bg_top up">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-8">
             </div>
             <div class="col-md-8">
-                    <div class="invoice_header_main">
-                        <div class="invoice_header_item">
-                            <p>Order Confirmation:</p>
-                        </div>
+                <div class="invoice_header_main">
+                    <div class="invoice_header_item">
+                        <p>Order Confirmation:</p>
                     </div>
+                </div>
             </div>
-            
-                <div class="col-md-8">
-                    <div class="invoice_body">
-
-                        <div class="invoice_date_info">
+            <div class="col-md-8">
+                <div class="invoice_body">
+                    <div class="invoice_date_info">
                         <div class="text-left ">
                             <ul>
-                            <li><div class="vdt-list text-left"><small><span>Order Number:</span>{{ order.order_number }}</small></div></li>
-                                <li><div class="vdt-list text-left"><small><span>Date :</span>{{ order.date }}</small></div></li>
-                                
+                                <li>
+                                    <div class="vdt-list text-left"><small><span>Order
+                                                Number:</span>{{ order.order_number }}</small></div>
+                                </li>
+                                <li>
+                                    <div class="vdt-list text-left"><small><span>Date :</span>{{ order.date }}</small>
+                                    </div>
+                                </li>
+
                             </ul>
                         </div>
-                        </div>
-                        <div class="invoice_dts">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2 class="invoice_title">Order Details:</h2>
+                    </div>
+                    <div class="invoice_dts">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="invoice_title">Order Details:</h2>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="vhls140">
+                                    <h4>To</h4>
+                                    <ul>
+                                        <li>
+                                            <div class="vdt-list">{{ order.full_name }}</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">{{ order.street_address1 }}</div>
+                                        </li>
+                                        {% if order.street_address2 %}
+                                        <li>
+                                            <div class="vdt-list">{{ order.street_address2 }}</div>
+                                        </li>
+                                        {% endif %} {% if order.county %}
+                                        <li>
+                                            <div class="vdt-list">{{ order.county }}</div>
+                                        </li>
+                                        {% endif %}
+                                        <li>
+                                            <div class="vdt-list">{{ order.town_or_city }}</div>
+                                        </li>
+                                        {% if order.postcode %}
+                                        <li>
+                                            <div class="vdt-list">{{ order.postcode }}</div>
+                                        </li>
+                                        {% endif %}
+                                        <li>
+                                            <div class="vdt-list">{{ order.country }}</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">{{ order.phone_number }}</div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="vhls140">
-                                        <h4>To</h4>
-                                         
-                                        <ul>
-                                            <li><div class="vdt-list">{{ order.full_name }}</div></li>
-                                            <li><div class="vdt-list">{{ order.street_address1 }}</div></li>
-                                             {% if order.street_address2 %}
-                                            <li><div class="vdt-list">{{ order.street_address2 }}</div></li>
-                                             {% endif %} {% if order.county %}
-                                            <li><div class="vdt-list">{{ order.county }}</div></li>
-                                             {% endif %}
-                                            <li><div class="vdt-list">{{ order.town_or_city }}</div></li>
-                                             {% if order.postcode %}
-                                            <li><div class="vdt-list">{{ order.postcode }}</div></li>
-                                             {% endif %}
-                                            <li><div class="vdt-list">{{ order.country }}</div></li>
-                                            <li><div class="vdt-list">{{ order.phone_number }}</div></li>
-                                        </ul>
-                                    </div>      
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="vhls140">
-                                        <h4>iLearn</h4>
-                                        <ul>
-                                            <li><div class="vdt-list">iLearn LTD</div></li>
-                                            <li><div class="vdt-list">55 Queen St, Oxford</div></li>
-                                            <li><div class="vdt-list">OX1 1TR</div></li>
-                                            <li><div class="vdt-list">United Kingdom</div></li>
-                                        </ul>
-                                    </div>      
+                            </div>
+                            <div class="col-md-6">
+                                <div class="vhls140">
+                                    <h4>iLearn</h4>
+                                    <ul>
+                                        <li>
+                                            <div class="vdt-list">iLearn LTD</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">55 Queen St, Oxford</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">OX1 1TR</div>
+                                        </li>
+                                        <li>
+                                            <div class="vdt-list">United Kingdom</div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="invoice_table">
-                            <div class="table-responsive-md">
+                    </div>
+                    <div class="invoice_table">
+                        <div class="table-responsive-md">
                             <table class="table table-borderless">
-                                    <thead>
-                                        <tr>
-                                          <th scope="col">Item</th>
-                                          <th scope="col">Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                       
-                                       {% for item in order.lineitems.all %}
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="user_dt_trans">
-                                                    <p> {{ item.course.name }}</p>
-                                                </div>
-                                            </th>
-                                        
-                                            <td>
-                                                <div class="user_dt_trans">                                                     
-                                                    <p>£{{ item.sub_total }}</p>
-                                                </div>
-                                            </td>                                   
-                                        </tr>   
-                                        <tr>    
-                                       
-                                            <td colspan="1"></td>
-                                            <td colspan="3">
-                                                <div class="user_dt_trans jsk1145">                                                     
-                                                    <div class="totalinv2">Invoice Total :£ {{ order.grand_total }}</div>
-                                                    <p>Paid Visa via Stripe</p>
-                                                </div>
-                                            </td>                                               
-                                        </tr>
-                                          {% endfor %}
-                                    </tbody>
-                                </table>                                                        
-                            </div>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Item</th>
+                                        <th scope="col">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in order.lineitems.all %}
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="user_dt_trans">
+                                                <p> {{ item.course.name }}</p>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="user_dt_trans">
+                                                <p>£{{ item.sub_total }}</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1"></td>
+                                        <td colspan="3">
+                                            <div class="user_dt_trans jsk1145">
+                                                <div class="totalinv2">Invoice Total :£ {{ order.grand_total }}</div>
+                                                <p>Paid Visa via Stripe</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="invoice_footer">
-                            
-                            <h6>Thank you for buying our course.<br> We hope that you will discover new path for yourself through technology world.
-<br>Ebook will be send to you via email as soon as payment will be visible on our account!
-
-<br>If you have any questions about your order, feel free to contact us. </h6>
-
-                                    
-                                <div class="leftfooter"><h4><br><i class="uil uil-smile-beam"></i> Thanks for buying! - iLearn team.</h4>
-                            </div>
-                            <div class="righttfooter">
-                                <a class="print_btn" href="javascript:window.print();">Print</a> 
-                            </div>
+                    </div>
+                    <div class="invoice_footer">
+                        <h6>Thank you for buying our course.<br> We hope that you will discover new path for yourself
+                            through technology world.
+                            <br>Ebook will be send to you via email as soon as payment will be visible on our account!
+                            <br>If you have any questions about your order, feel free to contact us. </h6>
+                        <div class="leftfooter">
+                            <h4><br><i class="uil uil-smile-beam"></i> Thanks for buying! - iLearn team.</h4>
+                        </div>
+                        <div class="righttfooter">
+                            <a class="print_btn" href="javascript:window.print();">Print</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
-  <div class="row">
-   {% if from_profile %}
-    <div class="col-12 col-lg-7 text-right">
-      <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-        <span class="icon mr-2">
-          <i class="fas fa-angle-left"></i>
-        </span>
-        <span class="text-uppercase">Back to Profile</span>
-      </a>
-    </div>
-     {% else %}
 </div>
- <div class="row">
-      <div class="col-12 col-lg-7 text-right mt-5 mb-5">
-        <a href="{% url 'home' %}" class="btn_back_red">
-           <i class="uil uil-arrow-left"></i>
-          <span >Go back to main page</span>
+<div class="row">
+    {% if from_profile %}
+    <div class="col-12 col-lg-7 text-right">
+        <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+            <span class="icon mr-2">
+                <i class="fas fa-angle-left"></i>
+            </span>
+            <span class="text-uppercase">Back to Profile</span>
         </a>
-      </div>
-       {% endif %}
+    </div>
+    {% else %}
+</div>
+<div class="row">
+    <div class="col-12 col-lg-7 text-right mt-5 mb-5">
+        <a href="{% url 'home' %}" class="btn_back_red">
+            <i class="uil uil-arrow-left"></i>
+            <span>Go back to main page</span>
+        </a>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
