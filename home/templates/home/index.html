@@ -20,7 +20,7 @@
         <div class="top-banner__wrapper__image__content__buttons">
           <a href="{% url 'courses' %}" class="crer_btn_link">Browse Courses</a>
            {% if user.is_authenticated %}
-           <a href="{% url 'account_login' %}" class="crer_btn_link">Log In</a>
+           <a href="{% url 'account_login' %}" class="crer_btn_link">My profile</a>
            {% else %}
            <a href="{% url 'account_signup' %}" class="crer_btn_link">Register</a>
            {% endif %}
