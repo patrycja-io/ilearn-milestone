@@ -136,8 +136,7 @@ follow{% endblock %} {% block content %}
 	
 				<div class="order_dt_section">
 					{% for item in basket_items %}
-					<div class="order_title"></div>
-	
+					<div class="order_title">
                         <h4><a href="{% url 'course_description' item.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a></h4>
                          <a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
 						<div class="order_price">£ {{ item.course.price }}</div>
