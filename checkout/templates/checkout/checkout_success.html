@@ -85,17 +85,17 @@
                                     </thead>
                                     <tbody>
                                        
-                                       {% for course in order.ebooks.all %}
+                                       {% for item in order.lineitems.all %}
                                         <tr>
                                             <th scope="row">
                                                 <div class="user_dt_trans">
-                                                    <p> {{ course.course.name }}</p>
+                                                    <p> {{ item.course.name }}</p>
                                                 </div>
                                             </th>
                                         
                                             <td>
                                                 <div class="user_dt_trans">                                                     
-                                                    <p>£ {{ course.course.price }}</p>
+                                                    <p>£ {{ item.course.price }}</p>
                                                 </div>
                                             </td>                                   
                                         </tr>   
