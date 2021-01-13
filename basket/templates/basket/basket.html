@@ -31,21 +31,21 @@
             </div>
         </div>
     </div>
+
     {% if basket_items %}
     <div class="basket">
         <div class="container">
             <div class="row">
                 {% for item in basket_items %}
-                <div class="col-lg-8">
-                  
+                <div class="col-lg-7">
+                     <div class="eps_dots eps_dots10 more_dropdown">
+                                    <a href="{% url 'course_description' item.id %}" class="remove-item" id="remove_{{ item.id }}"><i class="uil uil-times"></i></a>                                                                                                      
+                                </div>
                         <div class="fcrse_1">
                             <a href="{% url 'course_description' item.id %}" class="hf_img">
                                 <img class="cart_img" src="{{ item.course.image.url }}" alt="">
                             </a>
                             <div class="hs_content">
-                                <div class="eps_dots eps_dots10 more_dropdown">
-                                    <a href="{% url 'course_description' item.id %}" class="remove-item" id="remove_{{ item.id }}"><i class="uil uil-times"></i></a>                                                                                                      
-                                </div>
                                 <a href="{% url 'course_description' item.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a>
                                 <a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
                                 <div class="auth1lnkprce">
@@ -55,7 +55,7 @@
                         </div>                              
                 </div>
                 {% endfor %}
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="checkout_bg checkout_bg_right">
                         <div class="checkout_title">
                             <h4>Order Summary</h4>
