@@ -31,29 +31,83 @@
             </div>
         </div>
     </div>
+
+
+    <div class="mb4d25">
+            <div class="container">         
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="fcrse_1">
+                            <a href="http://gambolthemes.net/html-items/cursus_demo_f12/course_detail_view.html" class="hf_img">
+                                <img class="cart_img" src="./Cursus - Shopping Cart_files/img-2.jpg" alt="">
+                            </a>
+                            <div class="hs_content">
+                                <div class="eps_dots eps_dots10 more_dropdown">
+                                    <a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#"><i class="uil uil-times"></i></a>                                                                                                      
+                                </div>
+                                <a href="http://gambolthemes.net/html-items/cursus_demo_f12/course_detail_view.html" class="crse14s title900 pt-2">The Web Developer Bootcamp</a>
+                                <a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#" class="crse-cate">Web Development | Python</a>
+                                <div class="auth1lnkprce">
+                                    <div class="prce142">$10</div>
+                                </div>
+                            </div>
+                        </div>                              
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="membership_chk_bg rght1528">
+                                <div class="checkout_title">
+                                    <h4>Total</h4>
+                                    <img src="./Cursus - Shopping Cart_files/line.svg" alt="">
+                                </div>
+                                <div class="order_dt_section">
+                                    <div class="order_title">
+                                        <h4>Orignal Price</h4>
+                                        <div class="order_price">$15</div>
+                                    </div>
+                                    <div class="order_title">
+                                        <h6>Discount Price</h6>
+                                        <div class="order_price">$5</div>
+                                    </div>
+                                    <div class="order_title">
+                                        <h2>Total</h2>
+                                        <div class="order_price5">$10</div>
+                                    </div>
+                                    <div class="coupon_code">
+                                        <p>Learn now is applied.</p>
+                                        <div class="coupon_input">
+                                            <div class="ui search focus mt-15">
+                                                <div class="ui left icon input swdh11 swdh19">
+                                                    <input class="prompt srch_explore" type="text" name="couponcode" value="" id="id_coupon_code" required="" maxlength="6" placeholder="Enter Coupon Code">
+                                                </div>
+                                                <button class="code-apply-btn" type="submit">Apply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="http://gambolthemes.net/html-items/cursus_demo_f12/shopping_cart.html#" class="chck-btn22">Checkout Now</a>
+                                </div>
+                        </div>
     {% if basket_items %}
     <div class="basket">
         <div class="container">
             <div class="row">
                 {% for item in basket_items %}
                 <div class="col-lg-8">
-                     <div class="eps_dots eps_dots10 more_dropdown">
-                                <a class="remove-item" id="remove_{{ item.id }}"><i class="uil uil-times"></i></a>
+                  
+                        <div class="fcrse_1">
+                            <a href="{% url 'course_description' item.id %}" class="hf_img">
+                                <img class="cart_img" src="{{ item.course.image.url }}" alt="">
+                            </a>
+                            <div class="hs_content">
+                                <div class="eps_dots eps_dots10 more_dropdown">
+                                    <a href="{% url 'course_description' item.id %}" class="remove-item" id="remove_{{ item.id }}"><i class="uil uil-times"></i></a>                                                                                                      
+                                </div>
+                                <a href="{% url 'course_description' item.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a>
+                                <a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
+                                <div class="auth1lnkprce">
+                                    <div class="prce142">£ {{ item.course.price }}</div>
+                                </div>
                             </div>
-                    <div class="fcrse_1">
-                        <a href="{% url 'course_description' item.id %}" class="hf_img">
-                            <img class="cart_img" src="{{ item.course.image.url }}" alt="">
-                        </a>
-                        <div class="hs_content">
-                            <a href="{% url 'course_description' item.id %}"
-                                class="crse14s title900 pt-2">{{ item.course.name }}</a>
-                            {% if course.category %}
-                            <a href="{% url 'courses' %}?category={{ item.course.category.name }}"
-                                class="crse-cate">{{ item.course.category.friendly_name }}</a>
-                            {% endif %}
-                            <div class="prce142">£ {{ item.course.price }}</div>
-                        </div>
-                    </div>
+                        </div>                              
                 </div>
                 {% endfor %}
                 <div class="col-lg-4">
