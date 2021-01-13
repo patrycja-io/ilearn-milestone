@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
- {% load static %}
+{% load static %}
 
-  {% block content %}
+{% block content %}
 <div class="wrapper bg_top up">
-  <div class="top_overlay">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="title125">
-            <div class="titleleft">
-              <div class="path">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                      <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      Shopping Cart
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-          </div>
-          <div class="title126">
-            <h2>Shopping Cart</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{% if basket_items %}
-  <div class="basket">
-    <div class="container">
-      <div class="row">
-       {% for item in basket_items %}
-<div class="col-lg-8">
-						<div class="fcrse_1">
-							<a href="{% url 'course_description' item.id %}" class="hf_img">
-								<img class="cart_img" src="{{ item.course.image.url }}" alt="">
-							</a>
-							<div class="hs_content">
-								<div class="eps_dots eps_dots10 more_dropdown">
-									<a class="remove-item" id="remove_{{ item.id }}"><i class="uil uil-times"></i></a>																										
-								</div>
-								<a href="{% url 'course_description' item.id %}" class="crse14s title900 pt-2">{{ item.course.name }}</a>
-                                {% if course.category %}
-								<a href="{% url 'courses' %}?category={{ item.course.category.name }}" class="crse-cate">{{ item.course.category.friendly_name }}</a>
-                                {% endif %}
-							     <div class="prce142">£ {{ item.course.price }}</div>
-							</div>
-						</div>							
+    <div class="top_overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title125">
+                        <div class="titleleft">
+                            <div class="path">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="{% url 'home' %}">Home</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Shopping Cart
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
-                    {% endfor %}
-        <div class="col-lg-4">
-          <div class="checkout_bg checkout_bg_right">
-            <div class="checkout_title">
-              <h4>Order Summary</h4>
+                    <div class="title126">
+                        <h2>Shopping Cart</h2>
+                    </div>
+                </div>
             </div>
-            <div class="summary">
-              <div class="order_title">
-                <h2>Total</h2>
-                <div class="order_price_">£{{ total|floatformat:2 }}</div>
-              </div>
-              <a href="{% url 'checkout' %}" class="checkout_btn">Checkout Now</a>
-            </div>
-          </div>
         </div>
-
-{% else %}
-        <div class="sign_form">
-            <p class="lead mb-5">Your basket is empty.</p>
-                <a href="{% url 'courses' %}" class="btn_back_red">
-                    <i class="fas fa-chevron-left"></i>
-                        <span> Keep shopping </span>
-                </a>
-        </div>
-{% endif %}
-      </div>
     </div>
-  </div>
+    {% if basket_items %}
+    <div class="basket">
+        <div class="container">
+            <div class="row">
+                {% for item in basket_items %}
+                <div class="col-lg-8">
+                    <div class="fcrse_1">
+                        <a href="{% url 'course_description' item.id %}" class="hf_img">
+                            <img class="cart_img" src="{{ item.course.image.url }}" alt="">
+                        </a>
+                        <div class="hs_content">
+                            <div class="eps_dots eps_dots10 more_dropdown">
+                                <a class="remove-item" id="remove_{{ item.id }}"><i class="uil uil-times"></i></a>
+                            </div>
+                            <a href="{% url 'course_description' item.id %}"
+                                class="crse14s title900 pt-2">{{ item.course.name }}</a>
+                            {% if course.category %}
+                            <a href="{% url 'courses' %}?category={{ item.course.category.name }}"
+                                class="crse-cate">{{ item.course.category.friendly_name }}</a>
+                            {% endif %}
+                            <div class="prce142">£ {{ item.course.price }}</div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="col-lg-4">
+                    <div class="checkout_bg checkout_bg_right">
+                        <div class="checkout_title">
+                            <h4>Order Summary</h4>
+                        </div>
+                        <div class="summary">
+                            <div class="order_title">
+                                <h2>Total</h2>
+                                <div class="order_price_">£{{ total|floatformat:2 }}</div>
+                            </div>
+                            <a href="{% url 'checkout' %}" class="checkout_btn">Checkout Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                {% else %}
+                <div class="sign_form">
+                    <p class="lead mb-5">Your basket is empty.</p>
+                    <a href="{% url 'courses' %}" class="btn_back_red">
+                        <i class="fas fa-chevron-left"></i>
+                        <span> Keep shopping </span>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
@@ -88,19 +90,21 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-$('document').ready(function(){
+    $('document').ready(function () {
         // remove item and reload on click
-    $('.remove-item').click(function (e) {
-        var csrfToken = "{{ csrf_token }}";
-        var data = { csrfmiddlewaretoken: csrfToken };
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
+        $('.remove-item').click(function (e) {
+            var csrfToken = "{{ csrf_token }}";
+            var data = {
+                csrfmiddlewaretoken: csrfToken
+            };
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/basket/remove/${itemId}/`;
 
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    })
-});
+            $.post(url, data)
+                .done(function () {
+                    location.reload();
+                });
+        })
+    });
 </script>
 {% endblock %}
