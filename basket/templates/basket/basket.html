@@ -39,7 +39,7 @@
                 {% for item in basket_items %}
                 <div class="col-lg-7">
                      <div class="eps_dots eps_dots10 more_dropdown">
-                                    <a class="remove-item" id="remove_{{ item.id }}"><small>x</small></i></a>                                                                                                      
+                                    <a class="remove-item" id="remove_{{ item.id }}"><small>x</small></a>                                                                                                      
                                 </div>
                         <div class="fcrse_1">
                             <a href="{% url 'course_description' item.id %}" class="hf_img">
@@ -89,21 +89,19 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $('document').ready(function () {
+$('document').ready(function(){
         // remove item and reload on click
-        $('.remove-item').click(function (e) {
-            var csrfToken = "{{ csrf_token }}";
-            var data = {
-                csrfmiddlewaretoken: csrfToken
-            };
-            var itemId = $(this).attr('id').split('remove_')[1];
-            var url = `/basket/remove/${itemId}/`;
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var data = { csrfmiddlewaretoken: csrfToken };
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/basket/delete/${itemId}/`;
 
-            $.post(url, data)
-                .done(function () {
-                    location.reload();
-                });
-        })
-    });
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+});
 </script>
 {% endblock %}
