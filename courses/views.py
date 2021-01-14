@@ -97,33 +97,34 @@ def add_course(request):
 
 
 @login_required
-def edit_course(request, course_id):
-    """ Edit a course in the platform """
+def edit(request, course_id):
+    """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only course creator can do that.')
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    course = get_object_or_404(Course, pk=course_id)
+    course = get_object_or_404(Course, pk=course_i)
     if request.method == 'POST':
         form = CourseForm(request.POST, request.FILES, instance=course)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated course!')
+            messages.success(request, 'Successfully updated product!')
             return redirect(reverse('course_description', args=[course.id]))
         else:
-            messages.error(request, 'Failed to update the course')
+            messages.error(request,
+                           ('Failed to update product. '
+                            'Please ensure the form is valid.'))
     else:
         form = CourseForm(instance=course)
         messages.info(request, f'You are editing {course.name}')
 
-    template = 'courses/edit_course.html'
+    template = 'courses/edit.html'
     context = {
         'form': form,
-        'courses': course,
+        'course': course,
     }
 
     return render(request, template, context)
-
 
 @login_required
 def delete_course(request, course_id):
