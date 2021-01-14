@@ -75,7 +75,7 @@
                                         <i></i>{{ course.category.friendly_name }}</a>
                                     {% endif %} {% if request.user.is_superuser %}
                                     <small>
-                                        <a class="text-info" href="{% url 'edit_course' course.id %}">Edit</a> |
+                                        <a class="text-info" href="{% url 'edit' course.id %}">Edit</a> |
                                         <a class="text-danger" href="{% url 'delete_course' course.id %}">Delete</a>
                                     </small>
                                     {% endif %}
