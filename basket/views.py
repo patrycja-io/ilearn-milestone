@@ -39,7 +39,7 @@ def add_to_basket(request, item_id):
     print(request.session['basket'])
     return redirect(redirect_url)
 
-def remove_from_basket(request, item_id):
+def delete_from_basket(request, item_id):
     """Delete item from cart"""
 
     try:
