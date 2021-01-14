@@ -128,14 +128,12 @@ def edit(request, course_id):
 
 @login_required
 def delete_course(request, course_id):
-    """ Delete a course from the platform """
+    """ Delete a course from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only course creator can do that.')
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    course = Course.objects.get(pk=course_id)
-    if request.method == "POST":
-        course.delete()
-        messages.danger(request, 'Course deleted!')
-    return redirect('/')
-    return render(request, 'home')
+    course = get_object_or_404(Course, pk=course_id)
+    course.delete()
+    messages.success(request, 'Course deleted!')
+    return redirect(reverse('course'))
