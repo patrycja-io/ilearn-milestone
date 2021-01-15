@@ -39,8 +39,9 @@ def add_to_basket(request, item_id):
     print(request.session['basket'])
     return redirect(redirect_url)
 
+
 def remove_from_basket(request, item_id):
-    """Delete item from cart"""
+    """Remove the item from the shopping bag"""
 
     try:
         basket = request.session.get('basket', [])
@@ -60,5 +61,5 @@ def remove_from_basket(request, item_id):
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f'Error removing product {e}')
+        messages.error(request, f'Error removing course {e}')
         return HttpResponse(status=500)
