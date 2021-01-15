@@ -87,17 +87,21 @@
 
 {% block postloadjs %}
 {{ block.super }}
+
 <script type="text/javascript">
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+$('document').ready(function(){
+        // remove item and reload on click
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[0];
+        var data = { csrfmiddlewaretoken: csrfToken };
+        var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/basket/remove/${itemId}/`;
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
+});
 </script>
 {% endblock %}
