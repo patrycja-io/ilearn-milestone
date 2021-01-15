@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 from courses.models import Course
 
@@ -29,9 +31,28 @@ def add_to_basket(request, item_id):
     print(request.session['basket'])
     return redirect(redirect_url)
 
+def adjust_basket(request, item_id):
+    """ Adjust the quantity of the specified course to the specified amount """
+
+    course = get_object_or_404(Course, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    basket = request.session.get('basket', {})
+
+    if quantity > 0:
+        basket[item_id] = quantity
+        messages.success(request, f'Updated {course.name} quantity to {basket[item_id]}')
+    else:
+        basket.pop(item_id)
+        messages.success(request, f'Removed {course.name} from your basket')
+
+    request.session['basket'] = basket
+
+    return redirect(reverse('view_basket'))
+
+
 
 def remove_from_basket(request, item_id):
-    """Remove the item from the shopping bag"""
+    """Remove the item from the shopping basket"""
 
     try:
         basket = request.session.get('basket', [])
