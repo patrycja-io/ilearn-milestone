@@ -6,6 +6,7 @@ from courses.models import Course
 def view_basket(request):
     return render(request, 'basket/basket.html')
 
+
 def add_to_basket(request, item_id):
 
     course = get_object_or_404(Course, pk=item_id)
@@ -13,23 +14,12 @@ def add_to_basket(request, item_id):
 
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
-    background = request.POST.get('background')
-    extra_requirements = request.POST.get('extra_requirements')
-    text_color = request.POST.get('text_color')
-    text_content = request.POST.get('text_content')
     basket = request.session.get('basket', [])
-    if extra_requirements:
-        sub_total += 5
 
-    
     default_values = {
         'course': course.id,
         'sub_total': float(sub_total),
         'quantity': quantity,
-        'background': background,
-        'extra_requirements': extra_requirements,
-        'text_color': text_color,
-        'text_content': text_content,
         'id': len(basket) + 1,
         }
     basket.append(default_values)
