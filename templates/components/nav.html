@@ -59,13 +59,14 @@
                 <div class="dropdown">
                     <a href="" role="button" class="upload_btn" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="true">
-                        Log in</a>
+                        My
+                        Profile</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         {% if request.user.is_superuser %}
                         <a href="{% url 'add_course' %}" class="dropdown-item">Add New Course</a>
                         <div class="dropdown-divider"></div>
                         {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item">User Profile</a>
                         <div class="dropdown-divider"></div>
                         <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     </div>
@@ -74,12 +75,12 @@
                 <div class="dropdown">
                     <a href="" role="button" class="upload_btn" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="true">
-                        My
-                        Profile</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"></div>
+                       Log in</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                     <div class="dropdown-divider"></div>
                     <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                </div>
                 </div>
                 {% endif %}
             </li>
