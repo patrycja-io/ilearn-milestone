@@ -88,7 +88,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
-
 <script type="text/javascript">
 $('document').ready(function(){
         // remove item and reload on click
@@ -96,14 +95,9 @@ $('document').ready(function(){
         var csrfToken = "{{ csrf_token }}";
         var data = { csrfmiddlewaretoken: csrfToken };
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/basket/remove/${itemId}/`;
+        var url = `/bag/remove/${itemId}/`;
 
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
     })
 });
 </script>
-
 {% endblock %}
