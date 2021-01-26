@@ -111,7 +111,6 @@ and using secure payment gateways (in this case Stripe) is necessary to offer th
 ### Base Styles:
 
 
-
 ### Images:
 <p>The banner image used on the website main banner have been sourced from royalty free image website <a href="https://unsplash.com/photos/2FPjlAyMQTA">here</a>. The images are related to learning and it helps to provide lifestyle imagery to the user and potentially entice them into making a purchase.</p>
 
@@ -273,11 +272,7 @@ The Course model within the checkout app holds the following data for the orders
 
 #### Bugs in final Release:
 
- <strong>Bug</strong> Whitenoise integration - causing lack of images in courses view and course page
- <strong>Bug</strong> Ending Order Confirmation- doesnt show payment details - instead of showing price that customer paid it shows 0
- <strong>Bug</strong> Unable to delete created courses as well as created users
- <strong>Bug</strong> Not able to get to checkout page - throws an error
- <strong>Bug</strong> Not able to register or log in user
+<strong>Bug</strong> Remove option in basket 
 
 
 ## Deployment 🚀
