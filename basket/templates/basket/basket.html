@@ -39,7 +39,8 @@
             <div class="row">
                 {% for item in basket_items %}
                 <div class="col-lg-7">
-                     <a class="remove-item text-danger float-right" id="remove_{{ item.id }}">Remove</a>
+                    {% csrf_token %}
+                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" ><small>Remove</small></a>
                         <div class="fcrse_1">
                             <a href="{% url 'course_description' item.id %}" class="hf_img">
                                 <img class="cart_img" src="{{ item.course.image.url }}" alt="">
