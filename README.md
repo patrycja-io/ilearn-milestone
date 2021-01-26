@@ -272,7 +272,7 @@ The Course model within the checkout app holds the following data for the orders
 
 #### Bugs in final Release:
 
-<strong>Bug</strong> Remove option in basket 
+<strong>Bug</strong> Remove button option in basket doesnt work.
 
 
 ## Deployment 🚀
